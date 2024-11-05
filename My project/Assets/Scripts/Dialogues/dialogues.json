@@ -1,0 +1,31 @@
+{
+  "Dialogues": {
+    "DialogueGroupID1": {
+      "Dialogue1": {
+        "Text": "This is text for dialogue 1 dialogue group id 1",
+        "Responses": "None"
+      },
+      "Dialogue2": {
+        "Text": "This is text for dialogue 2 dialogue group id 2",
+        "Responses": "ResponseGroupID1" 
+      }
+    }
+  },
+
+  "Responses": {
+    "ResponseGroupID1": {
+      "Response1": {
+        "Text": "This is response1 from group id 1",
+        "NextDialogue": "DialogueGroup1",
+        "Chosen": "false"
+      }
+    },
+    "ResponseGroupID2": {
+      "Response1": {
+        "Text": "This is response1 from group id 2",
+        "NextDialogue": "DialogueGroup1",
+        "Chosen": "false"
+      }
+    }
+  }
+}
