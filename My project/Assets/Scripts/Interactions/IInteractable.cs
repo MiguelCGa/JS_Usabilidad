@@ -12,9 +12,10 @@ public abstract class IInteractable : MonoBehaviour
     void Start() {
         trans = transform;
         sprite = GetComponent<SpriteRenderer>();
+        InputReader.Instance.onUse += ClickCheck;
     }
 
-    bool IsInside(Vector3 pos) {
+    bool IsInside(InputReader.MousePos pos) {
         float left = trans.position.x - sprite.size.x * trans.localScale.x / 2f;
         float top = trans.position.y - sprite.size.y * trans.localScale.y / 2f;
         float right = trans.position.x + sprite.size.x * trans.localScale.x / 2f;
@@ -25,8 +26,8 @@ public abstract class IInteractable : MonoBehaviour
     public abstract void OnClick();
 
     // Update is called once per frame
-    void Update() {
-        if (Input.GetMouseButtonDown(0) && IsInside(Camera.main.ScreenToWorldPoint(Input.mousePosition))) {
+    void ClickCheck() {
+        if (IsInside(InputReader.Instance.mousePos)) {
             OnClick();
         }
     }
