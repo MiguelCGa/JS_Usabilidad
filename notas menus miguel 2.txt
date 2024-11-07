@@ -1,0 +1,11 @@
+State:
+	StateID id
+	Enter()
+	Exit()
+
+StateMachine:
+	ChangeState(StateID from, StateID into)
+
+GameManager:
+	StateMachine[] scenesMachines
+	ChangeScene()
