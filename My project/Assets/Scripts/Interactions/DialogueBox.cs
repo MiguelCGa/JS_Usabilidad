@@ -1,18 +1,25 @@
 using System.Collections;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
-public class Dialogue : MonoBehaviour
+public class DialogueBox : MonoBehaviour
 {
     [SerializeField]
     private GameObject dialogueBox;
 
     [SerializeField]
-    private Text dialogueText;  
+    private TMP_Text dialogueText;
+
+    [SerializeField]
+    private GameObject arrow;
 
     private string textToShow;
     private bool showText;
     private Coroutine typingCoroutine;
+    private bool arrowControl;
+    private float arrowTimer;
 
     public void dialogue(string text)
     {
@@ -20,6 +27,7 @@ public class Dialogue : MonoBehaviour
         showText = true;
 
         dialogueBox.SetActive(true);
+        dialogueText.enabled = true;
 
         // por si ya había alguna activa se para
         if (typingCoroutine != null) StopCoroutine(typingCoroutine); 
@@ -36,25 +44,41 @@ public class Dialogue : MonoBehaviour
             dialogueText.text += c;
             yield return new WaitForSeconds(0.05f);// velocidad de aparición de los caracteres
         }
+        showText = false;
+        arrow.SetActive(true);
+        arrowControl = true;
+        arrowTimer = 0;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         dialogueBox.SetActive(false);
+        dialogueText.enabled = false;
         showText = false;
+        arrow.SetActive(false);
+        arrowControl = false;
+        arrowTimer = 0;
+
+        // Activar el auto size
+        dialogueText.enableAutoSizing = true;
+
+        // Definir el tamaño mínimo y máximo de la fuente
+        dialogueText.fontSizeMin = 10;
+        dialogueText.fontSizeMax = 36;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Si se hace click se completa el texto (y para la corrutina)
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {
             if (!showText)
             {
                 dialogueText.enabled = false;
                 dialogueBox.SetActive(false);
+                arrow.SetActive(false);
+                arrowControl = false;
             }
             else if (typingCoroutine != null)
             {
@@ -62,7 +86,17 @@ public class Dialogue : MonoBehaviour
                 typingCoroutine = null;
                 dialogueText.text = textToShow; // texto completo
                 showText = false;
+                arrow.SetActive(true);
+                arrowControl = true;
+                arrowTimer = 0;
             }
+        }
+
+        arrowTimer += Time.deltaTime;
+        if (arrowControl && arrowTimer >= 0.4)
+        {
+            arrow.SetActive(!arrow.gameObject.activeSelf);
+            arrowTimer = 0;
         }
     }
 }
