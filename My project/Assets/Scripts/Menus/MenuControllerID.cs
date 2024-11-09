@@ -1,7 +1,7 @@
-public enum MenuStateID {
+public enum MenuControllerID {
     MainMenu,
     LevelSelector,
     Pause,
     Settings,
-    Game
+    None
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MenuState : MonoBehaviour
+public class MenuController : MonoBehaviour
 {
     [SerializeField]
-    private MenuStateID menuStateID;
+    private MenuControllerID id;
     [SerializeField]
     private UnityEvent OnEnter, OnExit;
 
-    public MenuStateID getID() { 
-        return menuStateID;
+    public MenuControllerID getID() { 
+        return id;
     }
     public void Enter() {
         OnEnter.Invoke(); 

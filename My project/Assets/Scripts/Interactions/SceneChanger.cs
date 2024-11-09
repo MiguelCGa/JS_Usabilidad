@@ -6,6 +6,6 @@ public class SceneChanger : IInteractable {
     [SerializeField] string sceneToStart = "";
 
     public override void OnClick() {
-        //GameManager.Instance.ChangeScene(sceneToStart);
+        GameManager.Instance.ChangeScene(sceneToStart);
     }
 }

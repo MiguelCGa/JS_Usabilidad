@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else { 
+            Destroy(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +27,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void ChangeScene(string sceneToStart) {
+    public void ChangeScene(string sceneToStart) {
 
         SceneManager.LoadScene(sceneToStart);
     }
