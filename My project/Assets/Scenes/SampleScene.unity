@@ -272,6 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2460306747a02004eb5b10cdfe99c2b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameBox: {fileID: 0}
+  nameText: {fileID: 0}
   dialogueBox: {fileID: 0}
   dialogueText: {fileID: 0}
   arrow: {fileID: 0}

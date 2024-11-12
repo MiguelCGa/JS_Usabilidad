@@ -16,7 +16,7 @@ public class prueba : MonoBehaviour
     {
         if (Input.GetKeyDown("a"))
         {
-            dialogue.dialogue("Juegos seriossssssss aaaaaa");
+            dialogue.dialogue("Juegos seriossssssss aaaaaa", "Sofía");
         }
     }
 }

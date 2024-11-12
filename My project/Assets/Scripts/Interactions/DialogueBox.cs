@@ -7,6 +7,12 @@ using TMPro;
 public class DialogueBox : MonoBehaviour
 {
     [SerializeField]
+    private GameObject nameBox;
+
+    [SerializeField]
+    private TMP_Text nameText;
+
+    [SerializeField]
     private GameObject dialogueBox;
 
     [SerializeField]
@@ -21,23 +27,26 @@ public class DialogueBox : MonoBehaviour
     private bool arrowControl;
     private float arrowTimer;
 
-    public void dialogue(string text)
+    public void dialogue(string text, string name)
     {
         textToShow = text;
         showText = true;
 
+        nameText.enabled = true;
+        nameBox.SetActive(true);
         dialogueBox.SetActive(true);
         dialogueText.enabled = true;
 
         // por si ya había alguna activa se para
         if (typingCoroutine != null) StopCoroutine(typingCoroutine); 
 
-        typingCoroutine = StartCoroutine(TypeText(textToShow));
+        typingCoroutine = StartCoroutine(TypeText(textToShow, name));
     }
 
     // Corrutina para escribir el texto caracter a caracter
-    private IEnumerator TypeText(string text)
+    private IEnumerator TypeText(string text, string name)
     {
+        nameText.text = name;
         dialogueText.text = "";
         foreach (char c in text)
         {
@@ -53,6 +62,8 @@ public class DialogueBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        nameText.enabled = false;
+        nameBox.SetActive(false);
         dialogueBox.SetActive(false);
         dialogueText.enabled = false;
         showText = false;
@@ -66,6 +77,7 @@ public class DialogueBox : MonoBehaviour
         // Definir el tamaño mínimo y máximo de la fuente
         dialogueText.fontSizeMin = 10;
         dialogueText.fontSizeMax = 36;
+
     }
 
     // Update is called once per frame
@@ -75,7 +87,9 @@ public class DialogueBox : MonoBehaviour
         {
             if (!showText)
             {
+                nameText.enabled = false;
                 dialogueText.enabled = false;
+                nameBox.SetActive(false);
                 dialogueBox.SetActive(false);
                 arrow.SetActive(false);
                 arrowControl = false;
