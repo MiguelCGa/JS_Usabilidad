@@ -83,34 +83,33 @@ public class DialogueBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
-        {
-            if (!showText)
-            {
-                nameText.enabled = false;
-                dialogueText.enabled = false;
-                nameBox.SetActive(false);
-                dialogueBox.SetActive(false);
-                arrow.SetActive(false);
-                arrowControl = false;
-            }
-            else if (typingCoroutine != null)
-            {
-                StopCoroutine(typingCoroutine);
-                typingCoroutine = null;
-                dialogueText.text = textToShow; // texto completo
-                showText = false;
-                arrow.SetActive(true);
-                arrowControl = true;
-                arrowTimer = 0;
-            }
-        }
-
         arrowTimer += Time.deltaTime;
         if (arrowControl && arrowTimer >= 0.4)
         {
             arrow.SetActive(!arrow.gameObject.activeSelf);
             arrowTimer = 0;
         }
+    }
+
+    public bool Next() {
+        if (!showText) {
+            nameText.enabled = false;
+            dialogueText.enabled = false;
+            nameBox.SetActive(false);
+            dialogueBox.SetActive(false);
+            arrow.SetActive(false);
+            arrowControl = false;
+        }
+        else if (typingCoroutine != null) {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+            dialogueText.text = textToShow; // texto completo
+            showText = false;
+            arrow.SetActive(true);
+            arrowControl = true;
+            arrowTimer = 0;
+        }
+        else return true;
+        return false;
     }
 }
