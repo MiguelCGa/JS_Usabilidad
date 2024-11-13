@@ -1,21 +1,13 @@
 {
-  "ResponseGroup1": {
-    "ID": "ID1",
+  "CharacterPick": {
     "Responses": {
       "Response1": {
-        "Text": "This is response1 from group id 1",
-        "NextDialogue": "DialogueGroup1",
-        "Chosen": "false"
-      }
-    }
-  },
-  "ResponseGroup2": {
-    "ID": "ID2",
-    "Responses": {
-      "Response1": {
-        "Text": "This is response1 from group id 2",
-        "NextDialogue": "DialogueGroup2",
-        "Chosen": "false"
+        "Text": "",
+        "NextDialogue": "Neutral"
+      },
+      "Response2": {
+        "Text": "",
+        "NextDialogue": "Receptor"
       }
     }
   }
