@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+
 [RequireComponent (typeof(DialogueData))]
 [RequireComponent (typeof(ResponseDisplayManager))]
+
 public class ConversationManager : MonoBehaviour {
+
     private DialogueData data;
     private ResponseDisplayManager responseManager;
 
-    [SerializeField]
     private DialogueBox dialogueBox;
 
     private DialogueGroup currentConversation;
     private int currentDialogue;
     private ResponseGroup currentResponses;
+
+    bool dialoging = false;
 
     public static ConversationManager Instance { get; private set; }
 
@@ -50,8 +54,13 @@ public class ConversationManager : MonoBehaviour {
 
     private void Start() {
         data = GetComponent<DialogueData>();
+        responseManager = GetComponent<ResponseDisplayManager>();
 
         InputReader.Instance.onUse += NextDialogue;
+    }
+
+    public void SetDialogBox(DialogueBox box) {
+        dialogueBox = box;
     }
 
     private void InitDialogue() {
@@ -60,15 +69,22 @@ public class ConversationManager : MonoBehaviour {
     }
 
     public void StartConversation(string id) {
+        dialoging = true;
+        dialogueBox.gameObject.SetActive(true);
         currentConversation = data.GetDialogueGroupByID(id);
         InitDialogue();
     }
 
     void NextDialogue() {
+        if (!dialoging)
+            return;
         if (dialogueBox.Next())
             return;
-        CheckResponses();
-        GetNextDialogue();
+        if (CheckResponses())
+            return;
+        if (GetNextDialogue() != null)
+            return;
+        StopDialogue();
     }
 
     public void SelectResponse(int id) {
@@ -77,6 +93,7 @@ public class ConversationManager : MonoBehaviour {
     }
 
     public void StopDialogue() {
-
+        dialoging = false;
+        dialogueBox.gameObject.SetActive(false);
     }
 }

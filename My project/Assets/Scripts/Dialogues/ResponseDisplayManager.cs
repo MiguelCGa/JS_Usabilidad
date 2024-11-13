@@ -7,20 +7,23 @@ public class ResponseDisplayManager : MonoBehaviour
     private ResponseGroup responses;
 
     [SerializeField]
-    private Canvas twoResponses;
+    private ResponseController twoResponses;
     [SerializeField]
-    private Canvas threeResponses;
+    private ResponseController threeResponses;
     [SerializeField]
-    private Canvas fourResponses;
+    private ResponseController fourResponses;
 
     void ActivateTwoResponses() {
-
+        twoResponses.gameObject.SetActive(true);
+        twoResponses.SetResponses(responses);
     }
     void ActivateThreeResponses() {
-
+        threeResponses.gameObject.SetActive(true);
+        threeResponses.SetResponses(responses);
     }
     void ActivateFourResponses() {
-
+        fourResponses.gameObject.SetActive(true);
+        fourResponses.SetResponses(responses);
     }
 
     public void SetResponses(ResponseGroup responseGroup) {
@@ -37,10 +40,11 @@ public class ResponseDisplayManager : MonoBehaviour
                 break;
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

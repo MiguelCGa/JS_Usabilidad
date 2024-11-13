@@ -78,6 +78,7 @@ public class DialogueBox : MonoBehaviour
         dialogueText.fontSizeMin = 10;
         dialogueText.fontSizeMax = 36;
 
+        ConversationManager.Instance.SetDialogBox(this);
     }
 
     // Update is called once per frame
@@ -109,7 +110,7 @@ public class DialogueBox : MonoBehaviour
             arrowControl = true;
             arrowTimer = 0;
         }
-        else return true;
-        return false;
+        else return false;
+        return true;
     }
 }
