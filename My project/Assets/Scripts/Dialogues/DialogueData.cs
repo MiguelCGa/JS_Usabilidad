@@ -6,39 +6,44 @@ public class DialogueData : MonoBehaviour
     [SerializeField]
     private TextAsset dialoguesJsonFile;
     [SerializeField]
+    private TextAsset dialoguesJsonFile1;
+    [SerializeField]
+    private TextAsset dialoguesJsonFile2;
+    [SerializeField]
     private TextAsset responsesJsonFile;
 
     private DialogueGroup myDialogueGroup;
+    private DialogueGroup myDialogueGroup1;
+    private DialogueGroup myDialogueGroup2;
     private ResponseGroup myResponseGroup;
 
     void Awake()
     {
         myDialogueGroup = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile.text);
+        myDialogueGroup1 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile1.text);
+        myDialogueGroup2 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile2.text);
         myResponseGroup = JsonUtility.FromJson<ResponseGroup>(responsesJsonFile.text);
     }
 
     public DialogueGroup GetDialogueGroupByID(string id)
     {
         DialogueGroup dialogueGroup = null;
-        //for(int i = 0; i < myDialogueGroup.Length; i++)
-        //{
-        //    //if(id == myDialogueGroup[i].id)
-        //    //{
-        //    //    dialogueGroup = myDialogueGroup[i];
-        //    //}
-        //}
+        switch (id){
+            case "InitialDialogue":
+                dialogueGroup = myDialogueGroup;
+                break;
+            case "Neutral":
+                dialogueGroup = myDialogueGroup1;
+                break;
+            case "Receptor":
+                dialogueGroup = myDialogueGroup2;
+                break;
+        }
         return dialogueGroup;
     }
     public ResponseGroup GetResponseGroupByID(string id)
     {
-        ResponseGroup responseGroup = null;
-        //for(int i = 0; i < myResponseGroup.Length; i++)
-        //{
-        //    //if(id == myResponseGroup[i].id)
-        //    //{
-        //    //    responseGroup = myResponseGroup[i];
-        //    //}
-        //}
+        ResponseGroup responseGroup = myResponseGroup;
         return responseGroup;
     }
 }
