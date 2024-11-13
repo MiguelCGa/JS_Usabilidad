@@ -58,6 +58,9 @@ public class DialogueBox : MonoBehaviour
         arrowControl = true;
         arrowTimer = 0;
     }
+    private void Awake() {
+        ConversationManager.Instance.SetDialogBox(this);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -77,8 +80,6 @@ public class DialogueBox : MonoBehaviour
         // Definir el tamaño mínimo y máximo de la fuente
         dialogueText.fontSizeMin = 10;
         dialogueText.fontSizeMax = 36;
-
-        ConversationManager.Instance.SetDialogBox(this);
     }
 
     // Update is called once per frame
