@@ -1,44 +1,9 @@
 {
-  "InitialDialogue": {
-    "Dialogues": {
-      "Dialogue1": {
-        "Character": "Main",
-        "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
-        "Responses": "CharacterPick"
-      }
+  "dialogues": [
+    {
+      "character": "Main",
+      "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
+      "Responses": "CharacterPick"
     }
-  },
-  "Neutral": {
-    "Dialogues": {
-      "Dialogue1": {
-        "Character": "Main",
-        "Text": "¿Qué está pasando?",
-        "Responses": "None"
-      },
-      "Dialogue2": {
-        "Character": "Neutral",
-        "Text": "Lo de siempre, Pr. R se ha llevado un balonazo porque los del fútbol ocupan todo el patio y no se puede hacer nada más.",
-        "Responses": "CharacterPick"
-      }
-    }
-  },
-  "Receptor": {
-    "Dialogues": {
-      "Dialogue1": {
-        "Character" : "Main",
-        "Text": "¿Estás bien? ¿Te ha hecho daño?",
-        "Responses": "None"
-      },
-      "Dialogue2": {
-        "Character": "Receptor",
-        "Text": "Sí, duele un poco… pero eso casi es lo de menos, el problema es que siempre ocupan todo el patio. No podemos jugar a otra cosa.",
-        "Responses": "None"
-      },
-      "Dialogue3": {
-        "Character": "Receptor",
-        "Text": "Hoy ha sido el balonazo, pero si  no es eso nos gritan para que nos apartemos o nos empujan… así todos los días (suspira)",
-        "Responses": "CharacterPick"
-      }
-    }
-  }
+  ]
 }

@@ -1,14 +1,12 @@
 {
-  "CharacterPick": {
-    "Responses": {
-      "Response1": {
-        "Text": "",
-        "NextDialogue": "Neutral"
-      },
-      "Response2": {
-        "Text": "",
-        "NextDialogue": "Receptor"
-      }
+  "responses": [
+    {
+      "text": "",
+      "nextDialogueGroup": "Neutral"
+    },
+    {
+      "text": "",
+      "nextDialogueGroup": "Receptor"
     }
-  }
+  ]
 }

@@ -1,0 +1,20 @@
+{
+  "dialogues": [
+    {
+      "character": "Main",
+      "Text": "¿Estás bien? ¿Te ha hecho daño?",
+      "Responses": "None"
+    },
+    {
+      "character": "Receptor",
+      "Text": "Sí, duele un poco… pero eso casi es lo de menos, el problema es que siempre ocupan todo el patio. No podemos jugar a otra cosa.",
+      "Responses": "None"
+    },
+    {
+      "character": "Receptor",
+      "Text": "Hoy ha sido el balonazo, pero sis no es eso nos gritan para que nos apartemos o nos empujan… así todos los días (suspira)",
+      "Responses": "CharacterPick"
+    }
+  ]
+
+}

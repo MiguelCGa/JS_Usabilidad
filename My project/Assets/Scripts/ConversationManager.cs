@@ -34,7 +34,7 @@ public class ConversationManager : MonoBehaviour {
     }
 
     private bool CheckResponses() {
-        string responses = GetCurrentDialogue().nextResponseGroup;
+        string responses = GetCurrentDialogue().Responses;
         if (responses == "None")
             return false;
         currentResponses = data.GetResponseGroupByID(responses);
@@ -66,7 +66,7 @@ public class ConversationManager : MonoBehaviour {
 
     private void InitDialogue() {
         currentDialogue = 0;
-        dialogueBox.dialogue(GetCurrentDialogue().text, "TO DO: poner nombre de quien habla en json. atte. ConversationManager");
+        dialogueBox.dialogue(GetCurrentDialogue().Text, "TO DO: poner nombre de quien habla en json. atte. ConversationManager");
     }
 
     public void StartConversation(string id) {
