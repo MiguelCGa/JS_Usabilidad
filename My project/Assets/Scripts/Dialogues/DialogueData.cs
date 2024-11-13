@@ -10,7 +10,7 @@ public class DialogueData : MonoBehaviour
     private DialogueGroup[] myDialogueGroup;
     private ResponseGroup[] myResponseGroup;
 
-    void Start()
+    void Awake()
     {
         myDialogueGroup = JsonUtility.FromJson<DialogueGroup[]>(dialoguesJsonFile.text);
         myResponseGroup = JsonUtility.FromJson<ResponseGroup[]>(responsesJsonFile.text);

@@ -57,6 +57,7 @@ public class ConversationManager : MonoBehaviour {
         responseManager = GetComponent<ResponseDisplayManager>();
 
         InputReader.Instance.onUse += NextDialogue;
+        StartConversation("InitialDialogue");
     }
 
     public void SetDialogBox(DialogueBox box) {
@@ -88,6 +89,7 @@ public class ConversationManager : MonoBehaviour {
     }
 
     public void SelectResponse(int id) {
+        responseManager.HideResponses();
         currentConversation = data.GetDialogueGroupByID(currentResponses.responses[id].nextDialogueGroup);
         InitDialogue();
     }

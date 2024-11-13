@@ -41,6 +41,12 @@ public class ResponseDisplayManager : MonoBehaviour
         }
     }
 
+    public void HideResponses() {
+        twoResponses.gameObject.SetActive(false);
+        threeResponses.gameObject.SetActive(false);
+        fourResponses.gameObject.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
