@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonInteractor : MonoBehaviour {
     public void ChangeScene(string sceneToStart) {
@@ -18,6 +19,6 @@ public class ButtonInteractor : MonoBehaviour {
 
     public void StartConversation(string conversation) {
         ConversationManager.Instance.StartConversation(conversation);
-        gameObject.SetActive(false);
+        GetComponent<Button>().enabled = false;
     }
 }
