@@ -110,7 +110,7 @@ public class DialogueBox : MonoBehaviour
             arrowControl = true;
             arrowTimer = 0;
         }
-        else return false;
-        return true;
+        else return true;
+        return false;
     }
 }
