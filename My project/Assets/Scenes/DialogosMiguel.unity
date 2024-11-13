@@ -489,6 +489,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5882313286782491879, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
+      propertyPath: dialoguesJsonFile1
+      value: 
+      objectReference: {fileID: 4900000, guid: 38222f5af90911947a2e16bf2de9fc79, type: 3}
+    - target: {fileID: 5882313286782491879, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
+      propertyPath: dialoguesJsonFile2
+      value: 
+      objectReference: {fileID: 4900000, guid: ff76ecb6f387dde4481d9168709d4338, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
