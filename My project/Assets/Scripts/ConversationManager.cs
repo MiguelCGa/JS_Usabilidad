@@ -57,7 +57,6 @@ public class ConversationManager : MonoBehaviour {
         responseManager = GetComponent<ResponseDisplayManager>();
 
         InputReader.Instance.onUse += NextDialogue;
-        StartConversation("InitialDialogue");
     }
 
     public void SetDialogBox(DialogueBox box) {
@@ -66,7 +65,7 @@ public class ConversationManager : MonoBehaviour {
 
     private void InitDialogue() {
         currentDialogue = 0;
-        dialogueBox.dialogue(GetCurrentDialogue().Text, "TO DO: poner nombre de quien habla en json. atte. ConversationManager");
+        dialogueBox.dialogue(GetCurrentDialogue().Text, GetCurrentDialogue().character);
     }
 
     public void StartConversation(string id) {

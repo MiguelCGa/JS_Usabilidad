@@ -15,4 +15,9 @@ public class ButtonInteractor : MonoBehaviour {
     public void QuitApplication() {
         GameManager.Instance.Quit();
     }
+
+    public void StartConversation(string conversation) {
+        ConversationManager.Instance.StartConversation(conversation);
+        gameObject.SetActive(false);
+    }
 }
