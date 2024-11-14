@@ -30,7 +30,7 @@ public class ResponseDisplayManager : MonoBehaviour
         responses = responseGroup;
         switch (responseGroup.responses.Length) {
             case 2:
-                ActivateTwoResponses();
+                //ActivateTwoResponses();
                 break;
             case 3:
                 ActivateThreeResponses();
