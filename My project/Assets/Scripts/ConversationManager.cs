@@ -82,8 +82,11 @@ public class ConversationManager : MonoBehaviour {
             return;
         if (CheckResponses())
             return;
-        if (GetNextDialogue() != null)
+        Dialogue d = GetNextDialogue();
+        if (d != null) {
+            dialogueBox.dialogue(d.Text, d.character);
             return;
+        }
         StopDialogue();
     }
 
