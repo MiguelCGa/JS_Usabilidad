@@ -289,6 +289,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2968585284713320725, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 107.8851
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968585284713320725, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.942535
+      objectReference: {fileID: 0}
     - target: {fileID: 3342396943922915238, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
       propertyPath: m_Name
       value: ConversationManager
@@ -372,6 +380,14 @@ PrefabInstance:
     - target: {fileID: 4652833974747119020, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178389670292945740, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 86.885
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178389670292945740, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26.7956
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
