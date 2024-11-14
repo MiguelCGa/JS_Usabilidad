@@ -10,11 +10,17 @@ public class DialogueData : MonoBehaviour
     [SerializeField]
     private TextAsset dialoguesJsonFile2;
     [SerializeField]
+    private TextAsset dialoguesJsonFile3;
+    [SerializeField]
+    private TextAsset dialoguesJsonFile4;
+    [SerializeField]
     private TextAsset responsesJsonFile;
 
     private DialogueGroup myDialogueGroup;
     private DialogueGroup myDialogueGroup1;
     private DialogueGroup myDialogueGroup2;
+    private DialogueGroup myDialogueGroup3;
+    private DialogueGroup myDialogueGroup4;
     private ResponseGroup myResponseGroup;
 
     void Awake()
@@ -22,6 +28,8 @@ public class DialogueData : MonoBehaviour
         myDialogueGroup = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile.text);
         myDialogueGroup1 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile1.text);
         myDialogueGroup2 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile2.text);
+        myDialogueGroup3 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile3.text);
+        myDialogueGroup4 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile4.text);
         myResponseGroup = JsonUtility.FromJson<ResponseGroup>(responsesJsonFile.text);
     }
 
@@ -37,6 +45,12 @@ public class DialogueData : MonoBehaviour
                 break;
             case "Receptor":
                 dialogueGroup = myDialogueGroup2;
+                break;
+            case "Sentimientos":
+                dialogueGroup = myDialogueGroup3;
+                break;
+            case "FutbolMal":
+                dialogueGroup = myDialogueGroup4;
                 break;
         }
         return dialogueGroup;

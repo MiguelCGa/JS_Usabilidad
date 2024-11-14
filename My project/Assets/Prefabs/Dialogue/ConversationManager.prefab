@@ -1152,6 +1152,8 @@ MonoBehaviour:
   dialoguesJsonFile: {fileID: 4900000, guid: b2387108c5569f2489fb01adf20bcba2, type: 3}
   dialoguesJsonFile1: {fileID: 4900000, guid: 38222f5af90911947a2e16bf2de9fc79, type: 3}
   dialoguesJsonFile2: {fileID: 4900000, guid: ff76ecb6f387dde4481d9168709d4338, type: 3}
+  dialoguesJsonFile3: {fileID: 4900000, guid: e61d3ea8a45327542a5b9325e52690bc, type: 3}
+  dialoguesJsonFile4: {fileID: 4900000, guid: 28037506e84c2764fb9f56102dd1bdd8, type: 3}
   responsesJsonFile: {fileID: 4900000, guid: 41059e8547c9ff742ab186bdf6dbce6c, type: 3}
 --- !u!114 &4433203309830287951
 MonoBehaviour:

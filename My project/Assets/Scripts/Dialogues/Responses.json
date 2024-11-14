@@ -1,12 +1,12 @@
 {
   "responses": [
     {
-      "text": "",
-      "nextDialogueGroup": "Neutral"
+      "text": "¿Y cómo te hace sentir eso?",
+      "nextDialogueGroup": "Sentimientos"
     },
     {
-      "text": "",
-      "nextDialogueGroup": "Receptor"
+      "text": "¡Juega también al fútbol!",
+      "nextDialogueGroup": "FutbolMal"
     }
   ]
 }

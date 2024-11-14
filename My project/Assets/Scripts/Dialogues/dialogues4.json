@@ -1,0 +1,20 @@
+{
+  "dialogues": [
+    {
+      "character": "Receptor",
+      "Text": "¡Yo no quiero jugar al fútbol!",
+      "Responses": "None"
+    },
+    {
+      "character": "Receptor",
+      "Text": "¡El diablo! ¡Vete al cuerno!",
+      "Responses": "None"
+    },
+    {
+      "character": "Main",
+      "Text": "¡Mosquis! Yo quería ayudar.",
+      "Responses": "None"
+    }
+  ]
+
+}
