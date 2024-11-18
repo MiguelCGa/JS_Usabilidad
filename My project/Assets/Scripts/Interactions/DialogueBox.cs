@@ -3,9 +3,17 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class DialogueBox : MonoBehaviour
 {
+    [System.Serializable]
+    public class CharacterSprite
+    {
+        public string name;
+        public Sprite sprite;
+    }
+
     [SerializeField]
     private GameObject nameBox;
 
@@ -20,6 +28,12 @@ public class DialogueBox : MonoBehaviour
 
     [SerializeField]
     private GameObject arrow;
+
+    [SerializeField]
+    private Image image; 
+
+    [SerializeField]
+    private List<CharacterSprite> sprites;
 
     private string textToShow;
     private bool showText;
@@ -36,10 +50,13 @@ public class DialogueBox : MonoBehaviour
         nameBox.SetActive(true);
         dialogueBox.SetActive(true);
         dialogueText.enabled = true;
+        image.enabled = true;
 
         dialogueText.text = textToShow;
         dialogueText.enableAutoSizing = false;
         dialogueText.text = "";
+
+        ChangeImage(name);
 
         // por si ya había alguna activa se para
         if (typingCoroutine != null) StopCoroutine(typingCoroutine); 
@@ -63,6 +80,20 @@ public class DialogueBox : MonoBehaviour
         arrowTimer = 0;
     }
 
+    private void ChangeImage(string name)
+    {
+        var img = sprites.Find(s => s.name == name);
+        if (img != null && image != null)
+        {
+            image.sprite = img.sprite;
+            image.enabled = true;
+        }
+        else if (image != null)
+        {
+            image.enabled = false;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +101,7 @@ public class DialogueBox : MonoBehaviour
         nameBox.SetActive(false);
         dialogueBox.SetActive(false);
         dialogueText.enabled = false;
+        image.enabled = false;
         showText = false;
         arrow.SetActive(false);
         arrowControl = false;
@@ -100,6 +132,7 @@ public class DialogueBox : MonoBehaviour
         if (!showText) {
             nameText.enabled = false;
             dialogueText.enabled = false;
+            image.enabled = false;
             nameBox.SetActive(false);
             dialogueBox.SetActive(false);
             arrow.SetActive(false);
