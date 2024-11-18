@@ -37,6 +37,10 @@ public class DialogueBox : MonoBehaviour
         dialogueBox.SetActive(true);
         dialogueText.enabled = true;
 
+        dialogueText.text = textToShow;
+        dialogueText.enableAutoSizing = false;
+        dialogueText.text = "";
+
         // por si ya había alguna activa se para
         if (typingCoroutine != null) StopCoroutine(typingCoroutine); 
 
