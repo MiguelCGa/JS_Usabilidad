@@ -1,3 +1,4 @@
+using Defective.JSON;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,9 +23,13 @@ public class DialogueData : MonoBehaviour
     private DialogueGroup myDialogueGroup3;
     private DialogueGroup myDialogueGroup4;
     private ResponseGroup myResponseGroup;
+    private JSONObject myJson;
 
     void Awake()
     {
+        myJson = new JSONObject(dialoguesJsonFile.text);
+        string neutralData =myJson.GetField("Neutral");
+        Dictionary<string,string> testObj = myJson.ToDictionary();
         myDialogueGroup = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile.text);
         myDialogueGroup1 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile1.text);
         myDialogueGroup2 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile2.text);
