@@ -36,7 +36,7 @@ public class DialogueBox : MonoBehaviour
     private List<CharacterSprite> sprites;
 
     private string textToShow;
-    private bool showText;
+    private bool textComplete;
     private Coroutine typingCoroutine;
     private bool arrowControl;
     private float arrowTimer;
@@ -44,7 +44,7 @@ public class DialogueBox : MonoBehaviour
     public void dialogue(string text, string name)
     {
         textToShow = text;
-        showText = true;
+        textComplete = false;
 
         nameText.enabled = true;
         nameBox.SetActive(true);
@@ -74,7 +74,7 @@ public class DialogueBox : MonoBehaviour
             dialogueText.text += c;
             yield return new WaitForSeconds(0.05f);// velocidad de aparición de los caracteres
         }
-        showText = false;
+        textComplete = true;
         arrow.SetActive(true);
         arrowControl = true;
         arrowTimer = 0;
@@ -102,7 +102,7 @@ public class DialogueBox : MonoBehaviour
         dialogueBox.SetActive(false);
         dialogueText.enabled = false;
         image.enabled = false;
-        showText = false;
+        textComplete = false;
         arrow.SetActive(false);
         arrowControl = false;
         arrowTimer = 0;
@@ -129,25 +129,18 @@ public class DialogueBox : MonoBehaviour
     }
 
     public bool Next() {
-        if (!showText) {
-            nameText.enabled = false;
-            dialogueText.enabled = false;
-            image.enabled = false;
-            nameBox.SetActive(false);
-            dialogueBox.SetActive(false);
-            arrow.SetActive(false);
-            arrowControl = false;
-        }
-        else if (typingCoroutine != null) {
+        if (textComplete)
+            return false;
+        if (typingCoroutine != null) {
             StopCoroutine(typingCoroutine);
             typingCoroutine = null;
             dialogueText.text = textToShow; // texto completo
-            showText = false;
+            textComplete = true;
             arrow.SetActive(true);
             arrowControl = true;
             arrowTimer = 0;
+            return true;
         }
-        else return true;
         return false;
     }
 }
