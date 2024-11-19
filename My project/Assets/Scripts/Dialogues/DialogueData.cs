@@ -7,85 +7,73 @@ public class DialogueData : MonoBehaviour
     [SerializeField]
     private TextAsset dialoguesJsonFile;
     [SerializeField]
-    private TextAsset dialoguesJsonFile1;
-    [SerializeField]
-    private TextAsset dialoguesJsonFile2;
-    [SerializeField]
-    private TextAsset dialoguesJsonFile3;
-    [SerializeField]
-    private TextAsset dialoguesJsonFile4;
-    [SerializeField]
     private TextAsset responsesJsonFile;
 
-    private DialogueGroup myDialogueGroup;
-    private DialogueGroup myDialogueGroup1;
-    private DialogueGroup myDialogueGroup2;
-    private DialogueGroup myDialogueGroup3;
-    private DialogueGroup myDialogueGroup4;
-    private ResponseGroup myResponseGroup;
-    private JSONObject myJson;
+    private Dictionary<string, DialogueGroup> conversations;
+    private Dictionary<string, ResponseGroup> convResponses;
 
-    void Awake()
-    {
-        myJson = new JSONObject(dialoguesJsonFile.text);
-        string neutralData =myJson.GetField("Neutral");
-        Dictionary<string,string> testObj = myJson.ToDictionary();
-        myDialogueGroup = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile.text);
-        myDialogueGroup1 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile1.text);
-        myDialogueGroup2 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile2.text);
-        myDialogueGroup3 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile3.text);
-        myDialogueGroup4 = JsonUtility.FromJson<DialogueGroup>(dialoguesJsonFile4.text);
-        myResponseGroup = JsonUtility.FromJson<ResponseGroup>(responsesJsonFile.text);
-    }
-
-    public DialogueGroup GetDialogueGroupByID(string id)
-    {
-        DialogueGroup dialogueGroup = null;
-        switch (id){
-            case "InitialDialogue":
-                dialogueGroup = myDialogueGroup;
-                break;
-            case "Neutral":
-                dialogueGroup = myDialogueGroup1;
-                break;
-            case "Receptor":
-                dialogueGroup = myDialogueGroup2;
-                break;
-            case "Sentimientos":
-                dialogueGroup = myDialogueGroup3;
-                break;
-            case "FutbolMal":
-                dialogueGroup = myDialogueGroup4;
-                break;
+    void Awake() {
+        conversations = new Dictionary<string, DialogueGroup>();
+        JSONObject conversationsJson = new JSONObject(dialoguesJsonFile.text);
+        for (int i = 0; i < conversationsJson.count; ++i) {
+            string key = conversationsJson.keys[i];
+            conversations[key] = new DialogueGroup(conversationsJson.GetField(key));
         }
-        return dialogueGroup;
+
+        convResponses = new Dictionary<string, ResponseGroup>();
+        JSONObject convResponsesJson = new JSONObject(responsesJsonFile.text);
+        for (int i = 0; i  < convResponsesJson.count; ++i) {
+            string key = convResponsesJson.keys[i];
+            convResponses[key] = new ResponseGroup(convResponsesJson.GetField(key));
+        }
+
     }
-    public ResponseGroup GetResponseGroupByID(string id)
-    {
-        ResponseGroup responseGroup = myResponseGroup;
-        return responseGroup;
+
+    public DialogueGroup GetDialogueGroupByID(string id) {
+        return conversations[id];
+    }
+    public ResponseGroup GetResponseGroupByID(string id) {
+        return convResponses[id];
     }
 }
-[System.Serializable]
-public class DialogueGroup
-{
+
+public class DialogueGroup {
     public Dialogue[] dialogues;
+    public DialogueGroup(JSONObject jsonObject) {
+        dialogues = new Dialogue[jsonObject.count];
+        for (int i = 0; i < jsonObject.count; ++i) {
+            dialogues[i] = new Dialogue(jsonObject[i]);
+        }
+    }
 }
-[System.Serializable]
-public class Dialogue
-{
+
+public class Dialogue {
     public string character;
     public string Text;
     public string Responses;
+
+    public Dialogue(JSONObject jsonObject) {
+        character = jsonObject.GetField("character").stringValue;
+        Text = jsonObject.GetField("Text").stringValue;
+        Responses = jsonObject.GetField("Responses").stringValue;
+    }
 }
-[System.Serializable]
-public class ResponseGroup
-{
+
+public class ResponseGroup {
     public Response[] responses;
+    public ResponseGroup(JSONObject jsonObject) {
+        responses = new Response[jsonObject.count];
+        for (int i = 0; i < jsonObject.count; ++i) {
+            responses[i] = new Response(jsonObject[i]);
+        }
+    }
 }
-[System.Serializable]
-public class Response
-{
+
+public class Response {
     public string text;
     public string nextDialogueGroup;
+    public Response(JSONObject jsonObject) { 
+        text = jsonObject.GetField("text").stringValue;
+        nextDialogueGroup = jsonObject.GetField("nextDialogueGroup").stringValue;
+    }
 }
