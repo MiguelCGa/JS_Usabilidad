@@ -1,5 +1,5 @@
 {
-  "responses": [
+  "RespuestasEjemplo1": [
     {
       "text": "¿Y cómo te hace sentir eso?",
       "nextDialogueGroup": "Sentimientos"
