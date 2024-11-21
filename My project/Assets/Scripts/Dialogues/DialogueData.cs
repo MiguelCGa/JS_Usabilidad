@@ -51,11 +51,18 @@ public class Dialogue {
     public string character;
     public string Text;
     public string Responses;
-
+    public bool emotions = false;
+    public float tension = 0.0f;
     public Dialogue(JSONObject jsonObject) {
         character = jsonObject.GetField("character").stringValue;
         Text = jsonObject.GetField("Text").stringValue;
         Responses = jsonObject.GetField("Responses").stringValue;
+        var emo = jsonObject.GetField("emotions");
+        if (emo != null)
+            emotions = emo.boolValue;
+        var ten = jsonObject.GetField("tension");
+        if (ten != null)
+            tension = ten.floatValue;
     }
 }
 
@@ -72,8 +79,12 @@ public class ResponseGroup {
 public class Response {
     public string text;
     public string nextDialogueGroup;
-    public Response(JSONObject jsonObject) { 
+    public float tension = 0.0f;
+    public Response(JSONObject jsonObject) {
         text = jsonObject.GetField("text").stringValue;
         nextDialogueGroup = jsonObject.GetField("nextDialogueGroup").stringValue;
+        var ten = jsonObject.GetField("tension");
+        if (ten != null)
+            tension = ten.floatValue;
     }
 }

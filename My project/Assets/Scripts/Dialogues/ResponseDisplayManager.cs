@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class ResponseDisplayManager : MonoBehaviour
     private ResponseController threeResponses;
     [SerializeField]
     private ResponseController fourResponses;
+    [SerializeField]
+    private ResponseController emotionsResponses;
 
     void ActivateTwoResponses() {
         twoResponses.gameObject.SetActive(true);
@@ -26,8 +29,16 @@ public class ResponseDisplayManager : MonoBehaviour
         fourResponses.SetResponses(responses);
     }
 
-    public void SetResponses(ResponseGroup responseGroup) {
+    private void ActivateEmotionsResponses() {
+        emotionsResponses.gameObject.SetActive(true);
+        emotionsResponses.SetResponses(responses);
+    }
+
+    public void SetResponses(ResponseGroup responseGroup, bool emotions) {
         responses = responseGroup;
+        if (emotions) 
+            ActivateEmotionsResponses();
+
         switch (responseGroup.responses.Length) {
             case 2:
                 ActivateTwoResponses();

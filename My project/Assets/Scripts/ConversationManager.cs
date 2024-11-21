@@ -5,11 +5,13 @@ using UnityEngine;
 
 [RequireComponent (typeof(DialogueData))]
 [RequireComponent (typeof(ResponseDisplayManager))]
+[RequireComponent (typeof(TensionController))]
 
 public class ConversationManager : MonoBehaviour {
 
     private DialogueData data;
     private ResponseDisplayManager responseManager;
+    private TensionController tensionController;
 
     private DialogueBox dialogueBox;
 
@@ -38,7 +40,7 @@ public class ConversationManager : MonoBehaviour {
         if (responses == "None")
             return false;
         currentResponses = data.GetResponseGroupByID(responses);
-        responseManager.SetResponses(currentResponses);
+        responseManager.SetResponses(currentResponses, GetCurrentDialogue().emotions);
         return true;
     }
 
@@ -55,6 +57,7 @@ public class ConversationManager : MonoBehaviour {
     private void Start() {
         data = GetComponent<DialogueData>();
         responseManager = GetComponent<ResponseDisplayManager>();
+        tensionController = GetComponent<TensionController>();
 
         InputReader.Instance.onUse += NextDialogue;
     }
@@ -92,7 +95,9 @@ public class ConversationManager : MonoBehaviour {
 
     public void SelectResponse(int id) {
         responseManager.HideResponses();
-        currentConversation = data.GetDialogueGroupByID(currentResponses.responses[id].nextDialogueGroup);
+        Response resp = currentResponses.responses[id];
+        tensionController.AddTension(resp.tension);
+        currentConversation = data.GetDialogueGroupByID(resp.nextDialogueGroup);
         InitDialogue();
     }
 
