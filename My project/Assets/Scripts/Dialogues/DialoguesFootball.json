@@ -3,7 +3,7 @@
     {
       "character": "Main",
       "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
-      "Responses": "CharacterPick"
+      "Responses": "None"
     }
   ],
   "Neutral": [
@@ -59,7 +59,8 @@
     {
       "character": "Main",
       "Text": "(Pensando): La he liado un poco, está claro que está triste.",
-      "Responses": "EmocionReceptor"
+      "Responses": "EmocionReceptor",
+      "emotions": true
     }
   ],
   "ReceptorAsustado": [
@@ -76,7 +77,8 @@
     {
       "character": "Main",
       "Text": "(Pensando): La he liado un poco, está claro que está triste.",
-      "Responses": "EmocionReceptor"
+      "Responses": "EmocionReceptor",
+      "emotions": true
     }
   ],
   "ReceptorEnfadado": [
@@ -93,7 +95,8 @@
     {
       "character": "Main",
       "Text": "(Pensando): La he liado un poco, está claro que está triste.",
-      "Responses": "EmocionReceptor"
+      "Responses": "EmocionReceptor",
+      "emotions": true
     }
   ],
   "ReceptorSolucionBien": [
@@ -129,7 +132,8 @@
     {
       "character": "Jugador",
       "Text": "¡Es R! Está en todo el medio y ahora me deja de malo porque se ha llevado un balonazo. ¡Qué se hubiera apartado!",
-      "Responses": "EmocionJugador"
+      "Responses": "EmocionJugador",
+      "emotions": true
     }
   ],
   "JugadorTriste": [
@@ -146,7 +150,8 @@
     {
       "character": "Receptor",
       "Text": "(Pensando) Parece que no he escogido la emoción correcta… J está enfadado.",
-      "Responses": "EmocionJugador"
+      "Responses": "EmocionJugador",
+      "emotions":  true
     }
   ],
   "JugadorFeliz": [
@@ -163,7 +168,8 @@
     {
       "character": "Receptor",
       "Text": "(Pensando) Parece que no he escogido la emoción correcta… J está enfadado.",
-      "Responses": "EmocionJugador"
+      "Responses": "EmocionJugador",
+      "emotions": true
     }
   ],
   "JugadorAsustado": [
@@ -180,7 +186,8 @@
     {
       "character": "Receptor",
       "Text": "(Pensando) Parece que no he escogido la emoción correcta… J está enfadado.",
-      "Responses": "EmocionJugador"
+      "Responses": "EmocionJugador",
+      "emotions": true
     }
   ],
   "JugadorEnfadado": [

@@ -38,7 +38,7 @@ public class ConversationManager : MonoBehaviour {
         if (responses == "None")
             return false;
         currentResponses = data.GetResponseGroupByID(responses);
-        responseManager.SetResponses(currentResponses);
+        responseManager.SetResponses(currentResponses, GetCurrentDialogue().emotions);
         return true;
     }
 

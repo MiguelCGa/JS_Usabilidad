@@ -51,11 +51,14 @@ public class Dialogue {
     public string character;
     public string Text;
     public string Responses;
-
+    public bool emotions = false;
     public Dialogue(JSONObject jsonObject) {
         character = jsonObject.GetField("character").stringValue;
         Text = jsonObject.GetField("Text").stringValue;
         Responses = jsonObject.GetField("Responses").stringValue;
+        var emo = jsonObject.GetField("emotions");
+        if (emo != null)
+            emotions = emo.boolValue;
     }
 }
 
