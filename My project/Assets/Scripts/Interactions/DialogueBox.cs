@@ -30,7 +30,10 @@ public class DialogueBox : MonoBehaviour
     private GameObject arrow;
 
     [SerializeField]
-    private Image image; 
+    private Image image;
+
+    [SerializeField]
+    private GameObject fondo;
 
     [SerializeField]
     private List<CharacterSprite> sprites;
@@ -51,6 +54,8 @@ public class DialogueBox : MonoBehaviour
         dialogueBox.SetActive(true);
         dialogueText.enabled = true;
         image.enabled = true;
+        fondo.SetActive(true);
+        image.preserveAspect = true;
 
         dialogueText.text = textToShow;
         dialogueText.enableAutoSizing = false;
@@ -91,6 +96,7 @@ public class DialogueBox : MonoBehaviour
         else if (image != null)
         {
             image.enabled = false;
+            fondo.SetActive(false);
         }
     }
 
@@ -102,6 +108,7 @@ public class DialogueBox : MonoBehaviour
         dialogueBox.SetActive(false);
         dialogueText.enabled = false;
         image.enabled = false;
+        fondo.SetActive(false);
         textComplete = false;
         arrow.SetActive(false);
         arrowControl = false;
