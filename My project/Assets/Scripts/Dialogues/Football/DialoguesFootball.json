@@ -237,5 +237,27 @@
       "Text": "Ya, supongo que si. Me disculparé si es lo que hay que hacer. ",
       "Responses": "None"
     }
+  ],
+  "IntervencionProfesor": [
+    {
+      "character": "Profesor",
+      "Text": "¿Qué pasa aquí? R y J venid y decidme qué ha pasado.",
+      "Responses": "None"
+    },
+    {
+      "character": "Jugador",
+      "Text": " R se ha cruzado mientras jugábamos al fútbol y le he dado un balonazo sin querer…",
+      "Responses": "None"
+    },
+    {
+      "character": "Receptor",
+      "Text": "Yo solo quería ver como jugaban…",
+      "Responses": "None"
+    },
+    {
+      "character": "Profesor",
+      "Text": "¿Y que tenéis que deciros?",
+      "Responses": "None"
+    }
   ]
 }

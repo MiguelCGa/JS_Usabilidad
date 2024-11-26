@@ -1,0 +1,14 @@
+{
+  "OroFutbol": [
+    {
+      "character": "Jugador",
+      "Text": "Siento haberte dado el balonazo, no te vi y no quería hacerte daño.",
+      "Responses": "None"
+    },
+    {
+      "character": "Receptor",
+      "Text": "Gracias J, yo también tendré más cuidado la próxima vez.",
+      "Responses": "None"
+    }
+  ]
+}
