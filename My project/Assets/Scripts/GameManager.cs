@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void ChangeScene(string sceneToStart) {
-        ConversationManager.Instance.StopDialogue();
+        ConversationManager.Instance?.StopDialogue();
         SceneManager.LoadScene(sceneToStart);
     }
 
