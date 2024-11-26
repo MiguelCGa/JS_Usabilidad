@@ -694,9 +694,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 194160931376395542, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3342396943922915238, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
       propertyPath: m_Name
       value: ConversationManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508579752010148610, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652833974747119020, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
       propertyPath: m_Pivot.x
