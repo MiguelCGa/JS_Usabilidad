@@ -7,7 +7,7 @@ using TMPro;
 public class ResponseInteractor : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text myText;
+    private TMP_Text myText = null;
 
     private int id;
     public void SetId(int responseId) {
@@ -18,7 +18,8 @@ public class ResponseInteractor : MonoBehaviour
     }
 
     public void SetResponse(string response) {
-        myText.text = response;
+        if (myText != null)
+            myText.text = response;
     }
     // Start is called before the first frame update
     void Start()
