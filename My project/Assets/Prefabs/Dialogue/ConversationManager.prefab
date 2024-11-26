@@ -1271,6 +1271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 7958429143658269729}
+  slider: {fileID: 1175513150126655649}
 --- !u!1 &2970725705153603067
 GameObject:
   m_ObjectHideFlags: 0

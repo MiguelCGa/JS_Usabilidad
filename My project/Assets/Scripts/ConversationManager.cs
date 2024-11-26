@@ -68,7 +68,9 @@ public class ConversationManager : MonoBehaviour {
 
     private void InitDialogue() {
         currentDialogue = 0;
-        dialogueBox.dialogue(GetCurrentDialogue().Text, GetCurrentDialogue().character);
+        Dialogue d = GetCurrentDialogue();
+        tensionController.AddTension(d.tension);
+        dialogueBox.dialogue(d.Text, d.character);
     }
 
     public void StartConversation(string id) {
@@ -87,6 +89,7 @@ public class ConversationManager : MonoBehaviour {
             return;
         Dialogue d = GetNextDialogue();
         if (d != null) {
+            tensionController.AddTension(d.tension);
             dialogueBox.dialogue(d.Text, d.character);
             return;
         }

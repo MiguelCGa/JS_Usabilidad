@@ -56,12 +56,14 @@
     {
       "character": "Receptor",
       "Text": "¡Yo no quiero jugar al fútbol!",
-      "Responses": "None"
+      "Responses": "None",
+      "tension": 10
     },
     {
       "character": "Receptor",
       "Text": "¡El diablo! ¡Vete al cuerno!",
-      "Responses": "None"
+      "Responses": "None",
+      "tension":  -5
     },
     {
       "character": "Main",

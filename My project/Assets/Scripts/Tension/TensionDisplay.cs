@@ -9,7 +9,7 @@ public class TensionDisplay : MonoBehaviour {
     [SerializeField]
     Slider slider;
 
-    float currentTension;
+    float currentTension = 0;
 
     public void SetTension(float tension) { 
         currentTension = tension;
@@ -19,12 +19,13 @@ public class TensionDisplay : MonoBehaviour {
     }
     // Start is called before the first frame update
     void Start() {
-        controller.SetDisplay(this);
+        currentTension = controller.SetDisplay(this);
+        slider.value = currentTension;
     }
 
     // Update is called once per frame
     void Update() {
         if (currentTension != slider.value)
-            slider.value = Mathf.Lerp(slider.value, currentTension, 0.25f);
+            slider.value = Mathf.Lerp(slider.value, currentTension, 0.1f);
     }
 }
