@@ -199,6 +199,42 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -64.6
       objectReference: {fileID: 0}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: sprites.Array.data[0].name
+      value: Javier
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: sprites.Array.data[1].name
+      value: Luis
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: sprites.Array.data[4].name
+      value: Raquel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: sprites.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 00fcdc2dd0ca4144998a7f58d3d29fdf, type: 3}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: sprites.Array.data[3].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f6f5d600990e71a4b918769f3a2339a1, type: 3}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: sprites.Array.data[4].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f096fab9c24b0754ba2ac9252cfbdd62, type: 3}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: sprites.Array.data[5].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a5a1f00808dbe9488691085113e2730, type: 3}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: sprites.Array.data[6].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 43b0822d4c5f87944bcc91ca9eb7a864, type: 3}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: sprites.Array.data[7].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e6d0f563a4c65f4eac16124a372c4d6, type: 3}
     - target: {fileID: 4580799129978191237, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
       propertyPath: m_Name
       value: GameSceneObjects
