@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private string levelScenePrefix = "Level";
+    [SerializeField]
+    private string mainMenuScene = "MainMenu";
 
     int currentLevel = 0;
     
@@ -58,5 +60,6 @@ public class GameManager : MonoBehaviour
 
     public void CompleteLevel(TensionCompletion tensionCompletion) {
         LevelManager.Instance.CompleteLevel(currentLevel, tensionCompletion);
+        ChangeScene(mainMenuScene);
     }
 }
