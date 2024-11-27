@@ -36,8 +36,10 @@ public class ResponseDisplayManager : MonoBehaviour
 
     public void SetResponses(ResponseGroup responseGroup, bool emotions) {
         responses = responseGroup;
-        if (emotions) 
+        if (emotions) {
             ActivateEmotionsResponses();
+            return;
+        }
 
         switch (responseGroup.responses.Length) {
             case 2:
@@ -56,6 +58,7 @@ public class ResponseDisplayManager : MonoBehaviour
         twoResponses.gameObject.SetActive(false);
         threeResponses.gameObject.SetActive(false);
         fourResponses.gameObject.SetActive(false);
+        emotionsResponses.gameObject.SetActive(false);
     }
 
     // Start is called before the first frame update

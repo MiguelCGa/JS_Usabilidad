@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     int totalLevels = 4;
 
-    int lastCompeltedLevel = 1; // CAMBIAR A 0
+    int lastCompeltedLevel = 3; // CAMBIAR A 0
 
     TensionCompletion[] levelsCompletion;
 
