@@ -104,6 +104,8 @@ public class ConversationManager : MonoBehaviour {
     }
 
     public void StartConversation(string id) {
+        if (dialoging)
+            return;
         dialoging = true;
         dialogueBox.gameObject.SetActive(true);
         currentConversation = data.GetDialogueGroupByID(currentLevel, id);
