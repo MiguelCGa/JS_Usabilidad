@@ -13,6 +13,9 @@ public class ConversationManager : MonoBehaviour {
     private ResponseDisplayManager responseManager;
     private TensionController tensionController;
 
+    [SerializeField]
+    private GameObject tensionMeter;
+
     private DialogueBox dialogueBox;
 
     private DialogueGroup currentConversation;
@@ -86,6 +89,7 @@ public class ConversationManager : MonoBehaviour {
 
     public void SetCurrentLevel(string level) {
         currentLevel = level;
+        tensionMeter.SetActive(true);
     }
 
     public void SetDialogBox(DialogueBox box) {
@@ -136,6 +140,7 @@ public class ConversationManager : MonoBehaviour {
         if (finishingLevel) {
             finishingLevel = false;
             GameManager.Instance.CompleteLevel(tensionController.GetCompletionLevel());
+            tensionMeter.SetActive(false);
         }
     }
 }
