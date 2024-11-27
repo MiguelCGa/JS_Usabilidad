@@ -36,8 +36,10 @@ public class LevelManager : MonoBehaviour
     }
 
     public void CompleteLevel(int currentLevel, TensionCompletion tensionCompletion) {
-        lastCompeltedLevel = currentLevel;
-        levelsCompletion[currentLevel - 1] = tensionCompletion;
+        if (lastCompeltedLevel < currentLevel)
+            lastCompeltedLevel = currentLevel;
+        if (levelsCompletion[currentLevel - 1] < tensionCompletion)
+            levelsCompletion[currentLevel - 1] = tensionCompletion;
     }
 
     public TensionCompletion GetLevelCompletion(int level) {
