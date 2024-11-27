@@ -7,6 +7,8 @@ public enum TensionCompletion { FAILED, BRONZE, SILVER, GOLD };
 public class TensionController : MonoBehaviour {
     float currentTension;
     [SerializeField]
+    float initialTension = 5.0f;
+    [SerializeField]
     float minTension = 0, maxTension = 10;
     [SerializeField]
     float gold = 1, silver = 3, bronze = 5;
@@ -46,5 +48,8 @@ public class TensionController : MonoBehaviour {
     public float SetDisplay(TensionDisplay display) { 
         tensionDisplay = display;
         return currentTension;
+    }
+    private void Start() {
+        currentTension = initialTension;
     }
 }
