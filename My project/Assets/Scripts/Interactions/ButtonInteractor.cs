@@ -23,6 +23,6 @@ public class ButtonInteractor : MonoBehaviour {
 
     public void StartConversation(string conversation) {
         ConversationManager.Instance.StartConversation(conversation);
-        GetComponent<Button>().enabled = false;
+        //GetComponent<Button>().enabled = false;
     }
 }
