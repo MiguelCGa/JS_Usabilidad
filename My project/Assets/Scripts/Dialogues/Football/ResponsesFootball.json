@@ -13,7 +13,7 @@
       },
       {
         "text": "Enfado",
-        "nextDialogueGroup": "LuisEnfado",
+        "nextDialogueGroup": "LuisEnfadado",
         "tension": "1"
       },
       {
