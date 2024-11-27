@@ -18,7 +18,7 @@
       },
       {
         "text": "Miedo",
-        "nextDialogueGroup": "LuisMiedo",
+        "nextDialogueGroup": "LuisAsustado",
         "tension": "1"
       }
     ],
@@ -52,7 +52,7 @@
       },
       {
         "text": "Miedo",
-        "nextDialogueGroup": "JavierMiedo",
+        "nextDialogueGroup": "JavierAsustado",
         "tension": "1"
       }
     ],
