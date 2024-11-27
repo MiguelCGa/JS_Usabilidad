@@ -18,6 +18,7 @@ public class ConversationManager : MonoBehaviour {
     private DialogueGroup currentConversation;
     private int currentDialogue;
     private ResponseGroup currentResponses;
+    private string currentLevel;
 
     bool dialoging = false;
 
@@ -39,7 +40,7 @@ public class ConversationManager : MonoBehaviour {
         string responses = GetCurrentDialogue().Responses;
         if (responses == "None")
             return false;
-        currentResponses = data.GetResponseGroupByID(responses);
+        currentResponses = data.GetResponseGroupByID(currentLevel, responses);
         responseManager.SetResponses(currentResponses, GetCurrentDialogue().emotions);
         return true;
     }
@@ -62,6 +63,10 @@ public class ConversationManager : MonoBehaviour {
         InputReader.Instance.onUse += NextDialogue;
     }
 
+    public void SetCurrentLevel(string level) {
+        currentLevel = level;
+    }
+
     public void SetDialogBox(DialogueBox box) {
         dialogueBox = box;
     }
@@ -76,7 +81,7 @@ public class ConversationManager : MonoBehaviour {
     public void StartConversation(string id) {
         dialoging = true;
         dialogueBox.gameObject.SetActive(true);
-        currentConversation = data.GetDialogueGroupByID(id);
+        currentConversation = data.GetDialogueGroupByID(currentLevel, id);
         InitDialogue();
     }
 
@@ -100,7 +105,7 @@ public class ConversationManager : MonoBehaviour {
         responseManager.HideResponses();
         Response resp = currentResponses.responses[id];
         tensionController.AddTension(resp.tension);
-        currentConversation = data.GetDialogueGroupByID(resp.nextDialogueGroup);
+        currentConversation = data.GetDialogueGroupByID(currentLevel, resp.nextDialogueGroup);
         InitDialogue();
     }
 

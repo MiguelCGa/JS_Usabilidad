@@ -1,262 +1,312 @@
 {
-  "Inicial": [
-    {
-      "character": "Main",
-      "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
-      "Responses": "None"
-    }
-  ],
-  "Neutral": [
-    {
-      "character": "Main",
-      "Text": "¿Qué está pasando?",
-      "Responses": "None"
-    },
-    {
-      "character": "Neutral",
-      "Text": "Lo de siempre, R se ha llevado un balonazo y todos están enfadados.",
-      "Responses": "None"
-    },
-    {
-      "character": "Neutral",
-      "Text": "Unos con R por parar el partido.",
-      "Responses": "None"
-    },
-    {
-      "character": "Neutral",
-      "Text": "Y otros con J, que no quiere pedirle perdón.",
-      "Responses": "None"
-    }
-  ],
-  "ReceptorTriste": [
-    {
-      "character": "Main",
-      "Text": "¿Estás triste? ¿Te ha hecho daño?",
-      "Responses": "None"
-    },
-    {
-      "character": "Receptor",
-      "Text": " Sí, el balonazo duele un poco… pero eso casi es lo de menos.",
-      "Responses": "None"
-    },
-    {
-      "character": "Receptor",
-      "Text": "Siento que los que jugaban me odian, especialmente J, que encima me ha dado el balonazo.",
-      "Responses": "PropuestaReceptor"
-    }
-  ],
-  "ReceptorFeliz": [
-    {
-      "character": "Main",
-      "Text": "¿Pareces feliz?",
-      "Responses": "None"
-    },
-    {
-      "character": "Receptor",
-      "Text": "¡No! Me ha hecho daño y encima todos los que jugaban al fútbol están enfadados conmigo por parar el partido.",
-      "Responses": "None"
-    },
-    {
-      "character": "Main",
-      "Text": "(Pensando): La he liado un poco, está claro que está triste.",
-      "Responses": "EmocionReceptor",
-      "emotions": true
-    }
-  ],
-  "ReceptorAsustado": [
-    {
-      "character": "Main",
-      "Text": "¿Pareces asustado?",
-      "Responses": "None"
-    },
-    {
-      "character": "Receptor",
-      "Text": "¡No! Me ha hecho daño y encima todos los que jugaban al fútbol están enfadados conmigo por parar el partido.",
-      "Responses": "None"
-    },
-    {
-      "character": "Main",
-      "Text": "(Pensando): La he liado un poco, está claro que está triste.",
-      "Responses": "EmocionReceptor",
-      "emotions": true
-    }
-  ],
-  "ReceptorEnfadado": [
-    {
-      "character": "Main",
-      "Text": "¿Pareces enfadado?",
-      "Responses": "None"
-    },
-    {
-      "character": "Receptor",
-      "Text": "¡No! Me ha hecho daño y encima todos los que jugaban al fútbol están enfadados conmigo por parar el partido.",
-      "Responses": "None"
-    },
-    {
-      "character": "Main",
-      "Text": "(Pensando): La he liado un poco, está claro que está triste.",
-      "Responses": "EmocionReceptor",
-      "emotions": true
-    }
-  ],
-  "ReceptorSolucionBien": [
-    {
-      "character": "Receptor",
-      "Text": "Es posible… ",
-      "Responses": "None"
-    },
-    {
-      "character": "Main",
-      "Text": "Bueno, voy a hablar con J.",
-      "Responses": "None"
-    }
-  ],
-  "ReceptorSolucionMal": [
-    {
-      "character": "Receptor",
-      "Text": "¡No! Seguro que se enfada incluso más. ",
-      "Responses": "None"
-    },
-    {
-      "character": "Main",
-      "Text": "Bueno, voy a hablar con J.",
-      "Responses": "None"
-    }
-  ],
-  "InicioJugador": [
-    {
-      "character": "Main",
-      "Text": "¿Qué te ocurre?",
-      "Responses": "None"
-    },
+  "Football": {
+    "Inicial": [
+      {
+        "character": "Main",
+        "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
+        "Responses": "None"
+      }
+    ],
+    "Neutral": [
+      {
+        "character": "Main",
+        "Text": "¿Qué está pasando?",
+        "Responses": "None"
+      },
+      {
+        "character": "Neutral",
+        "Text": "Lo de siempre, R se ha llevado un balonazo y todos están enfadados.",
+        "Responses": "None"
+      },
+      {
+        "character": "Neutral",
+        "Text": "Unos con R por parar el partido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Neutral",
+        "Text": "Y otros con J, que no quiere pedirle perdón.",
+        "Responses": "None"
+      }
+    ],
+    "ReceptorTriste": [
+      {
+        "character": "Main",
+        "Text": "¿Estás triste? ¿Te ha hecho daño?",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": " Sí, el balonazo duele un poco… pero eso casi es lo de menos.",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "Siento que los que jugaban me odian, especialmente J, que encima me ha dado el balonazo.",
+        "Responses": "PropuestaReceptor"
+      }
+    ],
+    "ReceptorFeliz": [
+      {
+        "character": "Main",
+        "Text": "¿Pareces feliz?",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "¡No! Me ha hecho daño y encima todos los que jugaban al fútbol están enfadados conmigo por parar el partido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Main",
+        "Text": "(Pensando): La he liado un poco, está claro que está triste.",
+        "Responses": "EmocionReceptor",
+        "emotions": true
+      }
+    ],
+    "ReceptorAsustado": [
+      {
+        "character": "Main",
+        "Text": "¿Pareces asustado?",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "¡No! Me ha hecho daño y encima todos los que jugaban al fútbol están enfadados conmigo por parar el partido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Main",
+        "Text": "(Pensando): La he liado un poco, está claro que está triste.",
+        "Responses": "EmocionReceptor",
+        "emotions": true
+      }
+    ],
+    "ReceptorEnfadado": [
+      {
+        "character": "Main",
+        "Text": "¿Pareces enfadado?",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "¡No! Me ha hecho daño y encima todos los que jugaban al fútbol están enfadados conmigo por parar el partido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Main",
+        "Text": "(Pensando): La he liado un poco, está claro que está triste.",
+        "Responses": "EmocionReceptor",
+        "emotions": true
+      }
+    ],
+    "ReceptorSolucionBien": [
+      {
+        "character": "Receptor",
+        "Text": "Es posible… ",
+        "Responses": "None"
+      },
+      {
+        "character": "Main",
+        "Text": "Bueno, voy a hablar con J.",
+        "Responses": "None"
+      }
+    ],
+    "ReceptorSolucionMal": [
+      {
+        "character": "Receptor",
+        "Text": "¡No! Seguro que se enfada incluso más. ",
+        "Responses": "None"
+      },
+      {
+        "character": "Main",
+        "Text": "Bueno, voy a hablar con J.",
+        "Responses": "None"
+      }
+    ],
+    "InicioJugador": [
+      {
+        "character": "Main",
+        "Text": "¿Qué te ocurre?",
+        "Responses": "None"
+      },
+      {
+        "character": "Jugador",
+        "Text": "¡Es R! Está en todo el medio y ahora me deja de malo porque se ha llevado un balonazo. ¡Qué se hubiera apartado!",
+        "Responses": "EmocionJugador",
+        "emotions": true
+      }
+    ],
+    "JugadorTriste": [
+      {
+        "character": "Main",
+        "Text": "¡Siento oír eso! Si necesitas estás triste estoy aquí…",
+        "Responses": "None"
+      },
+      {
+        "character": "Jugador",
+        "Text": "¿Qué estás diciendo?",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta… J está enfadado.",
+        "Responses": "EmocionJugador",
+        "emotions": true
+      }
+    ],
+    "JugadorFeliz": [
+      {
+        "character": "Main",
+        "Text": "Pareces feliz.",
+        "Responses": "None"
+      },
+      {
+        "character": "Jugador",
+        "Text": "Pero qué dices. No.",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta… J está enfadado.",
+        "Responses": "EmocionJugador",
+        "emotions": true
+      }
+    ],
+    "JugadorAsustado": [
+      {
+        "character": "Main",
+        "Text": "¿Te asusta esta situación?",
+        "Responses": "None"
+      },
+      {
+        "character": "Jugador",
+        "Text": "¿Yo asustado? Para nada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta… J está enfadado.",
+        "Responses": "EmocionJugador",
+        "emotions": true
+      }
+    ],
+    "JugadorEnfadado": [
+      {
+        "character": "Main",
+        "Text": "Entiendo que estés enfadado. Tanto R como tú tenéis razón pero, le has hecho daño.",
+        "Responses": "None"
+      },
+      {
+        "character": "Jugador",
+        "Text": "Ella se metió en el campo, es culpa suya y encima parece que soy el malo.",
+        "Responses": "PropuestaJugador"
+      }
+    ],
+    "JugadorDisculpaMal": [
+      {
+        "character": "Main",
+        "Text": "Le has hecho daño a R, te tienes que disculpar.",
+        "Responses": "None"
+      },
+      {
+        "character": "Jugador",
+        "Text": "No me da la gana. No quiero.",
+        "Responses": "PropuestaJugador"
+      }
+    ],
+    "JugadorDisculpaBien": [
+      {
+        "character": "Main",
+        "Text": "¿Por qué crees que se R se ha disgustado tanto?",
+        "Responses": "None"
+      },
+      {
+        "character": "Jugador",
+        "Text": "Igual el balonazo le ha hecho daño… Entiendo que esté triste. Debería disculparme.",
+        "Responses": "PropuestaJugador"
+      }
+    ],
+    "JugadorDisculpaRegular": [
+      {
+        "character": "Main",
+        "Text": "¿Si a ti te dieran un balonazo no esperarías que te pidieran perdón?",
+        "Responses": "None"
+      },
+      {
+        "character": "Jugador",
+        "Text": "Ya, supongo que si. Me disculparé si es lo que hay que hacer. ",
+        "Responses": "None"
+      }
+    ],
+    "IntervencionProfesor": [
+      {
+        "character": "Profesor",
+        "Text": "¿Qué pasa aquí? R y J venid y decidme qué ha pasado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Jugador",
+        "Text": " R se ha cruzado mientras jugábamos al fútbol y le he dado un balonazo sin querer…",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "Yo solo quería ver como jugaban…",
+        "Responses": "None"
+      },
+      {
+        "character": "Profesor",
+        "Text": "¿Y que tenéis que deciros?",
+        "Responses": "None"
+      }
+    ]
+  },
+  "Lost": [
     {
       "character": "Jugador",
-      "Text": "¡Es R! Está en todo el medio y ahora me deja de malo porque se ha llevado un balonazo. ¡Qué se hubiera apartado!",
-      "Responses": "EmocionJugador",
-      "emotions": true
-    }
-  ],
-  "JugadorTriste": [
-    {
-      "character": "Main",
-      "Text": "¡Siento oír eso! Si necesitas estás triste estoy aquí…",
-      "Responses": "None"
-    },
-    {
-      "character": "Jugador",
-      "Text": "¿Qué estás diciendo?",
+      "Text": "...",
       "Responses": "None"
     },
     {
       "character": "Receptor",
-      "Text": "(Pensando) Parece que no he escogido la emoción correcta… J está enfadado.",
-      "Responses": "EmocionJugador",
-      "emotions":  true
+      "Text": "...",
+      "Responses": "None"
     }
   ],
-  "JugadorFeliz": [
-    {
-      "character": "Main",
-      "Text": "Pareces feliz.",
-      "Responses": "None"
-    },
+  "Bronze": [
     {
       "character": "Jugador",
-      "Text": "Pero qué dices. No.",
+      "Text": "Siento haberte dado el balonazo...",
       "Responses": "None"
     },
     {
       "character": "Receptor",
-      "Text": "(Pensando) Parece que no he escogido la emoción correcta… J está enfadado.",
-      "Responses": "EmocionJugador",
-      "emotions": true
+      "Text": "Vale...",
+      "Responses": "None"
     }
   ],
-  "JugadorAsustado": [
-    {
-      "character": "Main",
-      "Text": "¿Te asusta esta situación?",
-      "Responses": "None"
-    },
+  "Silver": [
     {
       "character": "Jugador",
-      "Text": "¿Yo asustado? Para nada.",
+      "Text": "Siento haberte dado el balonazo... ",
       "Responses": "None"
     },
     {
       "character": "Receptor",
-      "Text": "(Pensando) Parece que no he escogido la emoción correcta… J está enfadado.",
-      "Responses": "EmocionJugador",
-      "emotions": true
-    }
-  ],
-  "JugadorEnfadado": [
-    {
-      "character": "Main",
-      "Text": "Entiendo que estés enfadado. Tanto R como tú tenéis razón pero, le has hecho daño.",
-      "Responses": "None"
-    },
-    {
-      "character": "Jugador",
-      "Text": "Ella se metió en el campo, es culpa suya y encima parece que soy el malo.",
-      "Responses": "PropuestaJugador"
-    }
-  ],
-  "JugadorDisculpaMal": [
-    {
-      "character": "Main",
-      "Text": "Le has hecho daño a R, te tienes que disculpar.",
-      "Responses": "None"
-    },
-    {
-      "character": "Jugador",
-      "Text": "No me da la gana. No quiero.",
-      "Responses": "PropuestaJugador"
-    }
-  ],
-  "JugadorDisculpaBien": [
-    {
-      "character": "Main",
-      "Text": "¿Por qué crees que se R se ha disgustado tanto?",
-      "Responses": "None"
-    },
-    {
-      "character": "Jugador",
-      "Text": "Igual el balonazo le ha hecho daño… Entiendo que esté triste. Debería disculparme.",
-      "Responses": "PropuestaJugador"
-    }
-  ],
-  "JugadorDisculpaRegular": [
-    {
-      "character": "Main",
-      "Text": "¿Si a ti te dieran un balonazo no esperarías que te pidieran perdón?",
-      "Responses": "None"
-    },
-    {
-      "character": "Jugador",
-      "Text": "Ya, supongo que si. Me disculparé si es lo que hay que hacer. ",
+      "Text": "Gracias J, yo también tendré más cuidado la próxima vez.",
       "Responses": "None"
     }
   ],
-  "IntervencionProfesor": [
-    {
-      "character": "Profesor",
-      "Text": "¿Qué pasa aquí? R y J venid y decidme qué ha pasado.",
-      "Responses": "None"
-    },
+  "Gold": [
     {
       "character": "Jugador",
-      "Text": " R se ha cruzado mientras jugábamos al fútbol y le he dado un balonazo sin querer…",
+      "Text": "Siento haberte dado el balonazo, no te vi y no quería hacerte daño.",
       "Responses": "None"
     },
     {
       "character": "Receptor",
-      "Text": "Yo solo quería ver como jugaban…",
-      "Responses": "None"
-    },
-    {
-      "character": "Profesor",
-      "Text": "¿Y que tenéis que deciros?",
+      "Text": "Gracias J, yo también tendré más cuidado la próxima vez.",
       "Responses": "None"
     }
   ]

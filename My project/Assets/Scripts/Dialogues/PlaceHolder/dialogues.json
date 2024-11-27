@@ -1,73 +1,123 @@
 {
-  "Inicial": [
+  "PlaceHolder": {
+    "Inicial": [
+      {
+        "character": "Main",
+        "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
+        "Responses": "CharacterPick"
+      }
+    ],
+    "Neutral": [
+      {
+        "character": "Main",
+        "Text": "¿Qué está pasando?",
+        "Responses": "None"
+      },
+      {
+        "character": "Neutral",
+        "Text": "Lo de siempre, Pr. R se ha llevado un balonazo porque los del fútbol ocupan todo el patio y no se puede hacer nada más.",
+        "Responses": "None"
+      }
+    ],
+    "Receptor": [
+      {
+        "character": "Main",
+        "Text": "¿Estás bien? ¿Te ha hecho daño?",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "Sí, duele un poco… pero eso casi es lo de menos, el problema es que siempre ocupan todo el patio. No podemos jugar a otra cosa.",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "Hoy ha sido el balonazo, pero si no es eso nos gritan para que nos apartemos o nos empujan… así todos los días (suspira)",
+        "Responses": "RespuestasEjemplo1"
+      }
+    ],
+    "Sentimientos": [
+      {
+        "character": "Receptor",
+        "Text": "Es una molestia. Nunca puedo estar a gusto. Si no es una cosa es otra.",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "Ojalá se den los balonazos entre ellos, pesados.",
+        "Responses": "None"
+      },
+      {
+        "character": "Malvado",
+        "Text": "Jajaja. ¡Multiplícate por cero!",
+        "Responses": "None"
+      }
+    ],
+    "FutbolMal": [
+      {
+        "character": "Receptor",
+        "Text": "¡Yo no quiero jugar al fútbol!",
+        "Responses": "None",
+        "tension": 10
+      },
+      {
+        "character": "Receptor",
+        "Text": "¡El diablo! ¡Vete al cuerno!",
+        "Responses": "None",
+        "tension": -5
+      },
+      {
+        "character": "Main",
+        "Text": "¡Mosquis! Yo quería ayudar.",
+        "Responses": "None"
+      }
+    ]
+  },
+  "Lost": [
     {
-      "character": "Main",
-      "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
-      "Responses": "CharacterPick"
+      "character": "Jugador",
+      "Text": "...",
+      "Responses": "None"
+    },
+    {
+      "character": "Receptor",
+      "Text": "...",
+      "Responses": "None"
     }
   ],
-  "Neutral": [
+  "Bronze": [
     {
-      "character": "Main",
-      "Text": "¿Qué está pasando?",
+      "character": "Jugador",
+      "Text": "...",
       "Responses": "None"
     },
     {
-      "character": "Neutral",
-      "Text": "Lo de siempre, Pr. R se ha llevado un balonazo porque los del fútbol ocupan todo el patio y no se puede hacer nada más.",
+      "character": "Receptor",
+      "Text": "...",
       "Responses": "None"
     }
   ],
-  "Receptor": [
+  "Silver": [
     {
-      "character": "Main",
-      "Text": "¿Estás bien? ¿Te ha hecho daño?",
+      "character": "Jugador",
+      "Text": "...",
       "Responses": "None"
     },
     {
       "character": "Receptor",
-      "Text": "Sí, duele un poco… pero eso casi es lo de menos, el problema es que siempre ocupan todo el patio. No podemos jugar a otra cosa.",
-      "Responses": "None"
-    },
-    {
-      "character": "Receptor",
-      "Text": "Hoy ha sido el balonazo, pero si no es eso nos gritan para que nos apartemos o nos empujan… así todos los días (suspira)",
-      "Responses": "RespuestasEjemplo1"
-    }
-  ],
-  "Sentimientos": [
-    {
-      "character": "Receptor",
-      "Text": "Es una molestia. Nunca puedo estar a gusto. Si no es una cosa es otra.",
-      "Responses": "None"
-    },
-    {
-      "character": "Receptor",
-      "Text": "Ojalá se den los balonazos entre ellos, pesados.",
-      "Responses": "None"
-    },
-    {
-      "character": "Malvado",
-      "Text": "Jajaja. ¡Multiplícate por cero!",
+      "Text": "...",
       "Responses": "None"
     }
   ],
-  "FutbolMal": [
+  "Gold": [
     {
-      "character": "Receptor",
-      "Text": "¡Yo no quiero jugar al fútbol!",
-      "Responses": "None",
-      "tension": 10
+      "character": "Jugador",
+      "Text": "...",
+      "Responses": "None"
     },
     {
       "character": "Receptor",
-      "Text": "¡El diablo! ¡Vete al cuerno!",
-      "Responses": "None",
-      "tension":  -5
-    },
-    {
-      "character": "Main",
-      "Text": "¡Mosquis! Yo quería ayudar.",
+      "Text": "...",
       "Responses": "None"
     }
   ]

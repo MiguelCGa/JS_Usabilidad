@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &646667922409861320
 RectTransform:
   m_ObjectHideFlags: 0
@@ -923,7 +923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -151.94145, y: 126.3}
+  m_AnchoredPosition: {x: -48.43445, y: 80}
   m_SizeDelta: {x: 93.7149, y: 96.234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2953874799109456141
@@ -1355,10 +1355,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 646667922409861320}
   - {fileID: 4840916867939482917}
   - {fileID: 8078293016794838620}
   - {fileID: 1903625055636416244}
+  - {fileID: 646667922409861320}
   - {fileID: 6972479601377517266}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1442,8 +1442,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4a6557285d11845abd3f39e21afb2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguesJsonFile: {fileID: 4900000, guid: b2387108c5569f2489fb01adf20bcba2, type: 3}
-  responsesJsonFile: {fileID: 4900000, guid: 41059e8547c9ff742ab186bdf6dbce6c, type: 3}
+  dialoguesJsonFiles:
+  - {fileID: 4900000, guid: b2387108c5569f2489fb01adf20bcba2, type: 3}
+  - {fileID: 4900000, guid: d4a3817affa85ef4793fd367a7be9b56, type: 3}
+  responsesJsonFiles:
+  - {fileID: 4900000, guid: 41059e8547c9ff742ab186bdf6dbce6c, type: 3}
+  - {fileID: 4900000, guid: 7cd563b9aef20184c93c2fd9a9a84b45, type: 3}
 --- !u!114 &4433203309830287951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,7 +1463,7 @@ MonoBehaviour:
   twoResponses: {fileID: 5803333471141767660}
   threeResponses: {fileID: 8154652956137730106}
   fourResponses: {fileID: 8183713485589871926}
-  emotionsResponses: {fileID: 0}
+  emotionsResponses: {fileID: 7487641177141396570}
 --- !u!114 &6017364319958276676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,7 +1753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55.846, y: 33.758}
+  m_AnchoredPosition: {x: 47.661003, y: -12.542007}
   m_SizeDelta: {x: 98.476, y: 88.851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5957118385950378174
@@ -3330,7 +3334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150.19, y: 33.758}
+  m_AnchoredPosition: {x: -46.683, y: -12.542007}
   m_SizeDelta: {x: 90.224, y: 88.851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1167014649647822885
@@ -3551,7 +3555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -56.507, y: 126.3}
+  m_AnchoredPosition: {x: 47, y: 80}
   m_SizeDelta: {x: 97.1433, y: 96.2334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1344768371513171446

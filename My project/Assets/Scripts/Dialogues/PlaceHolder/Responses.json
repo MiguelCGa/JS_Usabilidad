@@ -1,12 +1,14 @@
 {
-  "RespuestasEjemplo1": [
-    {
-      "text": "¿Y cómo te hace sentir eso?",
-      "nextDialogueGroup": "Sentimientos"
-    },
-    {
-      "text": "¡Juega también al fútbol!",
-      "nextDialogueGroup": "FutbolMal"
-    }
-  ]
+  "PlaceHolder": {
+    "RespuestasEjemplo1": [
+      {
+        "text": "¿Y cómo te hace sentir eso?",
+        "nextDialogueGroup": "Sentimientos"
+      },
+      {
+        "text": "¡Juega también al fútbol!",
+        "nextDialogueGroup": "FutbolMal"
+      }
+    ]
+  }
 }

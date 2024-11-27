@@ -1,62 +1,64 @@
 {
-  "EmocionReceptor": [
-    {
-      "text": "Triste",
-      "nextDialogueGroup": "ReceptorTriste"
-    },
-    {
-      "text": "Feliz",
-      "nextDialogueGroup": "ReceptorFeliz"
-    },
-    {
-      "text": "Enfado",
-      "nextDialogueGroup": "ReceptorEnfado"
-    },
-    {
-      "text": "Miedo",
-      "nextDialogueGroup": "ReceptorMiedo"
-    }
-  ],
-  "PropuestaReceptor": [
-    {
-      "text": "No te preocupes, haré que J se disculpe",
-      "nextDialogueGroup": "ReceptorSolucionMal"
-    },
-    {
-      "text": "¿Si J se disculpara te sentirías mejor?",
-      "nextDialogueGroup": "ReceptorSolucionBien"
-    }
-  ],
-  "EmocionJugador": [
-    {
-      "text": "Triste",
-      "nextDialogueGroup": "JugadorTriste"
-    },
-    {
-      "text": "Feliz",
-      "nextDialogueGroup": "JugadorFeliz"
-    },
-    {
-      "text": "Enfado",
-      "nextDialogueGroup": "JugadorEnfado"
-    },
-    {
-      "text": "Miedo",
-      "nextDialogueGroup": "JugadorMiedo"
-    }
-  ],
-  "PropuestaJugador": [
-    {
-      "text": "¿Si a ti te dieran un balonazo no esperarías que te pidieran perdón?",
-      "nextDialogueGroup": "JugadorDisculpaRegular"
-    },
-    {
-      "text": "Le has hecho daño a R, te tienes que disculpar.",
-      "nextDialogueGroup": "JugadorDisculpaMal"
-    },
-    {
-      "text": "¿Por qué crees que se R se ha disgustado tanto?",
-      "nextDialogueGroup": "JugadorDisculpaBien"
-    }
-  ]
+  "Football": {
+    "EmocionReceptor": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "ReceptorTriste"
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "ReceptorFeliz"
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "ReceptorEnfado"
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "ReceptorMiedo"
+      }
+    ],
+    "PropuestaReceptor": [
+      {
+        "text": "No te preocupes, haré que J se disculpe",
+        "nextDialogueGroup": "ReceptorSolucionMal"
+      },
+      {
+        "text": "¿Si J se disculpara te sentirías mejor?",
+        "nextDialogueGroup": "ReceptorSolucionBien"
+      }
+    ],
+    "EmocionJugador": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "JugadorTriste"
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "JugadorFeliz"
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "JugadorEnfado"
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "JugadorMiedo"
+      }
+    ],
+    "PropuestaJugador": [
+      {
+        "text": "¿Si a ti te dieran un balonazo no esperarías que te pidieran perdón?",
+        "nextDialogueGroup": "JugadorDisculpaRegular"
+      },
+      {
+        "text": "Le has hecho daño a R, te tienes que disculpar.",
+        "nextDialogueGroup": "JugadorDisculpaMal"
+      },
+      {
+        "text": "¿Por qué crees que se R se ha disgustado tanto?",
+        "nextDialogueGroup": "JugadorDisculpaBien"
+      }
+    ]
+  }
 }

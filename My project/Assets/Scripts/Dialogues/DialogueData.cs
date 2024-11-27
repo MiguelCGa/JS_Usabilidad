@@ -2,38 +2,75 @@ using Defective.JSON;
 using System.Collections.Generic;
 using UnityEngine;
 
+using LevelDialogues = System.Collections.Generic.Dictionary<string, DialogueGroup>;
+using LevelResponses = System.Collections.Generic.Dictionary<string, ResponseGroup>;
+
 public class DialogueData : MonoBehaviour
 {
     [SerializeField]
-    private TextAsset dialoguesJsonFile;
+    private TextAsset[] dialoguesJsonFiles;
     [SerializeField]
-    private TextAsset responsesJsonFile;
+    private TextAsset[] responsesJsonFiles;
 
-    private Dictionary<string, DialogueGroup> conversations;
-    private Dictionary<string, ResponseGroup> convResponses;
+    private Dictionary<string, Level> levels;
 
     void Awake() {
-        conversations = new Dictionary<string, DialogueGroup>();
-        JSONObject conversationsJson = new JSONObject(dialoguesJsonFile.text);
+        levels = new Dictionary<string, Level>();
+
+        foreach (TextAsset dialoguesFile in dialoguesJsonFiles) {
+            JSONObject conversationsJson = new JSONObject(dialoguesFile.text);
+            string levelName = conversationsJson.keys[0];
+            levels[levelName] = new Level(conversationsJson, levelName);
+        }
+
+        foreach (TextAsset responsesFile in responsesJsonFiles) {
+            JSONObject responsesJson = new JSONObject(responsesFile.text);
+            string levelName = responsesJson.keys[0];
+            InitLevelResponses(responsesJson[levelName], ref levels[levelName].responses);
+        }
+    }
+
+    private void InitLevelResponses(JSONObject responsesJson, ref LevelResponses levelResponses) {
+        levelResponses = new LevelResponses();
+        for (int i = 0; i < responsesJson.count; ++i) {
+            string key = responsesJson.keys[i];
+            levelResponses[key] = new ResponseGroup(responsesJson.GetField(key));
+        }
+    }
+
+    public DialogueGroup GetDialogueGroupByID(string level, string id) {
+        return levels[level].dialogues[id];
+    }
+    public ResponseGroup GetResponseGroupByID(string level, string id) {
+        return levels[level].responses[id];
+    }
+}
+
+public class Level {
+    public LevelDialogues dialogues;
+    public DialogueGroup loseDialogue;
+    public DialogueGroup bronzeDialogue;
+    public DialogueGroup silverDialogue;
+    public DialogueGroup goldDialogue;
+    public LevelResponses responses;
+    public Level(JSONObject conversationsJson, string levelName) {
+        dialogues = GetLevelDialogues(conversationsJson.GetField(levelName));
+        loseDialogue = GetFinishDialogues(conversationsJson, "Lost");
+        bronzeDialogue = GetFinishDialogues(conversationsJson, "Bronze");
+        silverDialogue = GetFinishDialogues(conversationsJson, "Silver");
+        goldDialogue = GetFinishDialogues(conversationsJson, "Gold");
+    }
+    LevelDialogues GetLevelDialogues(JSONObject conversationsJson) {
+        LevelDialogues conversations = new LevelDialogues();
         for (int i = 0; i < conversationsJson.count; ++i) {
             string key = conversationsJson.keys[i];
             conversations[key] = new DialogueGroup(conversationsJson.GetField(key));
         }
-
-        convResponses = new Dictionary<string, ResponseGroup>();
-        JSONObject convResponsesJson = new JSONObject(responsesJsonFile.text);
-        for (int i = 0; i  < convResponsesJson.count; ++i) {
-            string key = convResponsesJson.keys[i];
-            convResponses[key] = new ResponseGroup(convResponsesJson.GetField(key));
-        }
-
+        return conversations;
     }
 
-    public DialogueGroup GetDialogueGroupByID(string id) {
-        return conversations[id];
-    }
-    public ResponseGroup GetResponseGroupByID(string id) {
-        return convResponses[id];
+    DialogueGroup GetFinishDialogues(JSONObject conversationsJson, string key) {
+        return new DialogueGroup(conversationsJson.GetField(key));
     }
 }
 
