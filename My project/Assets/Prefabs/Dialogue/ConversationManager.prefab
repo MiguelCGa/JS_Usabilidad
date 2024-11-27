@@ -1102,7 +1102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6972479601377517266
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1441,6 +1441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213bfca3105184d4e9d0dca4996bff91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tensionMeter: {fileID: 2960809451543708419}
 --- !u!114 &7958429143658269729
 MonoBehaviour:
   m_ObjectHideFlags: 0
