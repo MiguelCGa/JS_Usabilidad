@@ -1,10 +1,17 @@
 {
   "Football": {
-    "Inicial": [
+    "InicialLuis": [
       {
         "character": "Yo",
         "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
-        "Responses": "None"
+        "Responses": "EmocionLuis"
+      }
+    ],
+    "InicialJavier": [
+      {
+        "character": "Yo",
+        "Text": "Antes que nada tengo que identificar como sienten",
+        "Responses": "EmocionJavier"
       }
     ],
     "Raquel": [
