@@ -68,7 +68,7 @@
         "tension": "2"
       },
       {
-        "text": "¿Por qué crees que se Liis se ha disgustado tanto?",
+        "text": "¿Por qué crees que se Luis se ha disgustado tanto?",
         "nextDialogueGroup": "JavierDisculpaBien",
         "tension": "-2"
       }

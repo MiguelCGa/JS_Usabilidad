@@ -221,7 +221,7 @@
       {
         "character": "Javier",
         "Text": "No me da la gana. No quiero.",
-        "Responses": "PropuestaJavier"
+        "Responses": "EndLevel"
       }
     ],
     "JavierDisculpaBien": [
@@ -233,7 +233,7 @@
       {
         "character": "Javier",
         "Text": "Igual el balonazo le ha hecho daño… Entiendo que esté triste. Debería disculparme.",
-        "Responses": "PropuestaJavier"
+        "Responses": "EndLevel"
       }
     ],
     "JavierDisculpaRegular": [
@@ -245,7 +245,7 @@
       {
         "character": "Javier",
         "Text": "Ya, supongo que si. Me disculparé si es lo que hay que hacer. ",
-        "Responses": "None"
+        "Responses": "EndLevel"
       }
     ],
     "IntervencionProfesor": [
