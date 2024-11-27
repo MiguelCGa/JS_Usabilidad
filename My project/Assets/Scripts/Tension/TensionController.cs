@@ -17,7 +17,11 @@ public class TensionController : MonoBehaviour {
 
     public void AddTension(float tension) {
         currentTension = Mathf.Clamp(currentTension + tension, minTension, maxTension);
-        tensionDisplay?.SetTension((currentTension - minTension) / (maxTension - minTension));
+        tensionDisplay?.SetTension(GetNormalizedTension());
+    }
+
+    private float GetNormalizedTension() {
+        return (currentTension - minTension) / (maxTension - minTension);
     }
 
     public float GetTension() {
@@ -47,9 +51,9 @@ public class TensionController : MonoBehaviour {
 
     public float SetDisplay(TensionDisplay display) { 
         tensionDisplay = display;
-        return currentTension;
+        return GetNormalizedTension();
     }
-    private void Start() {
+    private void Awake() {
         currentTension = initialTension;
     }
 }
