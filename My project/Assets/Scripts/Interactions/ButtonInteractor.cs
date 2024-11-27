@@ -17,6 +17,10 @@ public class ButtonInteractor : MonoBehaviour {
         GameManager.Instance.Quit();
     }
 
+    public void StartLevel(int id) {
+        GameManager.Instance.StartLevel(id);
+    }
+
     public void StartConversation(string conversation) {
         ConversationManager.Instance.StartConversation(conversation);
         GetComponent<Button>().enabled = false;

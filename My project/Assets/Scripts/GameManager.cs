@@ -7,6 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
+    [SerializeField]
+    private string levelScenePrefix = "Level";
+
+    int currentLevel = 0;
+    
     private void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -33,6 +39,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneToStart);
     }
 
+    public void StartLevel(int id) {
+        if (id > LevelManager.Instance.NextLevel())
+            return;
+        currentLevel = id;
+        ChangeScene(string.Concat(levelScenePrefix, id));
+    }
+
     public void Pause() {
 
     }
@@ -42,5 +55,9 @@ public class GameManager : MonoBehaviour
 
     public void Quit() {
         Application.Quit();
+    }
+
+    public void CompleteLevel(TensionCompletion tensionCompletion) {
+        LevelManager.Instance.CompleteLevel(currentLevel, tensionCompletion);
     }
 }

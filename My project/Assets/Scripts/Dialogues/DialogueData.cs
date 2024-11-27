@@ -44,6 +44,18 @@ public class DialogueData : MonoBehaviour
     public ResponseGroup GetResponseGroupByID(string level, string id) {
         return levels[level].responses[id];
     }
+    public DialogueGroup GetLevelLost(string level) {
+        return levels[level].loseDialogue;
+    }
+    public DialogueGroup GetLevelBronze(string level) {
+        return levels[level].bronzeDialogue;
+    }
+    public DialogueGroup GetLevelSilver(string level) {
+        return levels[level].silverDialogue;
+    }
+    public DialogueGroup GetLevelGold(string level) {
+        return levels[level].goldDialogue;
+    }
 }
 
 public class Level {

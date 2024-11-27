@@ -21,6 +21,7 @@ public class ConversationManager : MonoBehaviour {
     private string currentLevel;
 
     bool dialoging = false;
+    bool finishingLevel = false;
 
     public static ConversationManager Instance { get; private set; }
 
@@ -40,9 +41,29 @@ public class ConversationManager : MonoBehaviour {
         string responses = GetCurrentDialogue().Responses;
         if (responses == "None")
             return false;
+        if (responses == "EndLevel") {
+            finishingLevel = true;
+            currentConversation = GetLevelEndDialogue();
+            InitDialogue();
+            return true;
+        }
         currentResponses = data.GetResponseGroupByID(currentLevel, responses);
         responseManager.SetResponses(currentResponses, GetCurrentDialogue().emotions);
         return true;
+    }
+
+    private DialogueGroup GetLevelEndDialogue() {
+        switch (tensionController.GetCompletionLevel()) {
+            case TensionCompletion.FAILED:
+                return data.GetLevelLost(currentLevel);
+            case TensionCompletion.BRONZE:
+                return data.GetLevelBronze(currentLevel);
+            case TensionCompletion.SILVER:
+                return data.GetLevelSilver(currentLevel);
+            case TensionCompletion.GOLD:
+                return data.GetLevelGold(currentLevel);
+        }
+        return null;
     }
 
     private void Awake() {
@@ -112,5 +133,9 @@ public class ConversationManager : MonoBehaviour {
     public void StopDialogue() {
         dialoging = false;
         dialogueBox.gameObject.SetActive(false);
+        if (finishingLevel) {
+            finishingLevel = false;
+            GameManager.Instance.CompleteLevel(tensionController.GetCompletionLevel());
+        }
     }
 }

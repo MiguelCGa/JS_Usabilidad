@@ -236,34 +236,6 @@ PrefabInstance:
       value: GameSceneObjects
       objectReference: {fileID: 0}
     - target: {fileID: 4694913721695438149, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 493.8029
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694913721695438149, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 167.26056
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694913721695438149, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.3665192
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694913721695438149, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694913721695438149, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694913721695438149, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694913721695438149, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4694913721695438149, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}

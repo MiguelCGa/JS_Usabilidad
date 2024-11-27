@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum TensionCompletion { GOLD, SILVER, BRONZE, FAILED };
+public enum TensionCompletion { FAILED, BRONZE, SILVER, GOLD };
 public class TensionController : MonoBehaviour {
     float currentTension;
     [SerializeField]
