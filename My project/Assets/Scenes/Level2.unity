@@ -131,9 +131,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 858621641701247246, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 858621641701247246, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartConversation
+      objectReference: {fileID: 0}
+    - target: {fileID: 858621641701247246, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonInteractor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 858621641701247246, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1349091577977266716, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
       propertyPath: levelID
       value: Football
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374441978295056205, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374441978295056205, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartConversation
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374441978295056205, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonInteractor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374441978295056205, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Raquel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374441978295056205, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1583561165512445367, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
       propertyPath: m_AnchorMax.y
@@ -230,6 +266,26 @@ PrefabInstance:
     - target: {fileID: 5342644689544866167, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -99.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969310903570184127, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969310903570184127, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartConversation
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969310903570184127, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonInteractor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969310903570184127, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: InicialLuis
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969310903570184127, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6334766923644447601, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
       propertyPath: m_LocalScale.x
