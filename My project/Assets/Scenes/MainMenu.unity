@@ -815,6 +815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Volver
       objectReference: {fileID: 0}
+    - target: {fileID: 485886760706087894, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 633251885415462867, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
       propertyPath: m_text
       value: 'Volver
@@ -1097,6 +1101,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 45.4217
       objectReference: {fileID: 0}
+    - target: {fileID: 6433895791523138102, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level2
+      objectReference: {fileID: 0}
     - target: {fileID: 6640683697519950017, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
       propertyPath: m_Type
       value: 0
@@ -1161,6 +1169,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 4.9
       objectReference: {fileID: 0}
+    - target: {fileID: 7384182373106286400, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 7480762080373201181, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -1168,6 +1180,10 @@ PrefabInstance:
     - target: {fileID: 7480762080373201181, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652459355610118125, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level4
       objectReference: {fileID: 0}
     - target: {fileID: 7865596230281490820, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
       propertyPath: m_fontAsset
