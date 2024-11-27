@@ -1,63 +1,76 @@
 {
   "Football": {
-    "EmocionReceptor": [
+    "EmocionLuis": [
       {
         "text": "Triste",
-        "nextDialogueGroup": "ReceptorTriste"
+        "nextDialogueGroup": "LuisTriste",
+        "tension": "-1" 
       },
       {
         "text": "Feliz",
-        "nextDialogueGroup": "ReceptorFeliz"
+        "nextDialogueGroup": "LuisFeliz",
+        "tension": "1"
       },
       {
         "text": "Enfado",
-        "nextDialogueGroup": "ReceptorEnfado"
+        "nextDialogueGroup": "LuisEnfado",
+        "tension": "1"
       },
       {
         "text": "Miedo",
-        "nextDialogueGroup": "ReceptorMiedo"
+        "nextDialogueGroup": "LuisMiedo",
+        "tension": "1"
       }
     ],
-    "PropuestaReceptor": [
+    "PropuestaLuis": [
       {
-        "text": "No te preocupes, haré que J se disculpe",
-        "nextDialogueGroup": "ReceptorSolucionMal"
+        "text": "No te preocupes, haré que Javier se disculpe",
+        "nextDialogueGroup": "LuisSolucionMal",
+        "tension": "1"
       },
       {
-        "text": "¿Si J se disculpara te sentirías mejor?",
-        "nextDialogueGroup": "ReceptorSolucionBien"
+        "text": "¿Si Javier se disculpara te sentirías mejor?",
+        "nextDialogueGroup": "LuisSolucionBien",
+        "tension": "-1"
       }
     ],
-    "EmocionJugador": [
+    "EmocionJavier": [
       {
         "text": "Triste",
-        "nextDialogueGroup": "JugadorTriste"
+        "nextDialogueGroup": "JavierTriste",
+        "tension": "1"
       },
       {
         "text": "Feliz",
-        "nextDialogueGroup": "JugadorFeliz"
+        "nextDialogueGroup": "JavierFeliz",
+        "tension": "1"
       },
       {
         "text": "Enfado",
-        "nextDialogueGroup": "JugadorEnfado"
+        "nextDialogueGroup": "JavierEnfado",
+        "tension": "-1"
       },
       {
         "text": "Miedo",
-        "nextDialogueGroup": "JugadorMiedo"
+        "nextDialogueGroup": "JavierMiedo",
+        "tension": "1"
       }
     ],
-    "PropuestaJugador": [
+    "PropuestaJavier": [
       {
         "text": "¿Si a ti te dieran un balonazo no esperarías que te pidieran perdón?",
-        "nextDialogueGroup": "JugadorDisculpaRegular"
+        "nextDialogueGroup": "JavierDisculpaRegular",
+        "tension": "-1"
       },
       {
-        "text": "Le has hecho daño a R, te tienes que disculpar.",
-        "nextDialogueGroup": "JugadorDisculpaMal"
+        "text": "Le has hecho daño a Luis, te tienes que disculpar.",
+        "nextDialogueGroup": "JavierDisculpaMal",
+        "tension": "2"
       },
       {
-        "text": "¿Por qué crees que se R se ha disgustado tanto?",
-        "nextDialogueGroup": "JugadorDisculpaBien"
+        "text": "¿Por qué crees que se Liis se ha disgustado tanto?",
+        "nextDialogueGroup": "JavierDisculpaBien",
+        "tension": "-2"
       }
     ]
   }
