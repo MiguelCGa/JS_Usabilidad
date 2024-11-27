@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelDisplayController : MonoBehaviour {
     [SerializeField]
-    GameObject[] bronzeMedals;
+    Image[] bronzeMedals;
     [SerializeField]
-    GameObject[] silverMedals;
+    Image[] silverMedals;
     [SerializeField]
-    GameObject[] goldMedals;
+    Image[] goldMedals;
     // Start is called before the first frame update
     void Start() {
         ActivateIfCompleted(bronzeMedals, TensionCompletion.BRONZE);
@@ -16,11 +17,11 @@ public class LevelDisplayController : MonoBehaviour {
         ActivateIfCompleted(goldMedals, TensionCompletion.GOLD);
     }
 
-    private void ActivateIfCompleted(GameObject[] medals, TensionCompletion completion) {
+    private void ActivateIfCompleted(Image[] medals, TensionCompletion completion) {
         int level = 1;
         foreach (var medal in medals) {
             if (LevelManager.Instance.GetLevelCompletion(level) >= completion)
-                medal.SetActive(true);
+                medal.color = Color.white;
             ++level;
         }
     }
