@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff0bafc149087bc48bcceaff6959dc72, type: 2}
   m_sharedMaterial: {fileID: -7273105504238001581, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -258,7 +258,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff0bafc149087bc48bcceaff6959dc72, type: 2}
   m_sharedMaterial: {fileID: -7273105504238001581, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -392,7 +392,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff0bafc149087bc48bcceaff6959dc72, type: 2}
   m_sharedMaterial: {fileID: -7273105504238001581, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -673,7 +673,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff0bafc149087bc48bcceaff6959dc72, type: 2}
   m_sharedMaterial: {fileID: -7273105504238001581, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1527,7 +1527,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff0bafc149087bc48bcceaff6959dc72, type: 2}
   m_sharedMaterial: {fileID: -7273105504238001581, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1807,7 +1807,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff0bafc149087bc48bcceaff6959dc72, type: 2}
   m_sharedMaterial: {fileID: -7273105504238001581, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2292,7 +2292,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff0bafc149087bc48bcceaff6959dc72, type: 2}
   m_sharedMaterial: {fileID: -7273105504238001581, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2356,7 +2356,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6680456555450561265
@@ -2922,7 +2922,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff0bafc149087bc48bcceaff6959dc72, type: 2}
   m_sharedMaterial: {fileID: -7273105504238001581, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3348,7 +3348,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff0bafc149087bc48bcceaff6959dc72, type: 2}
   m_sharedMaterial: {fileID: -7273105504238001581, guid: 49a89c4fe47fcd44f82c6e869ea74f56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
