@@ -47,7 +47,7 @@
       },
       {
         "text": "Enfado",
-        "nextDialogueGroup": "JavierEnfado",
+        "nextDialogueGroup": "JavierEnfadado",
         "tension": "-1"
       },
       {
