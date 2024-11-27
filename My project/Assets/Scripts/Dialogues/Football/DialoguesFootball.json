@@ -11,7 +11,7 @@
     "InicialJavier": [
       {
         "character": "Yo",
-        "Text": "Antes que nada tengo que identificar como sienten",
+        "Text": "Antes que nada tengo que identificar como se siente",
         "Responses": "EmocionJavier",
         "emotions": true
       }
