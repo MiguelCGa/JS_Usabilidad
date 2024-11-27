@@ -1,0 +1,26 @@
+{
+  "Football": {
+    "EmocionLuis": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "FinalLuis",
+        "tension": "-1"
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "FinalLuis",
+        "tension": "2"
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "FinalLuis",
+        "tension": "3"
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "FinalLuis",
+        "tension": "4"
+      }
+    ]
+  }
+}

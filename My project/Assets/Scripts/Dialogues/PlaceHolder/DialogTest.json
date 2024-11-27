@@ -1,0 +1,19 @@
+{
+  "Test": {
+    "InicialLuis": [
+      {
+        "character": "Yo",
+        "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
+        "Responses": "EmocionLuis",
+        "emotions": true
+      }
+    ]
+  },
+  "FinalLuis": [
+    {
+      "character": "Yo",
+      "Text": "Hola :)",
+      "Responses": "None"
+    }
+  ]
+}
