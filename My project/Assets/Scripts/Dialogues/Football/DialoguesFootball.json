@@ -267,7 +267,7 @@
       {
         "character": "Profesor",
         "Text": "¿Y que tenéis que deciros?",
-        "Responses": "None"
+        "Responses": "EndLevel"
       }
     ]
   },
@@ -280,7 +280,7 @@
     {
       "character": "Luis",
       "Text": "...",
-      "Responses": "EndLevel"
+      "Responses": "None"
     }
   ],
   "Bronze": [
@@ -292,7 +292,7 @@
     {
       "character": "Luis",
       "Text": "Vale...",
-      "Responses": "EndLevel"
+      "Responses": "None"
     }
   ],
   "Silver": [
@@ -304,7 +304,7 @@
     {
       "character": "Luis",
       "Text": "Gracias Javier, yo también tendré más cuidado la próxima vez.",
-      "Responses": "EndLevel"
+      "Responses": "None"
     }
   ],
   "Gold": [
@@ -316,7 +316,7 @@
     {
       "character": "Luis",
       "Text": "Gracias J, yo también tendré más cuidado la próxima vez.",
-      "Responses": "EndLevel"
+      "Responses": "None"
     }
   ]
 }

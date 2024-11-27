@@ -7,13 +7,62 @@
         "Responses": "EmocionLuis",
         "emotions": true
       }
+    ],
+    "FinalLuis": [
+      {
+        "character": "Yo",
+        "Text": "Hola :)",
+        "Responses": "EndLevel"
+      }
+    ],
+
+    "Lost": [
+      {
+        "character": "Jugador",
+        "Text": "...",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "...",
+        "Responses": "None"
+      }
+    ],
+    "Bronze": [
+      {
+        "character": "Jugador",
+        "Text": "...",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "...",
+        "Responses": "None"
+      }
+    ],
+    "Silver": [
+      {
+        "character": "Jugador",
+        "Text": "...",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "...",
+        "Responses": "None"
+      }
+    ],
+    "Gold": [
+      {
+        "character": "Jugador",
+        "Text": "...",
+        "Responses": "None"
+      },
+      {
+        "character": "Receptor",
+        "Text": "...",
+        "Responses": "None"
+      }
     ]
-  },
-  "FinalLuis": [
-    {
-      "character": "Yo",
-      "Text": "Hola :)",
-      "Responses": "None"
-    }
-  ]
+  }
 }
