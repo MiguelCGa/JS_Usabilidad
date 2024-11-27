@@ -484,7 +484,7 @@ MonoBehaviour:
   dialogueText: {fileID: 4588723676867276456}
   arrow: {fileID: 2095024794380492673}
   image: {fileID: 1660988781123992255}
-  fondo: {fileID: 0}
+  fondo: {fileID: 8673676846900313121}
   sprites:
   - name: Receptor
     sprite: {fileID: 21300000, guid: 43a47ff0887b61b47a25b0d3daebb27e, type: 3}
