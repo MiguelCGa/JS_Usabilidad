@@ -27,7 +27,7 @@
       },
       {
         "character": "Raquel",
-        "Text": "Unos con R por parar el partido.",
+        "Text": "Unos con Luis por parar el partido.",
         "Responses": "None"
       },
       {
@@ -49,7 +49,7 @@
       },
       {
         "character": "Luis",
-        "Text": "Siento que los que jugaban me odian, especialmente J, que encima me ha dado el balonazo.",
+        "Text": "Siento que los que jugaban me odian, especialmente Javier, que encima me ha dado el balonazo.",
         "Responses": "PropuestaLuis"
       }
     ],
@@ -115,7 +115,7 @@
       },
       {
         "character": "Yo",
-        "Text": "Bueno, voy a hablar con J.",
+        "Text": "Bueno, voy a hablar con Javier.",
         "Responses": "None"
       }
     ],
@@ -127,7 +127,7 @@
       },
       {
         "character": "Yo",
-        "Text": "Bueno, voy a hablar con J.",
+        "Text": "Bueno, voy a hablar con Javier.",
         "Responses": "None"
       }
     ],
@@ -139,7 +139,7 @@
       },
       {
         "character": "Javier",
-        "Text": "¡Es R! Está en todo el medio y ahora me deja de malo porque se ha llevado un balonazo. ¡Qué se hubiera apartado!",
+        "Text": "¡Es Luis! Está en todo el medio y ahora me deja de malo porque se ha llevado un balonazo. ¡Qué se hubiera apartado!",
         "Responses": "EmocionJavier",
         "emotions": true
       }
