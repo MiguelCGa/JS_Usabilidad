@@ -237,6 +237,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 166277190}
     - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: fondoOscurecer
+      value: 
+      objectReference: {fileID: 887839788}
+    - target: {fileID: 4197848947326467995, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
       propertyPath: sprites.Array.data[0].name
       value: Javier
       objectReference: {fileID: 0}
@@ -643,6 +647,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724863365}
   m_CullTransparentMesh: 1
+--- !u!1 &887839788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5696730075902682491, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+  m_PrefabInstance: {fileID: 669452936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1042899074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1227,7 @@ GameObject:
   - component: {fileID: 2050412737}
   - component: {fileID: 2050412736}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

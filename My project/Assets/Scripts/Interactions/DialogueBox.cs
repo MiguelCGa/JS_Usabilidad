@@ -36,6 +36,9 @@ public class DialogueBox : MonoBehaviour
     private GameObject fondo;
 
     [SerializeField]
+    private GameObject fondoOscurecer;
+
+    [SerializeField]
     private List<CharacterSprite> sprites;
 
     private string textToShow;
@@ -55,6 +58,7 @@ public class DialogueBox : MonoBehaviour
         dialogueText.enabled = true;
         image.enabled = true;
         fondo.SetActive(true);
+        fondoOscurecer.SetActive(true);
         image.preserveAspect = true;
 
         dialogueText.text = textToShow;
@@ -109,6 +113,7 @@ public class DialogueBox : MonoBehaviour
         dialogueText.enabled = false;
         image.enabled = false;
         fondo.SetActive(false);
+        fondoOscurecer.SetActive(false);
         textComplete = false;
         arrow.SetActive(false);
         arrowControl = false;
