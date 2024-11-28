@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: sprites.Array.data[7].sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9e6d0f563a4c65f4eac16124a372c4d6, type: 3}
+    - target: {fileID: 4494263303285652386, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4580799129978191237, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
       propertyPath: m_Name
       value: GameSceneObjects
