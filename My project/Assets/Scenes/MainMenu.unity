@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -462,6 +461,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &785863104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8959990453455482934, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
+  m_PrefabInstance: {fileID: 1331795672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63685961c80f314c8133a2018b921d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &884032467
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,13 +597,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4003285284154531695, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
+      propertyPath: initialMenus.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003285284154531695, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
+      propertyPath: initialMenus.Array.data[0]
+      value: 
+      objectReference: {fileID: 1795403940}
+    - target: {fileID: 4003285284154531695, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
+      propertyPath: initialMenus.Array.data[1]
+      value: 
+      objectReference: {fileID: 785863104}
     - target: {fileID: 4088586780314098436, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7107182910756894040, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7180184847032145579, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -684,6 +706,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1795403940 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8562645460589138171, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
+  m_PrefabInstance: {fileID: 1331795672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63685961c80f314c8133a2018b921d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2101563158
 GameObject:
   m_ObjectHideFlags: 0

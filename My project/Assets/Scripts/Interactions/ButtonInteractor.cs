@@ -13,6 +13,9 @@ public class ButtonInteractor : MonoBehaviour {
     public void Resume() {
         GameManager.Instance.Resume();
     }
+    public void BackToMainMenu() { 
+        GameManager.Instance.BackToMainMenu();
+    }
     public void QuitApplication() {
         GameManager.Instance.Quit();
     }

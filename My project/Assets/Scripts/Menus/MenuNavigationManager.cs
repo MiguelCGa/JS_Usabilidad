@@ -6,16 +6,24 @@ using UnityEngine;
 public class MenuNavigationManager : MonoBehaviour
 {
     [SerializeField]
-    MenuController initialMenu = null;
+    MenuController[] initialMenus = null;
+
+    static int initialMenuIndex = 0;
 
     MenuController currentMenu = null;
     Stack<MenuController> previous = new Stack<MenuController>();
     Stack<MenuController> next = new Stack<MenuController>();
 
+    public static void SetIntialMenuIndex(int index) { 
+        initialMenuIndex = index;
+    }
+
     private void Start() {
-        if (initialMenu != null) {
-            currentMenu = initialMenu;
-            currentMenu.Enter();
+        if (initialMenus != null) {
+            for (int i = 0; i < initialMenuIndex + 1; i++) {
+                if (initialMenuIndex < initialMenus.Length) 
+                    GoTo(initialMenus[i]);
+            }
         }
     }
 
