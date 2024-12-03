@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
         if (id > LevelManager.Instance.NextLevel())
             return;
         currentLevel = id;
+        MenuNavigationManager.SetIntialMenuIndex(1);
         ChangeScene(string.Concat(levelScenePrefix, id));
     }
 
@@ -52,6 +53,11 @@ public class GameManager : MonoBehaviour
     }
     public void Resume() {
 
+    }
+
+    public void BackToMainMenu() {
+        MenuNavigationManager.SetIntialMenuIndex(0);
+        ChangeScene(mainMenuScene);
     }
 
     public void Quit() {
