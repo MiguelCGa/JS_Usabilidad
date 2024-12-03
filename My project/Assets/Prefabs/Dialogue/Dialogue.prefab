@@ -487,20 +487,20 @@ MonoBehaviour:
   fondo: {fileID: 8673676846900313121}
   fondoOscurecer: {fileID: 4426718066050356353}
   sprites:
-  - name: Receptor
+  - name: Javier
     sprite: {fileID: 21300000, guid: 43a47ff0887b61b47a25b0d3daebb27e, type: 3}
-  - name: Neutral
+  - name: Luis
     sprite: {fileID: 21300000, guid: b8cb022eb8c97994788a054350f1d087, type: 3}
   - name: noname
-    sprite: {fileID: 21300000, guid: 1a1b8b7d9d78d8144869774daedeaf46, type: 3}
+    sprite: {fileID: 21300000, guid: 00fcdc2dd0ca4144998a7f58d3d29fdf, type: 3}
   - name: noname
-    sprite: {fileID: 21300000, guid: 86899ec0b30dad64e9788cadf3430d76, type: 3}
+    sprite: {fileID: 21300000, guid: f6f5d600990e71a4b918769f3a2339a1, type: 3}
   - name: noname
-    sprite: {fileID: 21300000, guid: b4a47bfd7347e97469fbe28ae42e603e, type: 3}
+    sprite: {fileID: 21300000, guid: f096fab9c24b0754ba2ac9252cfbdd62, type: 3}
   - name: noname
-    sprite: {fileID: 21300000, guid: 35f79451a4a12b9479bcf0b9ad80d7ee, type: 3}
+    sprite: {fileID: 21300000, guid: 2a5a1f00808dbe9488691085113e2730, type: 3}
   - name: noname
-    sprite: {fileID: 21300000, guid: 1ce5ac4aee5c173499e332f5285b003c, type: 3}
+    sprite: {fileID: 21300000, guid: 43b0822d4c5f87944bcc91ca9eb7a864, type: 3}
   - name: Malvado
     sprite: {fileID: 21300000, guid: 9e6d0f563a4c65f4eac16124a372c4d6, type: 3}
 --- !u!1 &4426718066050356353
