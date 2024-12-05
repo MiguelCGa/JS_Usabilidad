@@ -1,6 +1,5 @@
 {
   "Football": {
-    "InitialTension": 4,
     "InicialLuis": [
       {
         "character": "Yo",
@@ -284,6 +283,7 @@
       "Responses": "None"
     }
   ],
+  "InitialTension": 4,
   "Bronze": [
     {
       "character": "Javier",

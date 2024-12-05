@@ -73,6 +73,7 @@
       }
     ]
   },
+  "InitialTension": 5.1,
   "Lost": [
     {
       "character": "Jugador",

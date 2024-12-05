@@ -89,6 +89,7 @@ public class ConversationManager : MonoBehaviour {
 
     public void SetCurrentLevel(string level) {
         currentLevel = level;
+        tensionController.SetInitialTension(data.GetLevelInitialTension(currentLevel));
         tensionMeter.SetActive(true);
     }
 
