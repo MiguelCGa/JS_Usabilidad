@@ -60,6 +60,8 @@ public class DialogueBox : MonoBehaviour
         fondo.SetActive(true);
         fondoOscurecer.SetActive(true);
         image.preserveAspect = true;
+        arrow.SetActive(false);
+        arrowControl = false;
 
         dialogueText.text = textToShow;
         dialogueText.enableAutoSizing = false;
