@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -514,7 +513,7 @@ GameObject:
   - component: {fileID: 724863370}
   - component: {fileID: 724863369}
   - component: {fileID: 724863368}
-  - component: {fileID: 724863367}
+  - component: {fileID: 724863371}
   m_Layer: 5
   m_Name: Javier
   m_TagString: Untagged
@@ -541,18 +540,6 @@ RectTransform:
   m_AnchoredPosition: {x: 258.76794, y: -29.699997}
   m_SizeDelta: {x: 775, y: 2048}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &724863367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724863365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9849e1b85c86171459d3ffe961fbc473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &724863368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,8 +584,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 724863367}
-        m_TargetAssemblyTypeName: ButtonInteractor, Assembly-CSharp
+      - m_Target: {fileID: 724863371}
+        m_TargetAssemblyTypeName: DialogableCharacter, Assembly-CSharp
         m_MethodName: StartConversation
         m_Mode: 5
         m_Arguments:
@@ -647,6 +634,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724863365}
   m_CullTransparentMesh: 1
+--- !u!114 &724863371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724863365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &887839788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5696730075902682491, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
@@ -756,7 +755,7 @@ GameObject:
   - component: {fileID: 1154003655}
   - component: {fileID: 1154003654}
   - component: {fileID: 1154003653}
-  - component: {fileID: 1154003652}
+  - component: {fileID: 1154003656}
   m_Layer: 5
   m_Name: Luis
   m_TagString: Untagged
@@ -783,18 +782,6 @@ RectTransform:
   m_AnchoredPosition: {x: -230.58, y: -69.768005}
   m_SizeDelta: {x: 766, y: 2048}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1154003652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154003650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9849e1b85c86171459d3ffe961fbc473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1154003653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,8 +826,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1154003652}
-        m_TargetAssemblyTypeName: ButtonInteractor, Assembly-CSharp
+      - m_Target: {fileID: 1154003656}
+        m_TargetAssemblyTypeName: DialogableCharacter, Assembly-CSharp
         m_MethodName: StartConversation
         m_Mode: 5
         m_Arguments:
@@ -889,6 +876,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154003650}
   m_CullTransparentMesh: 1
+--- !u!114 &1154003656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154003650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1843125458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,7 +1081,7 @@ GameObject:
   - component: {fileID: 2045158184}
   - component: {fileID: 2045158183}
   - component: {fileID: 2045158182}
-  - component: {fileID: 2045158181}
+  - component: {fileID: 2045158185}
   m_Layer: 5
   m_Name: Raquel
   m_TagString: Untagged
@@ -1109,18 +1108,6 @@ RectTransform:
   m_AnchoredPosition: {x: -7.9920044, y: -107.784}
   m_SizeDelta: {x: 604, y: 2048}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2045158181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045158179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9849e1b85c86171459d3ffe961fbc473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2045158182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,8 +1152,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2045158181}
-        m_TargetAssemblyTypeName: ButtonInteractor, Assembly-CSharp
+      - m_Target: {fileID: 2045158185}
+        m_TargetAssemblyTypeName: DialogableCharacter, Assembly-CSharp
         m_MethodName: StartConversation
         m_Mode: 5
         m_Arguments:
@@ -1215,6 +1202,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045158179}
   m_CullTransparentMesh: 1
+--- !u!114 &2045158185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045158179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2050412734
 GameObject:
   m_ObjectHideFlags: 0

@@ -158,7 +158,7 @@
         "Responses": "None"
       },
       {
-        "character": "Luis",
+        "character": "Yo",
         "Text": "(Pensando) Parece que no he escogido la emoción correcta… Javier está enfadado.",
         "Responses": "EmocionJavier",
         "emotions": true
@@ -176,7 +176,7 @@
         "Responses": "None"
       },
       {
-        "character": "Luis",
+        "character": "Yo",
         "Text": "(Pensando) Parece que no he escogido la emoción correcta… Javier está enfadado.",
         "Responses": "EmocionJavier",
         "emotions": true
@@ -194,7 +194,7 @@
         "Responses": "None"
       },
       {
-        "character": "Luis",
+        "character": "Yo",
         "Text": "(Pensando) Parece que no he escogido la emoción correcta… Javier está enfadado.",
         "Responses": "EmocionJavier",
         "emotions": true
