@@ -11,6 +11,13 @@ public class TensionDisplay : MonoBehaviour {
     [SerializeField]
     float slidingFactor = 0.1f;
 
+    [SerializeField]
+    Image gold;
+    [SerializeField]
+    Image silver;
+    [SerializeField]
+    Image bronze;
+
     float currentTension = 0;
 
     public void SetTension(float tension) { 
@@ -33,6 +40,23 @@ public class TensionDisplay : MonoBehaviour {
 
             slider.color = new Color(Mathf.Clamp(slider.fillAmount * 2, 0, 1), Mathf.Clamp((1 - slider.fillAmount) * 2, 0, 1), 0);
             slider.fillAmount = Mathf.Lerp(slider.fillAmount, currentTension, slidingFactor);
+            if(slider.fillAmount <= 0)
+            {
+                gold.color = silver.color = bronze.color = Color.white;
+            }
+            else if (slider.fillAmount <= 0.25){
+                gold.color = Color.black;
+                silver.color = bronze.color = Color.white;
+            }
+            else if(slider.fillAmount <= 0.5)
+            {
+                gold.color = silver.color = Color.black;
+                bronze.color = Color.white;
+            }
+            else
+            {
+                gold.color = silver.color = bronze.color = Color.black;
+            }
 
         }
             
