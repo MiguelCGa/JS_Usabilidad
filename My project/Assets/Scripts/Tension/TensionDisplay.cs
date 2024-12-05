@@ -26,11 +26,28 @@ public class TensionDisplay : MonoBehaviour {
     private void OnDestroy() {
         controller.SetDisplay(null);
     }
+
+    private void updateMedals()
+    {
+        if (slider.fillAmount <= controller.GetNormalizedGold()) gold.color = silver.color = bronze.color = Color.white;
+        else if (slider.fillAmount <= controller.GetNormalizedSilver())
+        {
+            gold.color = Color.black;
+            silver.color = bronze.color = Color.white;
+        }
+        else if (slider.fillAmount <= controller.GetNormalizedBronze())
+        {
+            gold.color = silver.color = Color.black;
+            bronze.color = Color.white;
+        }
+        else gold.color = silver.color = bronze.color = Color.black;
+    }
     // Start is called before the first frame update
     void Start() {
         currentTension = controller.SetDisplay(this);
         slider.fillAmount = currentTension;
         slider.color = new Color(Mathf.Clamp(slider.fillAmount * 2, 0, 1), Mathf.Clamp((1 - slider.fillAmount) * 2, 0, 1), 0);
+        updateMedals();
     }
 
     // Update is called once per frame
@@ -40,23 +57,7 @@ public class TensionDisplay : MonoBehaviour {
 
             slider.color = new Color(Mathf.Clamp(slider.fillAmount * 2, 0, 1), Mathf.Clamp((1 - slider.fillAmount) * 2, 0, 1), 0);
             slider.fillAmount = Mathf.Lerp(slider.fillAmount, currentTension, slidingFactor);
-            if(slider.fillAmount <= 0)
-            {
-                gold.color = silver.color = bronze.color = Color.white;
-            }
-            else if (slider.fillAmount <= 0.25){
-                gold.color = Color.black;
-                silver.color = bronze.color = Color.white;
-            }
-            else if(slider.fillAmount <= 0.5)
-            {
-                gold.color = silver.color = Color.black;
-                bronze.color = Color.white;
-            }
-            else
-            {
-                gold.color = silver.color = bronze.color = Color.black;
-            }
+            updateMedals();
 
         }
             
