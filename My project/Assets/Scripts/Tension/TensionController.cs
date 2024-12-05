@@ -29,16 +29,16 @@ public class TensionController : MonoBehaviour {
     public float GetTension() {
         return currentTension;
     }
-    public float GetGold() {  
-        return gold; 
+    public float GetNormalizedGold() {  
+        return (gold - minTension) / (maxTension - minTension);
     }
 
-    public float GetSilver() {  
-        return silver; 
+    public float GetNormalizedSilver() {
+        return (silver - minTension) / (maxTension - minTension);
     }
 
-    public float GetBronze() {  
-        return bronze; 
+    public float GetNormalizedBronze() {  
+        return (bronze - minTension) / (maxTension - minTension); 
     }
 
     public TensionCompletion GetCompletionLevel() {
