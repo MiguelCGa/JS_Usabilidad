@@ -118,7 +118,8 @@
       {
         "character": "Yo",
         "Text": "Bueno, voy a hablar con Javier.",
-        "Responses": "None"
+        "Responses": "None",
+        "unlock": "InicialJavier"
       }
     ],
     "LuisSolucionMal": [
@@ -130,7 +131,8 @@
       {
         "character": "Yo",
         "Text": "Bueno, voy a hablar con Javier.",
-        "Responses": "None"
+        "Responses": "None",
+        "unlock": "InicialJavier"
       }
     ],
     "InicioJavier": [

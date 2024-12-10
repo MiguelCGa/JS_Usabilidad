@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -589,7 +588,7 @@ MonoBehaviour:
       - m_Target: {fileID: 724863371}
         m_TargetAssemblyTypeName: DialogableCharacter, Assembly-CSharp
         m_MethodName: StartConversation
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -648,6 +647,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conversation: InicialJavier
+  locked: 1
 --- !u!1 &887839788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5696730075902682491, guid: 34a713c9f0716f8409bf80f5570296fa, type: 3}
@@ -831,7 +832,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1154003656}
         m_TargetAssemblyTypeName: DialogableCharacter, Assembly-CSharp
         m_MethodName: StartConversation
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -890,6 +891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conversation: InicialLuis
+  locked: 0
 --- !u!1 &1843125458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,7 +1159,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2045158185}
         m_TargetAssemblyTypeName: DialogableCharacter, Assembly-CSharp
         m_MethodName: StartConversation
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1215,6 +1218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conversation: Raquel
+  locked: 0
 --- !u!1 &2090119962
 GameObject:
   m_ObjectHideFlags: 0

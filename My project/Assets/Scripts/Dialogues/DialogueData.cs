@@ -110,6 +110,7 @@ public class Dialogue {
     public string Responses;
     public bool emotions = false;
     public float tension = 0.0f;
+    public string unlock = null;
     public Dialogue(JSONObject jsonObject) {
         character = jsonObject.GetField("character").stringValue;
         Text = jsonObject.GetField("Text").stringValue;
@@ -120,6 +121,9 @@ public class Dialogue {
         var ten = jsonObject.GetField("tension");
         if (ten != null)
             tension = ten.floatValue;
+        var unl = jsonObject.GetField("unlock");
+        if (unl != null)
+            unlock = unl.stringValue;
     }
 }
 

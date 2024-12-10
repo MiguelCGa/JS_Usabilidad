@@ -26,6 +26,8 @@ public class ConversationManager : MonoBehaviour {
     bool dialoging = false;
     bool finishingLevel = false;
 
+    Dictionary<string, DialogableCharacter> unlockableConversations = new Dictionary<string, DialogableCharacter>();
+
     public static ConversationManager Instance { get; private set; }
 
 
@@ -47,7 +49,7 @@ public class ConversationManager : MonoBehaviour {
         if (responses == "EndLevel") {
             finishingLevel = true;
             currentConversation = GetLevelEndDialogue();
-            InitDialogue();
+            InitConversation();
             return true;
         }
         currentResponses = data.GetResponseGroupByID(currentLevel, responses);
@@ -97,11 +99,15 @@ public class ConversationManager : MonoBehaviour {
         dialogueBox = box;
     }
 
-    private void InitDialogue() {
+    private void InitConversation() {
         currentDialogue = 0;
         Dialogue d = GetCurrentDialogue();
+        InitDialogue(d);
+    }
+    private void InitDialogue(Dialogue d) {
         tensionController.AddTension(d.tension);
         dialogueBox.dialogue(d.Text, d.character);
+        DoUnlock(d);
     }
 
     public void StartConversation(string id) {
@@ -110,7 +116,7 @@ public class ConversationManager : MonoBehaviour {
         dialoging = true;
         dialogueBox.gameObject.SetActive(true);
         currentConversation = data.GetDialogueGroupByID(currentLevel, id);
-        InitDialogue();
+        InitConversation();
     }
 
     void NextDialogue() {
@@ -122,8 +128,7 @@ public class ConversationManager : MonoBehaviour {
             return;
         Dialogue d = GetNextDialogue();
         if (d != null) {
-            tensionController.AddTension(d.tension);
-            dialogueBox.dialogue(d.Text, d.character);
+            InitDialogue(d);
             return;
         }
         StopDialogue();
@@ -134,7 +139,7 @@ public class ConversationManager : MonoBehaviour {
         Response resp = currentResponses.responses[id];
         tensionController.AddTension(resp.tension);
         currentConversation = data.GetDialogueGroupByID(currentLevel, resp.nextDialogueGroup);
-        InitDialogue();
+        InitConversation();
     }
 
     public void StopDialogue() {
@@ -145,5 +150,19 @@ public class ConversationManager : MonoBehaviour {
             GameManager.Instance.CompleteLevel(tensionController.GetCompletionLevel());
             tensionMeter.SetActive(false);
         }
+    }
+
+    public void AddUnlockableConversation(string name, DialogableCharacter character) {
+        unlockableConversations.Add(name, character);
+    }
+
+    public void RemoveUnlockableConversation(string name) {
+        unlockableConversations.Remove(name);
+    }
+
+    private void DoUnlock(Dialogue dialogue) {
+        if (dialogue.unlock == null)
+            return;
+        unlockableConversations[dialogue.unlock].Unlock();
     }
 }
