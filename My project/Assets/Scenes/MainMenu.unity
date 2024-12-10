@@ -405,7 +405,7 @@ RectTransform:
   m_GameObject: {fileID: 454896311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13.043385, y: 13.043385, z: 13.043385}
+  m_LocalScale: {x: 15.091985, y: 15.091985, z: 15.091985}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1004967269}
@@ -413,7 +413,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 51}
-  m_SizeDelta: {x: -880, y: -512}
+  m_SizeDelta: {x: -744, y: -428}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454896313
 MonoBehaviour:
@@ -569,7 +569,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 454896312}
-  m_Father: {fileID: 1238018956}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -639,11 +639,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!4 &1238018956 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 208166047106169421, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
-  m_PrefabInstance: {fileID: 1331795672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1331795672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -734,10 +729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 208166047106169421, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1004967269}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319c9e424994d3343969e24a7f6c666c, type: 3}
 --- !u!1 &1332504323
@@ -1035,6 +1027,7 @@ SceneRoots:
   - {fileID: 2101563161}
   - {fileID: 1332504326}
   - {fileID: 884032469}
+  - {fileID: 1004967269}
   - {fileID: 1331795672}
   - {fileID: 449652719}
   - {fileID: 6342351683532833593}

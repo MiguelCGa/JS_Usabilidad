@@ -108,9 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Super Childish
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 1530802329
   material: {fileID: -610869184822654372}
-  materialHashCode: 0
+  materialHashCode: -1526613095
   m_Version: 1.1.0
   m_SourceFontFileGUID: 3dfcbceb2eea53047a133d7377971036
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 3dfcbceb2eea53047a133d7377971036, type: 3}
