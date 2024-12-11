@@ -17,6 +17,8 @@ public class TensionDisplay : MonoBehaviour {
     Image silver;
     [SerializeField]
     Image bronze;
+    [SerializeField]
+    Image noMedals;
 
     float currentTension = 0;
 
@@ -29,18 +31,34 @@ public class TensionDisplay : MonoBehaviour {
 
     private void updateMedals()
     {
-        if (slider.fillAmount <= controller.GetNormalizedGold()) gold.color = silver.color = bronze.color = Color.white;
+        if (slider.fillAmount <= controller.GetNormalizedGold()) 
+        { 
+            gold.enabled = true;
+            silver.enabled = false;
+            bronze.enabled = false;
+            noMedals.enabled = false;
+        }
         else if (slider.fillAmount <= controller.GetNormalizedSilver())
         {
-            gold.color = Color.black;
-            silver.color = bronze.color = Color.white;
+            silver.enabled = true;
+            gold.enabled = false;
+            bronze.enabled = false;
+            noMedals.enabled = false;
         }
         else if (slider.fillAmount <= controller.GetNormalizedBronze())
         {
-            gold.color = silver.color = Color.black;
-            bronze.color = Color.white;
+            bronze.enabled = true;
+            gold.enabled = false;
+            silver.enabled = false;
+            noMedals.enabled = false;
         }
-        else gold.color = silver.color = bronze.color = Color.black;
+        else
+        {
+            noMedals.enabled = true;
+            gold.enabled = false;
+            silver.enabled = false;
+            bronze.enabled = false;
+        }
     }
     // Start is called before the first frame update
     void Start() {
