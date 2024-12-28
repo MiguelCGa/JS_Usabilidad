@@ -15,6 +15,12 @@ public class ResponseController : MonoBehaviour
         }
     }
 
+    public void ResetResponsesInteraction() {
+        foreach (var interactor in interactors) {
+            interactor.ResetInteraction();
+        }
+    }
+
     // Start is called before the first frame update
     void Start() {
         int i = 0;
@@ -22,11 +28,5 @@ public class ResponseController : MonoBehaviour
             interactor.SetId(i);
             ++i;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

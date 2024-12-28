@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ResponseDisplayManager : MonoBehaviour
 {
-    private ResponseGroup responses;
+    private ResponseGroup responses = null;
 
     [SerializeField]
     private ResponseController twoResponses;
@@ -16,40 +16,30 @@ public class ResponseDisplayManager : MonoBehaviour
     [SerializeField]
     private ResponseController emotionsResponses;
 
-    void ActivateTwoResponses() {
-        twoResponses.gameObject.SetActive(true);
-        twoResponses.SetResponses(responses);
-    }
-    void ActivateThreeResponses() {
-        threeResponses.gameObject.SetActive(true);
-        threeResponses.SetResponses(responses);
-    }
-    void ActivateFourResponses() {
-        fourResponses.gameObject.SetActive(true);
-        fourResponses.SetResponses(responses);
-    }
-
-    private void ActivateEmotionsResponses() {
-        emotionsResponses.gameObject.SetActive(true);
-        emotionsResponses.SetResponses(responses);
+    void ActivateResponses(ResponseGroup newResponses, ResponseController controller) {
+        controller.gameObject.SetActive(true);
+        if (newResponses != responses) {
+            controller.ResetResponsesInteraction();
+            responses = newResponses;
+            controller.SetResponses(responses);
+        }
     }
 
     public void SetResponses(ResponseGroup responseGroup, bool emotions) {
-        responses = responseGroup;
         if (emotions) {
-            ActivateEmotionsResponses();
+            ActivateResponses(responseGroup, emotionsResponses);
             return;
         }
 
         switch (responseGroup.responses.Length) {
             case 2:
-                ActivateTwoResponses();
+                ActivateResponses(responseGroup, twoResponses);
                 break;
             case 3:
-                ActivateThreeResponses();
+                ActivateResponses(responseGroup, threeResponses);
                 break;
             case 4:
-                ActivateFourResponses();
+                ActivateResponses(responseGroup, fourResponses);
                 break;
         }
     }
@@ -59,17 +49,5 @@ public class ResponseDisplayManager : MonoBehaviour
         threeResponses.gameObject.SetActive(false);
         fourResponses.gameObject.SetActive(false);
         emotionsResponses.gameObject.SetActive(false);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
