@@ -111,6 +111,7 @@ public class Dialogue {
     public bool emotions = false;
     public float tension = 0.0f;
     public string unlock = null;
+    public string nextStage = null;
     public Dialogue(JSONObject jsonObject) {
         character = jsonObject.GetField("character").stringValue;
         Text = jsonObject.GetField("Text").stringValue;
@@ -124,6 +125,9 @@ public class Dialogue {
         var unl = jsonObject.GetField("unlock");
         if (unl != null)
             unlock = unl.stringValue;
+        var nStg = jsonObject.GetField("nextStage");
+        if (nStg != null)
+            nextStage = nStg.stringValue;
     }
 }
 
@@ -141,11 +145,15 @@ public class Response {
     public string text;
     public string nextDialogueGroup;
     public float tension = 0.0f;
+    public string nextStage = null;
     public Response(JSONObject jsonObject) {
         text = jsonObject.GetField("text").stringValue;
         nextDialogueGroup = jsonObject.GetField("nextDialogueGroup").stringValue;
         var ten = jsonObject.GetField("tension");
         if (ten != null)
             tension = ten.floatValue;
+        var nStg = jsonObject.GetField("nextStage");
+        if (nStg != null)
+            nextStage = nStg.stringValue;
     }
 }

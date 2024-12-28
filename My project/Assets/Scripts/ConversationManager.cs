@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,7 @@ public class ConversationManager : MonoBehaviour {
     private DialogueData data;
     private ResponseDisplayManager responseManager;
     private TensionController tensionController;
+    public StageManager stageManager { get; private set; }
 
     [SerializeField]
     private GameObject tensionMeter;
@@ -85,6 +87,7 @@ public class ConversationManager : MonoBehaviour {
         data = GetComponent<DialogueData>();
         responseManager = GetComponent<ResponseDisplayManager>();
         tensionController = GetComponent<TensionController>();
+        stageManager = GetComponent<StageManager>(); 
 
         InputReader.Instance.onUse += NextDialogue;
     }
@@ -93,6 +96,7 @@ public class ConversationManager : MonoBehaviour {
         currentLevel = level;
         tensionController.SetInitialTension(data.GetLevelInitialTension(currentLevel));
         tensionMeter.SetActive(true);
+        stageManager.Restart();
     }
 
     public void SetDialogBox(DialogueBox box) {
@@ -126,6 +130,8 @@ public class ConversationManager : MonoBehaviour {
             return;
         if (CheckResponses())
             return;
+        if (CheckNextStage())
+            return;
         Dialogue d = GetNextDialogue();
         if (d != null) {
             InitDialogue(d);
@@ -134,10 +140,23 @@ public class ConversationManager : MonoBehaviour {
         StopDialogue();
     }
 
+    private bool CheckNextStage() {
+        string nextStage = GetCurrentDialogue().nextStage;
+        if (nextStage == null)
+            return false;
+        if (stageManager.SetStage(nextStage)) {
+            StopDialogue();
+            return true;
+        }
+        return false;
+    }
+
     public void SelectResponse(int id) {
         responseManager.HideResponses();
         Response resp = currentResponses.responses[id];
         tensionController.AddTension(resp.tension);
+        if (resp.nextStage != null && stageManager.SetStage(resp.nextStage)) 
+            return;
         currentConversation = data.GetDialogueGroupByID(currentLevel, resp.nextDialogueGroup);
         InitConversation();
     }
@@ -153,6 +172,8 @@ public class ConversationManager : MonoBehaviour {
     }
 
     public void AddUnlockableConversation(string name, DialogableCharacter character) {
+        if (unlockableConversations.ContainsKey(name))
+            return;
         unlockableConversations.Add(name, character);
     }
 
