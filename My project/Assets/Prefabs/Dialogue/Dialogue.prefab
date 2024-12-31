@@ -491,7 +491,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 43a47ff0887b61b47a25b0d3daebb27e, type: 3}
   - name: Luis
     sprite: {fileID: 21300000, guid: b8cb022eb8c97994788a054350f1d087, type: 3}
-  - name: Raul
+  - name: "Ra\xFAl"
     sprite: {fileID: 21300000, guid: 00fcdc2dd0ca4144998a7f58d3d29fdf, type: 3}
   - name: noname
     sprite: {fileID: 21300000, guid: f6f5d600990e71a4b918769f3a2339a1, type: 3}
