@@ -1,0 +1,412 @@
+{
+  "Tutorial": {
+    "Sofía": [
+      {
+        "character": "Sofía",
+        "Text": "¡Hola!",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Te acabas de unir al programa de mediación de conflictos ¿No?",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Yo llevo ya casi dos cursos, así que soy ya experta.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Voy a ayudarte con este conflicto y así te explico las partes que tienes que tener en cuenta.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Algunas personas están más implicadas en el conflicto que otras.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Javier no lo está tanto, hablemos con él, nos puede dar información útil.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Prueba a hablar con él.",
+        "Responses": "None",
+        "unlock" : "Javier"
+      }
+    ],
+    "Javier": [
+      {
+        "character": "Yo",
+        "Text": "Hola. ¿Sabes qué es lo que ocurre?",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "Pues Héctor y Elena se han vuelto a enfadar, cada uno quiere usar el patio de forma distinta.",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "Elena quiere que juguemos al fútbol y Héctor quiere jugar al pilla pilla",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "No hay espacio para jugar a las dos cosas",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "Siempre estamos igual. Menudo rollo…",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Ahora entendemos mejor el conflicto. Gracias Javier.",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "De nada, a ver si podéis ayudar de alguna forma…",
+        "Responses": "None",
+        "unlock": "ContinuacionSofia"
+      }
+    ],
+
+    "ContinuacionSofia": [
+      {
+        "character": "Sofía",
+        "Text": "Con la información que tenemos vamos a hablar con uno de los que forman parte del conflicto.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Es importante identificar sus emociones para entender mejor su postura.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": " Al elegir hablar con ella aparecerá una rueda de selección de emociones",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Tendrás que elegir la que más se acerque a cómo crees que se siente esa persona.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Como es la primera vez que identificas una emoción te voy a dar una pista, Elena está enfadada.",
+        "Responses": "None",
+        "unlock": "InicialElena"
+      }
+    ],
+
+    "InicialElena":[
+      {
+        "character": "Yo",
+        "Text": "Ahora tengo que identificar como se siente, tal y cómo me ha enseñado Sofía",
+        "Responses": "EmocionElena",
+        "emotions": true
+      }
+    ],
+
+    "ElenaEnfadado":[
+      {
+        "character": "Yo",
+        "Text": "¿Te has enfadado mucho con Héctor?",
+        "Responses": "None"
+      },
+      {
+        "character": "Elena",
+        "Text": "Pues sí. Es muy cabezón.",
+        "Responses": "None"
+      },
+      {
+        "character": "Elena",
+        "Text": "Todo el día insistiendo en que juguemos a otras cosas.",
+        "Responses": "None"
+      },
+      {
+        "character": "Elena",
+        "Text": "Pero a la mayoría nos gusta el fútbol. Se tendrá que aguantar.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Ahora podemos tomar una decisión sobre qué decir. Intentemos proponer una alternativa que ayude a todo el mundo.",
+        "Responses": "EleccionElena"
+      }
+    ],
+    "ElenaBien": [
+      {
+        "character": "Elena",
+        "Text": "Podríamos hacer eso… Pero Héctor tiene que estar de acuerdo. ",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "¿Has visto eso? La barra en la parte superior izquierda ha bajado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Ese es el medidor de tensión, dependiendo de las elecciones que tomes subirá o bajará.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Nuestro objetivo es que baje todo lo posible para que el conflicto se resuelva lo mejor posible.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "En el medidor aparecen también las medallas que se pueden ganar.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Prueba a hablar ahora con Héctor. Esta vez no te estaré ayudando. ¡Suerte!",
+        "Responses": "None",
+        "unlock": "HectorInicial"
+      }
+    ],
+    "HectorInicial": [
+      {
+        "character": "Yo",
+        "Text": "Lo primero es identificar cómo se siente.",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "¡Qué pesada es Elena! Todo el día con el fútbol…",
+        "Responses": "EmocionHector",
+        "emotions": true
+      }
+    ],
+    "HectorMiedo": [
+      {
+        "character": "Yo",
+        "Text": "¿Tienes miedo?",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "Pues no…",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he acertado, Héctor está enfadado con Elena.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdón, no he entendido bien cómo te sientes.",
+        "Responses": "EmocionHector",
+        "emotions": true
+      }
+    ],
+    "HectorTriste": [
+      {
+        "character": "Yo",
+        "Text": "¿Te da pena que estéis así?",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "No, no me da pena.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he acertado, Héctor está enfadado con Elena.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdón, no he entendido bien cómo te sientes.",
+        "Responses": "EmocionHector",
+        "emotions": true
+      }
+    ],
+    "HectorFeliz": [
+      {
+        "character": "Yo",
+        "Text": "¿Estás contento?",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "Pues no…",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he acertado, Héctor está enfadado con Elena.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdón, no he entendido bien cómo te sientes.",
+        "Responses": "EmocionHector",
+        "emotions": true
+      }
+    ],
+    "HectorEnfadado": [
+      {
+        "character": "Yo",
+        "Text": "¿Estás enfadado con Elena?",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "Si. No quiere hacer otra cosa que no sea jugar al fútbol.",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "A veces está bien, pero todos los días cansa.",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "He visto que tú y Sofía habéis estado hablando con ella.",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "¿Se os ocurre alguna solución?",
+        "Responses": "SolucionHector"
+      }
+    ],
+    "SolucionHectorMal": [
+      {
+        "character": "Héctor",
+        "Text": "Vale… No hace falta que seas tan borde…",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "Pero hay un problema…",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "No me fio de Elena, siempre me está diciendo que ya jugaremos al día siguiente.",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "¿Quién se va a asegurar de que se cumpla?",
+        "Responses": "AyudaHector"
+      }
+    ],
+    "SolucionHectorBien": [
+      {
+        "character": "Héctor",
+        "Text": "Me parece bien ¡Así podremos variar!",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "Pero hay un problema…",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "No me fio de Elena, siempre me está diciendo que ya jugaremos al día siguiente.",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "¿Quién se va a asegurar de que se cumpla?",
+        "Responses": "AyudaHector"
+      }
+    ],
+    "AyudaHectorBien": [
+      {
+        "character": "Héctor",
+        "Text": "¡Guay! ¡Vamos!",
+        "Responses": "None",
+        "unlock": "SofiaFinal"
+      }
+    ],
+    "AyudaHectorMal": [
+      {
+        "character": "Héctor",
+        "Text": "No nos vamos a poner de acuerdo, mejor hablarlo con un profesor.",
+        "Responses": "None",
+        "unlock": "SofiaFinal"
+      }
+    ],
+    "SofiaFinal": [
+      {
+        "character": "Sofía",
+        "Text": "Parece que ya has hablado con todos, no estaré para ayudarte en los siguientes conflictos",
+        "Responses": "None"
+      },
+      {
+        "character": "Héctor",
+        "Text": "¡Mucha suerte! Ahora veamos cómo se resuelve este..",
+        "Responses": "EndLevel"
+      }
+    ]
+  },
+  "InitialTension": 4,
+  "Bronze": [
+    {
+      "character": "Profesor",
+      "Text": "… Y estos serán los turnos. ¿Os parece bien?",
+      "Responses": "None"
+    },
+    {
+      "character": "Elena",
+      "Text": "Sí, así será más sencillo. Perdona por discutir así contigo Héctor.",
+      "Responses": "None"
+    },
+    {
+      "character": "Héctor",
+      "Text": "Si no queda otra… Mal que mal, discutiremos menos.",
+      "Responses": "None"
+    }
+  ],
+  "Silver": [
+    {
+      "character": "Profesor",
+      "Text": "… Y estos serán los turnos. ¿Os parece bien?",
+      "Responses": "None"
+    },
+    {
+      "character": "Elena",
+      "Text": "Sí, así será más sencillo. Perdona por discutir así contigo Héctor.",
+      "Responses": "None"
+    },
+    {
+      "character": "Héctor",
+      "Text": "También me parece bien. Se acabó tanto fútbol.",
+      "Responses": "None"
+    }
+  ],
+  "Gold": [
+    {
+      "character": "Profesor",
+      "Text": "… Y estos serán los turnos. ¿Os parece bien?",
+      "Responses": "None"
+    },
+    {
+      "character": "Elena",
+      "Text": "Sí, así será más sencillo. Perdona por discutir así contigo Héctor.",
+      "Responses": "None"
+    },
+    {
+      "character": "Héctor",
+      "Text": "También me parece bien. No te preocupes Elena. Yo también te hablé mal, lo siento.",
+      "Responses": "None"
+    }
+  ]
+}
