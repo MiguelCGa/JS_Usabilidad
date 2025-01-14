@@ -70,13 +70,10 @@ public class TensionDisplay : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (currentTension != slider.fillAmount)
-        {
-
+        if (currentTension != slider.fillAmount) {
             slider.color = new Color(Mathf.Clamp(slider.fillAmount * 2, 0, 1), Mathf.Clamp((1 - slider.fillAmount) * 2, 0, 1), 0);
             slider.fillAmount = Mathf.Lerp(slider.fillAmount, currentTension, slidingFactor);
             updateMedals();
-
         }
             
     }
