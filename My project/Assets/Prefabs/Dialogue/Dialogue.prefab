@@ -520,6 +520,8 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 11136875b19d17e46a5369bd60a46a4e, type: 3}
   - name: Lucas
     sprite: {fileID: 21300000, guid: d258542483e2f1648b76bd1394b3f89c, type: 3}
+  - name: Carla
+    sprite: {fileID: 21300000, guid: 4fb64bc939058b74380944febafd6ea2, type: 3}
 --- !u!114 &1849425488700879144
 MonoBehaviour:
   m_ObjectHideFlags: 0
