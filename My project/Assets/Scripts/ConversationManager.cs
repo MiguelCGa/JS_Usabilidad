@@ -18,6 +18,8 @@ public class ConversationManager : MonoBehaviour {
 
     [SerializeField]
     private GameObject tensionMeter;
+    [SerializeField]
+    private TensionDisplay finalTensionMeter;
 
     private DialogueBox dialogueBox;
     private ContextController contextController;
@@ -29,6 +31,7 @@ public class ConversationManager : MonoBehaviour {
 
     bool dialoging = false;
     bool finishingLevel = false;
+    bool concludingLevel = false;
     bool inContext = false;
 
     Dictionary<string, DialogableCharacter> unlockableConversations = new Dictionary<string, DialogableCharacter>();
@@ -75,6 +78,19 @@ public class ConversationManager : MonoBehaviour {
         }
         return null;
     }
+    private DialogueGroup GetLevelConclusionDialogue() {
+        switch (tensionController.GetCompletionLevel()) {
+            case TensionCompletion.FAILED:
+                return data.GetLevelLostConclusion(currentLevel);
+            case TensionCompletion.BRONZE:
+                return data.GetLevelBronzeConclusion(currentLevel);
+            case TensionCompletion.SILVER:
+                return data.GetLevelSilverConclusion(currentLevel);
+            case TensionCompletion.GOLD:
+                return data.GetLevelGoldConclusion(currentLevel);
+        }
+        return null;
+    }
 
     private void Awake() {
         if (Instance == null) {
@@ -99,6 +115,8 @@ public class ConversationManager : MonoBehaviour {
         currentLevel = level;
         tensionController.SetInitialTension(data.GetLevelInitialTension(currentLevel));
         tensionMeter.SetActive(true);
+        finalTensionMeter.SetTension(1);
+        finalTensionMeter.gameObject.SetActive(false);
         stageManager.Restart();
         DialogueGroup context = data.GetLevelInitialContext(currentLevel);
         if (context != null) {
@@ -182,8 +200,16 @@ public class ConversationManager : MonoBehaviour {
         dialogueBox.gameObject.SetActive(false);
         if (finishingLevel) {
             finishingLevel = false;
-            GameManager.Instance.CompleteLevel(tensionController.GetCompletionLevel());
+            concludingLevel = true;
             tensionMeter.SetActive(false);
+            finalTensionMeter.gameObject.SetActive(true);
+            finalTensionMeter.SetTension(tensionController.GetTension());
+        }
+        else if (concludingLevel) {
+            concludingLevel = false;
+            GameManager.Instance.CompleteLevel(tensionController.GetCompletionLevel());
+            finalTensionMeter.gameObject.SetActive(false);
+            finalTensionMeter.SetTension(1);
         }
     }
 
