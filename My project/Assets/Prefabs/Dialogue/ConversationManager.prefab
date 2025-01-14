@@ -191,6 +191,7 @@ MonoBehaviour:
   silver: {fileID: 6135748522121188830}
   bronze: {fileID: 2678718907705683509}
   noMedals: {fileID: 7391364485184953524}
+  currentTension: 1
 --- !u!1 &436690052363638618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,6 +1201,7 @@ MonoBehaviour:
   silver: {fileID: 8415145705515272672}
   bronze: {fileID: 343025696834482699}
   noMedals: {fileID: 5151399426399273098}
+  currentTension: 0
 --- !u!1 &3272087349531344979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,11 +1478,13 @@ MonoBehaviour:
   - {fileID: 4900000, guid: d4a3817affa85ef4793fd367a7be9b56, type: 3}
   - {fileID: 4900000, guid: 9f72f053367439c47b643edb7aef4788, type: 3}
   - {fileID: 4900000, guid: c4d6132d87e37aa47ab2abe7d244f098, type: 3}
+  - {fileID: 4900000, guid: 399737ad643b6fe4080580d804170813, type: 3}
   responsesJsonFiles:
   - {fileID: 4900000, guid: 41059e8547c9ff742ab186bdf6dbce6c, type: 3}
   - {fileID: 4900000, guid: 7cd563b9aef20184c93c2fd9a9a84b45, type: 3}
   - {fileID: 4900000, guid: c6bf4aa3f6215584990738c47053b86f, type: 3}
   - {fileID: 4900000, guid: 0d5a84875cd345c4f9e5af60e95f16e1, type: 3}
+  - {fileID: 4900000, guid: ad576a553b54b044e9ed18e1dc903be6, type: 3}
 --- !u!114 &4433203309830287951
 MonoBehaviour:
   m_ObjectHideFlags: 0
