@@ -504,21 +504,31 @@
   "ConclusionLost":[
     {
       "character": "",
-      "Text": "La situación ha explotado porque no se han pedido perdón y Miguel y Bruno se han acabado agrediendo físicamente, ha hecho falta que venga un profesor.",
+      "Text": "La situación ha explotado porque Miguel y Bruno no se han pedido perdón.",
+      "Responses": "None"
+    },
+    {
+      "character": "",
+      "Text": "Han terminado agrediendose físicamente y ha hecho falta que venga un profesor.",
       "Responses": "None"
     }
   ],
   "ConclusionBronze":[
     {
       "character": "",
-      "Text": "Los dos se han disculpado pero no admiten su responsabilidad, es posible que la situación se repita en el futuro.",
+      "Text": "Los dos se han disculpado pero no admiten su responsabilidad.",
+      "Responses": "None"
+    },
+    {
+      "character": "",
+      "Text": "Es posible que la situación se repita en el futuro.",
       "Responses": "None"
     }
   ],
   "ConclusionSilver":[
     {
       "character": "",
-      "Text": "Bruno se disculpa y admite su parte de responsabilidad, pero Miguel lo hace para continuar jugando",
+      "Text": "Bruno se disculpa y admite su parte de culpa, pero Miguel lo hace solo para continuar jugando",
       "Responses": "None"
     }
   ],
