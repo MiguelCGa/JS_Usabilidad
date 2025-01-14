@@ -20,6 +20,7 @@ public class TensionDisplay : MonoBehaviour {
     [SerializeField]
     Image noMedals;
 
+    [SerializeField]
     float currentTension = 0;
 
     public void SetTension(float tension) { 

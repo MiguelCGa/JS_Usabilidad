@@ -203,7 +203,11 @@ public class ConversationManager : MonoBehaviour {
             concludingLevel = true;
             tensionMeter.SetActive(false);
             finalTensionMeter.gameObject.SetActive(true);
-            finalTensionMeter.SetTension(tensionController.GetTension());
+            finalTensionMeter.SetTension(tensionController.GetNormalizedTension());
+            dialoging = true;
+            dialogueBox.gameObject.SetActive(true);
+            currentConversation = GetLevelConclusionDialogue();
+            InitConversation();
         }
         else if (concludingLevel) {
             concludingLevel = false;

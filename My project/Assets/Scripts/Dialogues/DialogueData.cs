@@ -100,10 +100,10 @@ public class Level {
         bronzeDialogue = GetFinishDialogues(conversationsJson, "Bronze");
         silverDialogue = GetFinishDialogues(conversationsJson, "Silver");
         goldDialogue = GetFinishDialogues(conversationsJson, "Gold");
-        loseConclusion = GetFinishDialogues(conversationsJson, "LostConclusion");
-        bronzeConclusion = GetFinishDialogues(conversationsJson, "BronzeConclusion");
-        silverConclusion = GetFinishDialogues(conversationsJson, "SilverConclusion");
-        goldConclusion = GetFinishDialogues(conversationsJson, "GoldConclusion");
+        loseConclusion = GetFinishDialogues(conversationsJson, "ConclusionLost");
+        bronzeConclusion = GetFinishDialogues(conversationsJson, "ConclusionBronze");
+        silverConclusion = GetFinishDialogues(conversationsJson, "ConclusionSilver");
+        goldConclusion = GetFinishDialogues(conversationsJson, "ConclusionGold");
         initialContextDialogue = GetFinishDialogues(conversationsJson, "InitialContext");
         var it = conversationsJson.GetField("InitialTension");
         if (it != null)
