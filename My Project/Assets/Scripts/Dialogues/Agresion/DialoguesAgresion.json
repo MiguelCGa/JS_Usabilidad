@@ -8,12 +8,12 @@
       },
       {
         "character": "María",
-        "Text": "Estamos siempre igual, otra vez estos dos parando el juego…",
+        "Text": "Estamos siempre igual, otra vez estos dos parando el juego...",
         "Responses": "None"
       },
       {
         "character": "Lucas",
-        "Text": "Bueno… Es que se han hecho daño…",
+        "Text": "Bueno... Es que se han hecho daño...",
         "Responses": "None"
       },
       {
@@ -53,7 +53,7 @@
       },
       {
         "character": "Lucas",
-        "Text": "Al final por una cosa o por la otra siempre acaban peleándose…",
+        "Text": "Al final por una cosa o por la otra siempre acaban peleándose...",
         "Responses": "None"
       },
       {
@@ -65,7 +65,7 @@
     "InicialMiguelYCelia":[
       {
         "character": "Yo",
-        "Text": "Parece que están muy unidos. Se deben de sentir igual…",
+        "Text": "Parece que están muy unidos. Se deben de sentir igual...",
         "Responses": "EmocionMiguelyCelia",
         "emotions": true
       }
@@ -101,7 +101,7 @@
     "MiguelYCeliaEnfadados": [
       {
         "character": "Yo",
-        "Text": "Parecéis bastante enfadados…",
+        "Text": "Parecéis bastante enfadados...",
         "Responses": "None"
       },
       {
@@ -248,7 +248,7 @@
     "SolucionMiguelMal":[
       {
         "character": "Miguel",
-        "Text": "No se nos ocurre ¿Para eso no estás tú? Deja que piense…",
+        "Text": "No se nos ocurre ¿Para eso no estás tú? Deja que piense...",
         "Responses": "None"
       },
       {
@@ -265,7 +265,7 @@
     "SolucionMiguelBien":[
       {
         "character": "Miguel",
-        "Text": "Hm… Deja que piense…",
+        "Text": "Hm... Deja que piense...",
         "Responses": "None"
       },
       {
@@ -282,7 +282,7 @@
     "InicialBruno":[
       {
         "character": "Yo",
-        "Text": "(Pensando) Voy a preguntarle cómo está…",
+        "Text": "(Pensando) Voy a preguntarle cómo está...",
         "Responses": "EmocionBruno",
         "emotions": true
       }
@@ -456,7 +456,7 @@
     },
     {
       "character": "Miguel",
-      "Text": "Lo siento, Bruno…",
+      "Text": "Lo siento, Bruno...",
       "Responses": "None"
     },
     {
@@ -473,7 +473,7 @@
     },
     {
       "character": "Miguel",
-      "Text": "Lo siento, Bruno…",
+      "Text": "Lo siento, Bruno...",
       "Responses": "None"
     },
     {

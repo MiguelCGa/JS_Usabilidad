@@ -321,5 +321,17 @@
       "Text": "Gracias, Javier, yo también tendré más cuidado la próxima vez.",
       "Responses": "None"
     }
+  ],
+  "InitialContext":[
+    {
+      "character": "Javier",
+      "Text": "¡Luis quita!",
+      "Responses": "None"
+    },
+    {
+      "character": "Luis",
+      "Text": "¡Tengo que pasar, esperad un momento!",
+      "Responses": "None"
+    }
   ]
 }

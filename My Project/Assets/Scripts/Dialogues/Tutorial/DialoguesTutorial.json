@@ -411,5 +411,22 @@
       "Responses": "None"
     }
   ],
-  "Lose": []
+  "Lose": [],
+  "InitialContext": [
+    {
+      "character": "Héctor",
+      "Text": "¡Tenéis que dejar espacio a los demás!",
+      "Responses": "None"
+    },
+    {
+      "character": "Elena",
+      "Text": "¿Y dónde vamos a jugar entonces?",
+      "Responses": "None"
+    },
+    {
+      "character": "Elena",
+      "Text": "¡Lo que tenéis que hacer es quitaros de en medio!",
+      "Responses": "None"
+    }
+  ]
 }
