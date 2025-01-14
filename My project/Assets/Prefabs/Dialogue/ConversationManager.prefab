@@ -1307,6 +1307,7 @@ GameObject:
   - component: {fileID: 6017364319958276676}
   - component: {fileID: 7958429143658269729}
   - component: {fileID: 8815164156495886548}
+  - component: {fileID: 5926297887129877993}
   m_Layer: 5
   m_Name: ConversationManager
   m_TagString: Untagged
@@ -1481,6 +1482,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc6a08c30edd54418d2ef7949c815c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5926297887129877993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3342396943922915238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57b6d978f7d481c47b44d16bf013658d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contextBackground: {fileID: 0}
+  fadeDuration: 10
 --- !u!1 &3964102693462448370
 GameObject:
   m_ObjectHideFlags: 0

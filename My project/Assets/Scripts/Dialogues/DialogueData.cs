@@ -53,9 +53,11 @@ public class DialogueData : MonoBehaviour
     public DialogueGroup GetLevelSilver(string level) {
         return levels[level].silverDialogue;
     }
-    public DialogueGroup GetLevelGold(string level)
-    {
+    public DialogueGroup GetLevelGold(string level) {
         return levels[level].goldDialogue;
+    }
+    public DialogueGroup GetLevelInitialContext(string level) {
+        return levels[level].initialContextDialogue;
     }
     public float GetLevelInitialTension(string level) {
         return levels[level].initialTension;
@@ -68,6 +70,7 @@ public class Level {
     public DialogueGroup bronzeDialogue;
     public DialogueGroup silverDialogue;
     public DialogueGroup goldDialogue;
+    public DialogueGroup initialContextDialogue;
     public LevelResponses responses;
     public float initialTension = 5f;
     public Level(JSONObject conversationsJson, string levelName) {
@@ -76,6 +79,7 @@ public class Level {
         bronzeDialogue = GetFinishDialogues(conversationsJson, "Bronze");
         silverDialogue = GetFinishDialogues(conversationsJson, "Silver");
         goldDialogue = GetFinishDialogues(conversationsJson, "Gold");
+        initialContextDialogue = GetFinishDialogues(conversationsJson, "InitialContext");
         var it = conversationsJson.GetField("InitialTension");
         if (it != null)
             initialTension = it.floatValue;

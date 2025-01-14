@@ -7,6 +7,7 @@ using UnityEngine;
 [RequireComponent (typeof(DialogueData))]
 [RequireComponent (typeof(ResponseDisplayManager))]
 [RequireComponent (typeof(TensionController))]
+[RequireComponent (typeof(StageManager))]
 
 public class ConversationManager : MonoBehaviour {
 
@@ -19,6 +20,7 @@ public class ConversationManager : MonoBehaviour {
     private GameObject tensionMeter;
 
     private DialogueBox dialogueBox;
+    private ContextController contextController;
 
     private DialogueGroup currentConversation;
     private int currentDialogue;
@@ -27,6 +29,7 @@ public class ConversationManager : MonoBehaviour {
 
     bool dialoging = false;
     bool finishingLevel = false;
+    bool inContext = false;
 
     Dictionary<string, DialogableCharacter> unlockableConversations = new Dictionary<string, DialogableCharacter>();
 
@@ -97,10 +100,19 @@ public class ConversationManager : MonoBehaviour {
         tensionController.SetInitialTension(data.GetLevelInitialTension(currentLevel));
         tensionMeter.SetActive(true);
         stageManager.Restart();
+        DialogueGroup context = data.GetLevelInitialContext(currentLevel);
+        if (context != null) {
+            dialoging = true;
+            inContext = true;
+            contextController.ActivateContext();
+            currentConversation = context;
+            InitConversation();
+        }
     }
 
     public void SetDialogBox(DialogueBox box) {
         dialogueBox = box;
+        contextController = box.gameObject.GetComponent<ContextController>();
     }
 
     private void InitConversation() {
@@ -162,6 +174,10 @@ public class ConversationManager : MonoBehaviour {
     }
 
     public void StopDialogue() {
+        if (inContext) {
+            inContext = false;
+            contextController.DeactivateContext();
+        }
         dialoging = false;
         dialogueBox.gameObject.SetActive(false);
         if (finishingLevel) {
