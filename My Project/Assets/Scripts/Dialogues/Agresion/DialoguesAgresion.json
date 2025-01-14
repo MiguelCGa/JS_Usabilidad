@@ -259,7 +259,8 @@
       {
         "character": "Miguel",
         "Text": "Supongo que si se disculpara, yo también le podría pedir perdón.",
-        "Responses": "None"
+        "Responses": "None",
+        "unlock": "InicialBruno"
       }
     ],
     "SolucionMiguelBien":[
@@ -276,7 +277,8 @@
       {
         "character": "Miguel",
         "Text": "Supongo que si se disculpara, yo también le podría pedir perdón.",
-        "Responses": "None"
+        "Responses": "None",
+        "unlock": "InicialBruno"
       }
     ],
     "InicialBruno":[
@@ -397,7 +399,7 @@
       {
         "character": "Bruno",
         "Text": "Pero me lo tiene que pedir él primero.",
-        "Responses": "None"
+        "Responses": "EndLevel"
       }
     ],
     "DesactivarBrunoBien":[
@@ -414,7 +416,7 @@
       {
         "character": "Bruno",
         "Text": "Pero me lo tiene que pedir él primero.",
-        "Responses": "None"
+        "Responses": "EndLevel"
       }
     ]
   },
@@ -496,6 +498,34 @@
     {
       "character": "Miguel",
       "Text": "Yo también lo siento, tendré más cuidado.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionLost":[
+    {
+      "character": "",
+      "Text": "La situación ha explotado porque no se han pedido perdón y Miguel y Bruno se han acabado agrediendo físicamente, ha hecho falta que venga un profesor.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionBronze":[
+    {
+      "character": "",
+      "Text": "Los dos se han disculpado pero no admiten su responsabilidad, es posible que la situación se repita en el futuro.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionSilver":[
+    {
+      "character": "",
+      "Text": "Bruno se disculpa y admite su parte de responsabilidad, pero Miguel lo hace para continuar jugando",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionGold":[
+    {
+      "character": "",
+      "Text": "Miguel y Bruno se disculpan y cada uno admite su parte de responsabilidad en el conflicto",
       "Responses": "None"
     }
   ]

@@ -428,5 +428,33 @@
       "Text": "¡Lo que tenéis que hacer es quitaros de en medio!",
       "Responses": "None"
     }
+  ],
+  "ConclusionLost":[
+    {
+      "character": "",
+      "Text": "",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionBronze":[
+    {
+      "character": "",
+      "Text": "Elena se ha disculpado, pero Héctor no, solo Elena está contenta con la resolución del profesor",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionSilver":[
+    {
+      "character": "",
+      "Text": "Elena se ha disculpado, pero Héctor no, ambos están contentos con la resolución del profesor",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionGold":[
+    {
+      "character": "",
+      "Text": "Los dos se han disculpado y están contentos con la resolución del profesor",
+      "Responses": "None"
+    }
   ]
 }

@@ -333,5 +333,33 @@
       "Text": "¡Tengo que pasar, esperad un momento!",
       "Responses": "None"
     }
+  ],
+  "ConclusionLost":[
+    {
+      "character": "",
+      "Text": "Al ir a disculparse ni Javier ni Luis se dirigen la palabra, el conflicto no se ha resuelto.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionBronze":[
+    {
+      "character": "",
+      "Text": "Javier le pide disculpas a Luis, Luis no las acepta y Javier se ha disculpado solo para salir del paso.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionSilver":[
+    {
+      "character": "",
+      "Text": "Javier le pide disculpas a Luis, Luis las acepta pero Javier se ha disculpado solo para salir del paso.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionGold":[
+    {
+      "character": "",
+      "Text": "Se reconcilian y Javier le pide perdón a Luis, Luis acepta sus disculpas",
+      "Responses": "None"
+    }
   ]
 }

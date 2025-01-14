@@ -621,5 +621,33 @@
       "Text": "¡Déjame en paz, pesada!",
       "Responses": "None"
     }
+  ],
+  "ConclusionLost":[
+    {
+      "character": "",
+      "Text": "Carla y Laura no han entendido las perspectivas de la otra y se continúan llevando muy mal.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionBronze":[
+    {
+      "character": "",
+      "Text": "Laura entiende mejor la perspectiva de Carla, sin embargo Carla no ha sido capaz de transmitir sus sentimientos teniendo en cuenta los de Laura.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionSilver":[
+    {
+      "character": "",
+      "Text": "Carla empatiza con Laura y le transmite lo que siente de forma empática, pero Laura no entiende la perspectiva de Carla.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionGold":[
+    {
+      "character": "",
+      "Text": "Carla y Laura entienden mejor la situación y empatizan mutuamente. Aunque no vayan a ser amigas van a tratarse mejor en adelante.",
+      "Responses": "None"
+    }
   ]
 }
