@@ -33,6 +33,8 @@ public class ResponseInteractor : MonoBehaviour
 
     public void SetResponse(string response) {
         text = response;
+        if (myText != null)
+            myText.text = text;
     }
 
     public void SetInteractable(bool interactable) {
@@ -48,7 +50,10 @@ public class ResponseInteractor : MonoBehaviour
     void Start() {
         button = GetComponent<Button>();
         if (myText != null)
+        {
             myText.text = text;
+            myText.enableAutoSizing = true;
+        }
         button.interactable = isInteractable;
     }
 }
