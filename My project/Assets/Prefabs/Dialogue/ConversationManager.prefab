@@ -1416,9 +1416,13 @@ MonoBehaviour:
   dialoguesJsonFiles:
   - {fileID: 4900000, guid: b2387108c5569f2489fb01adf20bcba2, type: 3}
   - {fileID: 4900000, guid: d4a3817affa85ef4793fd367a7be9b56, type: 3}
+  - {fileID: 4900000, guid: 9f72f053367439c47b643edb7aef4788, type: 3}
+  - {fileID: 4900000, guid: c4d6132d87e37aa47ab2abe7d244f098, type: 3}
   responsesJsonFiles:
   - {fileID: 4900000, guid: 41059e8547c9ff742ab186bdf6dbce6c, type: 3}
   - {fileID: 4900000, guid: 7cd563b9aef20184c93c2fd9a9a84b45, type: 3}
+  - {fileID: 4900000, guid: c6bf4aa3f6215584990738c47053b86f, type: 3}
+  - {fileID: 4900000, guid: 0d5a84875cd345c4f9e5af60e95f16e1, type: 3}
 --- !u!114 &4433203309830287951
 MonoBehaviour:
   m_ObjectHideFlags: 0

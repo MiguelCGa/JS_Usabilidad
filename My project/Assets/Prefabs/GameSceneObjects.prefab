@@ -324,30 +324,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5882313286782491879, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
-      propertyPath: dialoguesJsonFiles.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5882313286782491879, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
-      propertyPath: responsesJsonFiles.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5882313286782491879, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
-      propertyPath: dialoguesJsonFiles.Array.data[2]
-      value: 
-      objectReference: {fileID: 4900000, guid: 9f72f053367439c47b643edb7aef4788, type: 3}
-    - target: {fileID: 5882313286782491879, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
-      propertyPath: dialoguesJsonFiles.Array.data[3]
-      value: 
-      objectReference: {fileID: 4900000, guid: c4d6132d87e37aa47ab2abe7d244f098, type: 3}
-    - target: {fileID: 5882313286782491879, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
-      propertyPath: responsesJsonFiles.Array.data[2]
-      value: 
-      objectReference: {fileID: 4900000, guid: c6bf4aa3f6215584990738c47053b86f, type: 3}
-    - target: {fileID: 5882313286782491879, guid: 613a2b709b872fd4db0ee812a2b2733e, type: 3}
-      propertyPath: responsesJsonFiles.Array.data[3]
-      value: 
-      objectReference: {fileID: 4900000, guid: 0d5a84875cd345c4f9e5af60e95f16e1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

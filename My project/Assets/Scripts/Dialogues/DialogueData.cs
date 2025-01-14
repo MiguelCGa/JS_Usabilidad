@@ -97,6 +97,8 @@ public class Level {
 public class DialogueGroup {
     public Dialogue[] dialogues;
     public DialogueGroup(JSONObject jsonObject) {
+        if (jsonObject == null)
+            return;
         dialogues = new Dialogue[jsonObject.count];
         for (int i = 0; i < jsonObject.count; ++i) {
             dialogues[i] = new Dialogue(jsonObject[i]);
