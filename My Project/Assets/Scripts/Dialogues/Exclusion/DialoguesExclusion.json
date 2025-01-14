@@ -604,5 +604,22 @@
       "Text": "Bueno... Gracias por contármelo. Yo también lo siento si os agobié mucho...",
       "Responses": "None"
     }
+  ],
+  "InitialContext": [
+    {
+      "character": "Carla",
+      "Text": "Pues porque no quiero que vengas con nosotras y ya.",
+      "Responses": "None"
+    },
+    {
+      "character": "Laura",
+      "Text": "¡No es justo!",
+      "Responses": "None"
+    },
+    {
+      "character": "Carla",
+      "Text": "¡Déjame en paz, pesada!",
+      "Responses": "None"
+    }
   ]
 }
