@@ -134,7 +134,12 @@
       },
       {
         "character": "Sofía",
-        "Text": "Ahora podemos tomar una decisión sobre qué decir. Intentemos proponer una alternativa que ayude a todo el mundo.",
+        "Text": "Ahora podemos tomar una decisión sobre qué decir.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sofía",
+        "Text": "Intentemos proponer una alternativa que ayude a todo el mundo.",
         "Responses": "EleccionElena"
       }
     ],
