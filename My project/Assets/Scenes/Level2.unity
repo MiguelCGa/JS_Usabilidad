@@ -798,7 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: 
+  conversation: InicialMiguelYCelia
   locked: 0
   speechBubble: {fileID: 1867650197}
 --- !u!1 &887839788 stripped
@@ -1119,7 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: 
+  conversation: InicialBruno
   locked: 0
   speechBubble: {fileID: 700233562}
 --- !u!1 &1245796492
@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: 
+  conversation: MariayLucas
   locked: 0
   speechBubble: {fileID: 1110787231}
 --- !u!114 &1245796495
@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: 
+  conversation: MariayLucas
   locked: 0
   speechBubble: {fileID: 597189083}
 --- !u!1 &2070171155
@@ -1654,7 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: 
+  conversation: InicialMiguelYCelia
   locked: 0
   speechBubble: {fileID: 2100767359}
 --- !u!114 &2070171158
