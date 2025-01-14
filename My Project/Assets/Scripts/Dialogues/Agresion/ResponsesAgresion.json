@@ -1,0 +1,84 @@
+{
+  "Agresion": {
+    "EmocionMiguelyCelia": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "MiguelYCeliaTristes",
+        "tension": 1 
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "MiguelYCeliaFelices",
+        "tension": 1
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "MiguelYCeliaEnfadados",
+        "tension": -1
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "MiguelYCeliaAsustados",
+        "tension": 1
+      }
+    ],
+    "DesactivarMiguel": [
+      {
+        "text": "Relajaos un poco y contadme lo que ha pasado.",
+        "nextDialogueGroup": "DesactivarMiguelMal",
+        "tension": 1
+      },
+      {
+        "text": "¿Me podéis contar lo que ha ocurrido desde el principio?",
+        "nextDialogueGroup": "DesactivarMiguelBien",
+        "tension": -1
+      }
+    ],
+    "SolucionMiguel": [
+      {
+        "text": "¿Qué se os ocurre para solucionar esto y que podáis seguir jugando?",
+        "nextDialogueGroup": "SolucionMiguelBien",
+        "tension": -1
+      },
+      {
+        "text": "Alguna solución habrá. ¿Qué se os ocurre?",
+        "nextDialogueGroup": "SolucionMiguelMal",
+        "tension": 1
+      }
+    ],
+    "EmocionBruno": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "BrunoTriste",
+        "tension": 1
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "BrunoFeliz",
+        "tension": 1
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "BrunoEnfadado",
+        "tension": -1
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "BrunoAsustado",
+        "tension": 1
+      }
+    ],
+    "DesactivarBruno": [
+      {
+        "text": "A veces eso pasa cuando juegas al pilla pilla…",
+        "nextDialogueGroup": "DesactivarBrunoMal",
+        "tension": 1
+      },
+      {
+        "text": "Te entiendo. ¿Qué se podría hacer para que te sientas mejor?",
+        "nextDialogueGroup": "DesactivarBrunoBien",
+        "tension": -1
+      }
+    ]
+  }
+}

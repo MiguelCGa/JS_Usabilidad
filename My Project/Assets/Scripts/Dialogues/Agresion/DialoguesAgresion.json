@@ -1,0 +1,502 @@
+{
+  "Agresion": {
+    "MariayLucas": [
+      {
+        "character": "Yo",
+        "Text": "¿Sabéis que ha pasado?",
+        "Responses": "None"
+      },
+      {
+        "character": "María",
+        "Text": "Estamos siempre igual, otra vez estos dos parando el juego…",
+        "Responses": "None"
+      },
+      {
+        "character": "Lucas",
+        "Text": "Bueno… Es que se han hecho daño…",
+        "Responses": "None"
+      },
+      {
+        "character": "María",
+        "Text": "Pero es que nunca acabamos el juego.",
+        "Responses": "None"
+      },
+      {
+        "character": "María",
+        "Text": "Siempre se acaban enfadando y después se termina el recreo.",
+        "Responses": "None"
+      },
+      {
+        "character": "Lucas",
+        "Text": "Igual se puede hacer algo para arreglar esto.",
+        "Responses": "None"
+      },
+      {
+        "character": "Lucas",
+        "Text": "Si le contamos lo que hemos visto igual nos puede ayudar.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Sí por favor, contadme, ¿Alguno habéis visto qué ha pasado?",
+        "Responses": "None"
+      },
+      {
+        "character": "María",
+        "Text": "Pues Miguel es súper bruto y se anda chocando con la gente siempre que jugamos al pilla pilla.",
+        "Responses": "None"
+      },
+      {
+        "character": "María",
+        "Text": "Y Bruno enseguida se enfada por todo.",
+        "Responses": "None"
+      },
+      {
+        "character": "Lucas",
+        "Text": "Al final por una cosa o por la otra siempre acaban peleándose…",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Gracias. Ahora hablo con ellos, a ver qué puedo hacer",
+        "Responses": "None"
+      }
+    ],
+    "InicialMiguelYCelia":[
+      {
+        "character": "Yo",
+        "Text": "Parece que están muy unidos. Se deben de sentir igual…",
+        "Responses": "EmocionMiguelyCelia",
+        "emotions": true
+      }
+    ],
+    "MiguelYCeliaTristes": [
+      {
+        "character": "Yo",
+        "Text": "¿Estáis tristes por los insultos?",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "No, no lo estamos.",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "Para nada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Creo que me he equivocado, se les ve enfadados.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdonad, no entendí bien como os sentiais.",
+        "Responses": "EmocionMiguelyCelia",
+        "emotions": true
+      }
+    ],
+    "MiguelYCeliaEnfadados": [
+      {
+        "character": "Yo",
+        "Text": "Parecéis bastante enfadados…",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Pues claro que sí, es súper injusto todo.",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "Es que no aguanta nada, es un quejica.",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "El juego es así, no sé por qué me insulta.",
+        "Responses": "DesactivarMiguel"
+      }
+    ],
+    "MiguelYCeliaFelices": [
+      {
+        "character": "Yo",
+        "Text": "¿Os lo estáis pasando bien?",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "¿Bien?",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Pero qué dices.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Creo que me he equivocado, se les ve enfadados.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdonad, no entendí bien como os sentiais.",
+        "Responses": "EmocionMiguelyCelia",
+        "emotions": true
+      }
+    ],
+    "MiguelYCeliaAsustados": [
+      {
+        "character": "Yo",
+        "Text": "¿Os ha asustado Bruno?",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": " ¿Qué si nos ha asustado?",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Que va.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Creo que me he equivocado, se les ve enfadados.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdonad, no entendí bien como os sentiais.",
+        "Responses": "EmocionMiguelyCelia",
+        "emotions": true
+      }
+    ],
+    "DesactivarMiguelBien": [
+      {
+        "character": "Celia",
+        "Text": "Vale, te lo cuento yo.",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Estábamos jugando al pilla pilla como siempre.",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Y Miguel ha pillado a Bruno.",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Pero el otro es un torpe y se ha caído cuando le ha cogido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "¡Y encima se ha puesto a insultarme!",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "No se entera de que va el juego.",
+        "Responses": "SolucionMiguel"
+      }
+    ],
+    "DesactivarMiguelMal": [
+      {
+        "character": "Miguel",
+        "Text": "Relájate tú no ves que estamos cabreados.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Es verdad, perdona ¿Me lo podéis aclarar para que lo entienda?",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Estábamos jugando al pilla pilla como siempre.",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Y Miguel ha pillado a Bruno.",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Pero el otro es un torpe y se ha caído cuando le ha cogido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "¡Y encima se ha puesto a insultarme!",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "No se entera de que va el juego.",
+        "Responses": "SolucionMiguel"
+      }
+    ],
+    "SolucionMiguelMal":[
+      {
+        "character": "Miguel",
+        "Text": "No se nos ocurre ¿Para eso no estás tú? Deja que piense…",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Bruno le tendría que pedir perdón, se ha pasado un montón.",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "Supongo que si se disculpara, yo también le podría pedir perdón.",
+        "Responses": "None"
+      }
+    ],
+    "SolucionMiguelBien":[
+      {
+        "character": "Miguel",
+        "Text": "Hm… Deja que piense…",
+        "Responses": "None"
+      },
+      {
+        "character": "Celia",
+        "Text": "Bruno le tendría que pedir perdón, se ha pasado un montón.",
+        "Responses": "None"
+      },
+      {
+        "character": "Miguel",
+        "Text": "Supongo que si se disculpara, yo también le podría pedir perdón.",
+        "Responses": "None"
+      }
+    ],
+    "InicialBruno":[
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Voy a preguntarle cómo está…",
+        "Responses": "EmocionBruno",
+        "emotions": true
+      }
+    ],
+    "BrunoTriste": [
+      {
+        "character": "Yo",
+        "Text": "¿Estás triste?",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "No, ¿No te enteras?",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Me he equivocado, se le ve enfadado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdoname, no te entendí bien, estás enfadado.",
+        "Responses": "EmocionBruno",
+        "emotions": true
+      }
+    ],
+    "BrunoAsustado": [
+      {
+        "character": "Yo",
+        "Text": "¿Te has asustado?",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "No, no me he asustado de nada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Me he equivocado, se le ve enfadado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdoname, no te entendí bien, estás enfadado.",
+        "Responses": "EmocionBruno",
+        "emotions": true
+      }
+    ],
+    "BrunoFeliz": [
+      {
+        "character": "Yo",
+        "Text": "Se te ve bien.",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "Pues no lo estoy.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Me he equivocado, se le ve enfadado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdoname, no te entendí bien, estás enfadado.",
+        "Responses": "EmocionBruno",
+        "emotions": true
+      }
+    ],
+    "BrunoEnfadado": [
+      {
+        "character": "Yo",
+        "Text": "¿Estás enfadado?",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "Pues claro, me ha empujado jugando al pilla pilla y me ha hecho daño.",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "Es un bestia, nunca tiene cuidado con nada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "Anda empujando a todo el mundo y encima ni te puedes quejar.",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "Un estúpido.",
+        "Responses": "DesactivarBruno"
+      }
+    ],
+    "DesactivarBrunoMal":[
+      {
+        "character": "Bruno",
+        "Text": "Esto no es normal, tiene que haber una solución.",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "Me ha empujado, si me pide perdón igual lo arreglamos.",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "Pero me lo tiene que pedir él primero.",
+        "Responses": "None"
+      }
+    ],
+    "DesactivarBrunoBien":[
+      {
+        "character": "Bruno",
+        "Text": "Seguro que hay una solución.",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "Me ha empujado, si me pide perdón igual lo arreglamos.",
+        "Responses": "None"
+      },
+      {
+        "character": "Bruno",
+        "Text": "Pero me lo tiene que pedir él primero.",
+        "Responses": "None"
+      }
+    ]
+  },
+  "InitialContext":[
+    {
+      "character": "Miguel",
+      "Text": "Eres imbécil. Mira por donde vas pringao.",
+      "Responses": "None"
+    },
+    {
+      "character": "Bruno",
+      "Text": "¡Imbécil tú! ¿Por qué haces eso?",
+      "Responses": "None"
+    }
+  ],
+  "Lost": [
+    {
+      "character": "Miguel",
+      "Text": "¿Te disculpas por insultarme o qué?",
+      "Responses": "None"
+    },
+    {
+      "character": "Bruno",
+      "Text": "¿Que me disculpe? Discúlpate tú estúpido.",
+      "Responses": "None"
+    },
+    {
+      "character": "Celia",
+      "Text": "¡Profe! ¡Se pegan!",
+      "Responses": "None"
+    }
+  ],
+  "InitialTension": 4,
+  "Bronze": [
+    {
+      "character": "Celia",
+      "Text": "Pídele perdón Miguel, que queda poco recreo y queremos jugar más.",
+      "Responses": "None"
+    },
+    {
+      "character": "Miguel",
+      "Text": "Lo siento, Bruno…",
+      "Responses": "None"
+    },
+    {
+      "character": "Bruno",
+      "Text": "Lo siento.",
+      "Responses": "None"
+    }
+  ],
+  "Silver": [
+    {
+      "character": "Celia",
+      "Text": "Pídele perdón Miguel, que queda poco recreo y queremos jugar más.",
+      "Responses": "None"
+    },
+    {
+      "character": "Miguel",
+      "Text": "Lo siento, Bruno…",
+      "Responses": "None"
+    },
+    {
+      "character": "Bruno",
+      "Text": "Lo siento Miguel, la verdad que me he enfadado enseguida.",
+      "Responses": "None"
+    }
+  ],
+  "Gold": [
+    {
+      "character": "Miguel",
+      "Text": "Tienes razón Bruno, he sido un poco bruto.",
+      "Responses": "None"
+    },
+    {
+      "character": "Bruno",
+      "Text": "Lo siento Miguel, yo también salto enseguida.",
+      "Responses": "None"
+    },
+    {
+      "character": "Miguel",
+      "Text": "Yo también lo siento, tendré más cuidado.",
+      "Responses": "None"
+    }
+  ]
+}
