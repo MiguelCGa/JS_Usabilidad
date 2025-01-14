@@ -12,6 +12,7 @@ public class ResponseInteractor : MonoBehaviour
     private Button button = null;
 
     private int id;
+
     public void SetId(int responseId) {
         id = responseId;
     }
@@ -23,6 +24,10 @@ public class ResponseInteractor : MonoBehaviour
     public void SetResponse(string response) {
         if (myText != null)
             myText.text = response;
+    }
+
+    public void SetInteractable(bool interactable) {
+        button.interactable = interactable;
     }
 
     public void ResetInteraction() {

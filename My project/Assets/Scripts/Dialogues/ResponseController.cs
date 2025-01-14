@@ -11,6 +11,7 @@ public class ResponseController : MonoBehaviour
         int i = 0;
         foreach (var interactor in interactors) {
             interactor.SetResponse(responseGroup.responses[i].text);
+            interactor.SetInteractable(responseGroup.responses[i].interactable);
             ++i;
         }
     }

@@ -146,6 +146,7 @@ public class Response {
     public string nextDialogueGroup;
     public float tension = 0.0f;
     public string nextStage = null;
+    public bool interactable = true;
     public Response(JSONObject jsonObject) {
         text = jsonObject.GetField("text").stringValue;
         nextDialogueGroup = jsonObject.GetField("nextDialogueGroup").stringValue;
@@ -155,5 +156,8 @@ public class Response {
         var nStg = jsonObject.GetField("nextStage");
         if (nStg != null)
             nextStage = nStg.stringValue;
+        var intr = jsonObject.GetField("interactable");
+        if (intr != null)
+            interactable = intr.boolValue;
     }
 }
