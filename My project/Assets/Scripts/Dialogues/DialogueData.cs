@@ -1,4 +1,5 @@
 using Defective.JSON;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -62,6 +63,22 @@ public class DialogueData : MonoBehaviour
     public float GetLevelInitialTension(string level) {
         return levels[level].initialTension;
     }
+
+    internal DialogueGroup GetLevelLostConclusion(string level) {
+        return levels[level].loseConclusion;
+    }
+
+    internal DialogueGroup GetLevelBronzeConclusion(string level) {
+        return levels[level].bronzeConclusion;
+    }
+
+    internal DialogueGroup GetLevelSilverConclusion(string level) {
+        return levels[level].silverConclusion;
+    }
+
+    internal DialogueGroup GetLevelGoldConclusion(string level) {
+        return levels[level].goldConclusion;
+    }
 }
 
 public class Level {
@@ -70,6 +87,10 @@ public class Level {
     public DialogueGroup bronzeDialogue;
     public DialogueGroup silverDialogue;
     public DialogueGroup goldDialogue;
+    public DialogueGroup loseConclusion;
+    public DialogueGroup bronzeConclusion;
+    public DialogueGroup silverConclusion;
+    public DialogueGroup goldConclusion;
     public DialogueGroup initialContextDialogue;
     public LevelResponses responses;
     public float initialTension = 5f;
@@ -79,6 +100,10 @@ public class Level {
         bronzeDialogue = GetFinishDialogues(conversationsJson, "Bronze");
         silverDialogue = GetFinishDialogues(conversationsJson, "Silver");
         goldDialogue = GetFinishDialogues(conversationsJson, "Gold");
+        loseConclusion = GetFinishDialogues(conversationsJson, "LostConclusion");
+        bronzeConclusion = GetFinishDialogues(conversationsJson, "BronzeConclusion");
+        silverConclusion = GetFinishDialogues(conversationsJson, "SilverConclusion");
+        goldConclusion = GetFinishDialogues(conversationsJson, "GoldConclusion");
         initialContextDialogue = GetFinishDialogues(conversationsJson, "InitialContext");
         var it = conversationsJson.GetField("InitialTension");
         if (it != null)

@@ -9,6 +9,9 @@ public class ResponseInteractor : MonoBehaviour
     [SerializeField]
     private TMP_Text myText = null;
 
+    private string text = "";
+    private bool isInteractable = true;
+
     private Button button = null;
 
     private int id;
@@ -21,13 +24,19 @@ public class ResponseInteractor : MonoBehaviour
         button.interactable = false;
     }
 
+    private void OnEnable() {
+        if (myText != null) 
+            myText.text = text;
+        if (button != null)
+            button.interactable = isInteractable;
+    }
+
     public void SetResponse(string response) {
-        if (myText != null)
-            myText.text = response;
+        text = response;
     }
 
     public void SetInteractable(bool interactable) {
-        button.interactable = interactable;
+        isInteractable = interactable;
     }
 
     public void ResetInteraction() {
@@ -38,5 +47,8 @@ public class ResponseInteractor : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         button = GetComponent<Button>();
+        if (myText != null)
+            myText.text = text;
+        button.interactable = isInteractable;
     }
 }
