@@ -15,7 +15,7 @@
         "Responses": "None"
       },
       {
-        "character": "Raul",
+        "character": "Raúl",
         "Text": "¿Tristes? No... Estamos bien.",
         "Responses": "None"
       },
@@ -39,12 +39,12 @@
         "Responses": "None"
       },
       {
-        "character": "Raul",
+        "character": "Raúl",
         "Text": "La verdad que no lo sabemos, estábamos por aquí jugando y queremos enterarnos de lo que pasa.",
         "Responses": "None"
       },
       {
-        "character": "Raul",
+        "character": "Raúl",
         "Text": "Parece que Laura está triste pero Sara no nos deja que le preguntemos, dice que la agobiamos.",
         "Responses": "PropuestaRaul"
       }
@@ -56,7 +56,7 @@
         "Responses": "None"
       },
       {
-        "character": "Raul",
+        "character": "Raúl",
         "Text": "¿Asustados? ¿De qué?",
         "Responses": "None"
       },
@@ -73,14 +73,14 @@
 
       }
     ],
-    "RaulEnfadado": [
+    "RaúlEnfadado": [
       {
         "character": "Yo",
         "Text": "¿Qué es lo que os enfada?",
         "Responses": "None"
       },
       {
-        "character": "Raul",
+        "character": "Raúl",
         "Text": "No estamos enfadados con nadie...",
         "Responses": "None"
       },
@@ -98,21 +98,21 @@
     ],
     "RaulSolucionBien": [
       {
-        "character": "Raul",
+        "character": "Raúl",
         "Text": "Igual tienes razón, ya le preguntaremos más tarde.",
         "Responses": "None"
       }
     ],
     "RaulSolucionRegular": [
       {
-        "character": "Raul",
+        "character": "Raúl",
         "Text": "Bueno, haremos lo que queramos.",
         "Responses": "None"
       }
     ],
     "RaulSolucionMal": [
       {
-        "character": "Raul",
+        "character": "Raúl",
         "Text": "Eso, mira a ver qué le pasa con nosotros.",
         "Responses": "None"
       }
