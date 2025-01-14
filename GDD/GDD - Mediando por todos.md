@@ -69,7 +69,20 @@ También, dependiendo de si se ha resuelto el conflicto y cuán bien se haya hec
 
 Cada nivel del juego es representativo de uno de los conflictos más comunes, aquí se presentan ordenados por día de aparición:
 
-- Se agreden física y verbalmente (Tutorial):
+- Problemas de espacio: (Tutorial):
+    - Precedente: Se escuchará como dos personas discuten en base a os problemas de espacio en el recreo, Elena y Héctor.
+    - Conflicto: El mediador está en el recreo cuando observa dos grupos de personas discutiendo. Habría tres opciones de intervención:
+        - Hablar con alguien que no ha tenido que ver en el conflicto: Será un personaje neutral que conoce la situación. Hablaría del conflicto general que se produce entre las personas que juegan al fútbol y las que no, sin posicionarse en ningún lado.
+        - Hablar con la persona que quiere jugar al fútbol: Será una persona  que representará al grupo de los que juegan al fútbol.
+        - Hablar con la persona que ha pegado el balonazo: Defenderá los intereses de las personas que no juegan al fútbol.
+        
+    
+    En función de si se ha seguido el procedimiento correctamente o no el conflicto tendrá los siguientes posibles resultados:
+    
+    - **Bronce:** Elena se ha disculpado, pero Héctor no, solo Elena está contenta con la resolución del profesor.
+    - **Plata:** Elena se ha disculpado, pero Héctor no, ambos están contentos con la resolución del profesor.
+    - **Oro:** Las dos partes del conflicto han entendido qué han hecho mal y por qué ha hecho cada uno lo que ha hecho. Se perdonan y vuelven a estar cómodamente juntos.
+- Se agreden física y verbalmente:
     - Precedente: Se podrá ver como dos personas empiezan a insultar gravemente.
     - Conflicto: El jugador se encontrará con las personas que antes habían empezado a enemistarse, esta vez insultándose. Para empezar la mediación se interactuará directamente con las personas implicadas en el conflicto, este conflicto sirve de tutorial, de modo que hay un personaje auxiliar ayudándote.
     - Resolución: El jugador tendrá que pedir a los implicados que expliquen lo que ha pasado y que lo hagan uno a uno. El jugador escogerá con quién quiere interactuar primero y guiará a la persona a que explique lo que ha pasado con calma, sin insultar y mostrando cómo se ha sentido con lo ocurrido. Se tendrá que escuchar sin juzgar ni tomar partido, una vez recibida la información se intentará devolver la misma para preguntar por una confirmación. Una vez terminada la interacción con uno de los actores se repetirá el proceso con el otro. Con toda la información se buscará consensuadamente una resolución al conflicto. Además en caso de insultos o de provocaciones previas se buscará que se disculpen y admita cada implicado su parte de culpa.
@@ -102,12 +115,6 @@ Cada nivel del juego es representativo de uno de los conflictos más comunes, aq
         - Bronce: Se perdonan pero ya no están tan bien entre ellas, así que se dan un espacio. La chica que estaba llorando encuentra otro grupo distinto con el que estar.
         - Plata: Vuelven a llevarse bien, pero el origen del conflicto no se ha tratado de forma apropiada. El grupo de la chica le da otra oportunidad pero es posible que la situación se repita en un futuro.
         - Oro: Vuelven a llevarse bien y cada miembro se da cuenta de las cosas que ha hecho mal. El origen del problema ha sido tratado por cada parte de forma profunda y es poco probable que se repita.
-- Problemas de espacio:
-    - Precedente: Se irá viendo como quienes juegan al fútbol ocupan la mayor parte del espacio del patio sin permitir al resto hacer uso del mismo. El conflicto estalla cuando una persona que no está jugando al fútbol recibe un balonazo.
-    - Conflicto: El mediador está en el recreo cuando observa dos grupos de personas discutiendo. Habría tres opciones de intervención:
-        - Hablar con alguien que no ha tenido que ver en el conflicto: Será un personaje neutral que conoce la situación. Hablaría del conflicto general que se produce entre las personas que juegan al fútbol y las que no, sin posicionarse en ningún lado.
-        - Hablar con la persona que ha recibido el balonazo: Será una persona  que representará al grupo de los que no juegan al fútbol. Hablará del balonazo como el momento que ha detonado un conflicto a mayor escala, pero después se centrará en defender los intereses de las personas que no juegan al fútbol.
-        - Hablar con la persona que ha pegado el balonazo: En un primer momento no va a asumir responsabilidades del balonazo y defenderá los intereses de las personas que juegan al fútbol.
 
 ## Limitaciones debido al Uso Pedagógico
 
@@ -179,6 +186,6 @@ Selección de personaje con el que se va a interactuar
 
 ![image.png](image%204.png)
 
-## Sonido
+## Uso de IA
 
-Las acciones del jugador tendrán feedback sonoro en todo momento y el estilo de la música será ambient. Destacando en el medidor de tensión, que reproducirá un sonido agradable al bajar y un sonido desagradable al subir. También se hará uso de música con capas para relajar o aumentar la tensión de las situaciones de forma acorde al medidor.
+No se han usado herramientas de IA.
