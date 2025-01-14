@@ -4,12 +4,14 @@
       {
         "text": "Triste",
         "nextDialogueGroup": "ElenaEnfadado",
-        "tension": 1 
+        "tension": 1,
+        "interactable": false
       },
       {
         "text": "Feliz",
         "nextDialogueGroup": "ElenaEnfadado",
-        "tension": 1
+        "tension": 1,
+        "interactable": false
       },
       {
         "text": "Enfado",
@@ -19,7 +21,8 @@
       {
         "text": "Miedo",
         "nextDialogueGroup": "ElenaEnfadado",
-        "tension": 1
+        "tension": 1,
+        "interactable": false
       }
     ],
     "EleccionElena": [
@@ -31,12 +34,14 @@
       {
         "text": "Tienes razón. La mayoría manda.",
         "nextDialogueGroup": "ElenaBien",
-        "tension": -2
+        "tension": -2,
+        "interactable": false
       },
       {
         "text": "El fútbol es un rollazo. Que Héctor decida.",
         "nextDialogueGroup": "ElenaBien",
-        "tension": -2
+        "tension": -2,
+        "interactable": false
       }
     ],
     "EmocionHector": [
