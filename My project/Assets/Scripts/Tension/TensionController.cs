@@ -22,7 +22,7 @@ public class TensionController : MonoBehaviour {
         tensionDisplay?.SetTension(GetNormalizedTension());
     }
 
-    private float GetNormalizedTension() {
+    public float GetNormalizedTension() {
         return (currentTension - minTension) / (maxTension - minTension);
     }
 
