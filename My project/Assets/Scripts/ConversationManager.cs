@@ -115,7 +115,7 @@ public class ConversationManager : MonoBehaviour {
         currentLevel = level;
         tensionController.SetInitialTension(data.GetLevelInitialTension(currentLevel));
         tensionMeter.SetActive(true);
-        finalTensionMeter.SetTension(1);
+        finalTensionMeter.ForceTension(1);
         finalTensionMeter.gameObject.SetActive(false);
         stageManager.Restart();
         DialogueGroup context = data.GetLevelInitialContext(currentLevel);
@@ -213,7 +213,7 @@ public class ConversationManager : MonoBehaviour {
             concludingLevel = false;
             GameManager.Instance.CompleteLevel(tensionController.GetCompletionLevel());
             finalTensionMeter.gameObject.SetActive(false);
-            finalTensionMeter.SetTension(1);
+            finalTensionMeter.ForceTension(1);
         }
     }
 

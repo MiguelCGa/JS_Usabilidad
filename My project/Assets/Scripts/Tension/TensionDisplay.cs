@@ -20,11 +20,17 @@ public class TensionDisplay : MonoBehaviour {
     [SerializeField]
     Image noMedals;
 
-    [SerializeField]
     float currentTension = 0;
+
+    [SerializeField]
+    bool updateOnStart = true;
 
     public void SetTension(float tension) { 
         currentTension = tension;
+    }
+    public void ForceTension(float tension) {
+        currentTension = tension;
+        slider.fillAmount = tension;
     }
     private void OnDestroy() {
         controller.SetDisplay(null);
@@ -63,6 +69,8 @@ public class TensionDisplay : MonoBehaviour {
     }
     // Start is called before the first frame update
     void Start() {
+        if (!updateOnStart)
+            return;
         currentTension = controller.SetDisplay(this);
         slider.fillAmount = currentTension;
         slider.color = new Color(Mathf.Clamp(slider.fillAmount * 2, 0, 1), Mathf.Clamp((1 - slider.fillAmount) * 2, 0, 1), 0);

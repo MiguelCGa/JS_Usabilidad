@@ -186,12 +186,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 7958429143658269729}
   slider: {fileID: 5612395092846977710}
-  slidingFactor: 0.1
+  slidingFactor: 0.01
   gold: {fileID: 7000967083026490299}
   silver: {fileID: 6135748522121188830}
   bronze: {fileID: 2678718907705683509}
   noMedals: {fileID: 7391364485184953524}
-  currentTension: 1
+  updateOnStart: 0
 --- !u!1 &436690052363638618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1201,7 @@ MonoBehaviour:
   silver: {fileID: 8415145705515272672}
   bronze: {fileID: 343025696834482699}
   noMedals: {fileID: 5151399426399273098}
-  currentTension: 0
+  updateOnStart: 1
 --- !u!1 &3272087349531344979
 GameObject:
   m_ObjectHideFlags: 0
