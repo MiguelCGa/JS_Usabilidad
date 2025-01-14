@@ -32,10 +32,10 @@ public class LevelDisplayController : MonoBehaviour {
     private void ActivateAbleButtons() {
         int level = 1;
         foreach (var button in buttons) {
-            //if (LevelManager.Instance.NextLevel() < level)
-            //    button.interactable = false;
-            //else
-            //    button.interactable = true;
+            if (LevelManager.Instance.NextLevel() < level)
+                button.interactable = false;
+            else
+                button.interactable = true;
             ++level;
         }
     }
