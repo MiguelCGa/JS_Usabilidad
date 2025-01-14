@@ -9,13 +9,17 @@ public class DialogableCharacter : MonoBehaviour
     string conversation;
     [SerializeField]
     bool locked = false;
+    [SerializeField]
+    GameObject speechBubble;
     Button button;
 
     public void Start() {
         button = GetComponent<Button>();
         button.interactable = !locked;
-        if (locked)
+        if (locked) {
             ConversationManager.Instance.AddUnlockableConversation(conversation, this);
+            speechBubble?.SetActive(false);
+        }
     }
     private void OnDestroy()
     {
@@ -30,9 +34,11 @@ public class DialogableCharacter : MonoBehaviour
 
     public void DeactivateInteraction() {
         button.interactable = false;
+        speechBubble?.SetActive(false);
     }
 
     public void Unlock() {
         button.interactable = true;
+        speechBubble?.SetActive(true);
     }
 }

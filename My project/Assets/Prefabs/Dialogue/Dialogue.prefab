@@ -513,9 +513,9 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 7fe0bef53f827be41ab652ed3b81a28b, type: 3}
   - name: "H\xE9ctor"
     sprite: {fileID: 21300000, guid: d1e8c05db6189854a8066e09e8ba1666, type: 3}
-  - name: Miguel
-    sprite: {fileID: 21300000, guid: 6f28c322919e0734cb5a392967e353d4, type: 3}
   - name: Bruno
+    sprite: {fileID: 21300000, guid: 6f28c322919e0734cb5a392967e353d4, type: 3}
+  - name: Miguel
     sprite: {fileID: 21300000, guid: 11136875b19d17e46a5369bd60a46a4e, type: 3}
   - name: Lucas
     sprite: {fileID: 21300000, guid: d258542483e2f1648b76bd1394b3f89c, type: 3}
