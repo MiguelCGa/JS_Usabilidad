@@ -124,7 +124,7 @@ public class ConversationManager : MonoBehaviour {
             inContext = true;
             contextController.ActivateContext();
             currentConversation = context;
-            InitConversation();
+            InitConversation(true);
         }
     }
 
@@ -133,14 +133,15 @@ public class ConversationManager : MonoBehaviour {
         contextController = box.gameObject.GetComponent<ContextController>();
     }
 
-    private void InitConversation() {
+    private void InitConversation(bool preparing = false) {
         currentDialogue = 0;
         Dialogue d = GetCurrentDialogue();
-        InitDialogue(d);
+        InitDialogue(d, preparing);
     }
-    private void InitDialogue(Dialogue d) {
+    private void InitDialogue(Dialogue d, bool preparing = false) {
         tensionController.AddTension(d.tension);
-        dialogueBox.dialogue(d.Text, d.character);
+        if (preparing) dialogueBox.prepareDialogue(d.Text, d.character);
+        else dialogueBox.dialogue(d.Text, d.character);
         DoUnlock(d);
     }
 

@@ -47,6 +47,15 @@ public class DialogueBox : MonoBehaviour
     private bool arrowControl;
     private float arrowTimer;
 
+
+    private string preparedText = null;
+    private string preparedName = null;
+
+    public void prepareDialogue(string text, string name) {
+        preparedText = text;
+        preparedName = name;
+    }
+
     public void dialogue(string text, string name)
     {
         textToShow = text;
@@ -73,6 +82,7 @@ public class DialogueBox : MonoBehaviour
         if (typingCoroutine != null) StopCoroutine(typingCoroutine); 
 
         typingCoroutine = StartCoroutine(TypeText(textToShow, name));
+
     }
 
     // Corrutina para escribir el texto caracter a caracter
@@ -106,6 +116,10 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
+    private void Awake() {
+        ConversationManager.Instance.SetDialogBox(this);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -128,7 +142,9 @@ public class DialogueBox : MonoBehaviour
         dialogueText.fontSizeMin = 10;
         dialogueText.fontSizeMax = 36;
 
-        ConversationManager.Instance.SetDialogBox(this);
+        if (preparedText != null) {
+            dialogue(preparedText, preparedName);
+        }
     }
 
     // Update is called once per frame
