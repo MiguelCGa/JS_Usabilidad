@@ -61,6 +61,7 @@ public class ConversationManager : MonoBehaviour {
             return true;
         }
         currentResponses = data.GetResponseGroupByID(currentLevel, responses);
+        // EventoBot("Respuesta/Emoción inciada", responses) 
         responseManager.SetResponses(currentResponses, GetCurrentDialogue().emotions);
         return true;
     }
@@ -154,7 +155,7 @@ public class ConversationManager : MonoBehaviour {
         InitConversation();
     }
 
-    void NextDialogue() {
+    public void NextDialogue() {
         if (!dialoging)
             return;
         if (dialogueBox.Next())
@@ -205,6 +206,7 @@ public class ConversationManager : MonoBehaviour {
             tensionMeter.SetActive(false);
             finalTensionMeter.gameObject.SetActive(true);
             finalTensionMeter.SetTension(tensionController.GetNormalizedTension());
+            // EventoBot("Tension final", tensionController.GetTension()) 
             dialoging = true;
             dialogueBox.gameObject.SetActive(true);
             currentConversation = GetLevelConclusionDialogue();
