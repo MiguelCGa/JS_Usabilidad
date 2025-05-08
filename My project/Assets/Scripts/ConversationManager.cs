@@ -154,7 +154,7 @@ public class ConversationManager : MonoBehaviour {
         InitConversation();
     }
 
-    void NextDialogue() {
+    public void NextDialogue() {
         if (!dialoging)
             return;
         if (dialogueBox.Next())
