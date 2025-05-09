@@ -37,6 +37,20 @@ public class MenuNavigationManager : MonoBehaviour
         currentMenu.Enter();
     }
 
+
+    public void GoTo(int index)
+    { 
+        MenuController menu = initialMenus[index];
+        if (currentMenu != null)
+        {
+            currentMenu.Exit();
+            previous.Push(currentMenu);
+            next.Clear();
+        }
+        currentMenu = menu;
+        currentMenu.Enter();
+    }
+
     public void GoBack() {
         if (currentMenu != null) {
              currentMenu.Exit();

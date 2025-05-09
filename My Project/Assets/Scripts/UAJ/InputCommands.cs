@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class InputCommands : MonoBehaviour
 {
+    [SerializeField] private MenuNavigationManager navigationManager;
+
+    private ButtonInteractor interactor;
     public static InputCommands Instance { get; private set; }
+
     private void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -14,12 +18,19 @@ public class InputCommands : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+        interactor = GetComponent<ButtonInteractor>();
+    }
     public void StartGame() {
         // Llamar a la función del botón de iniciar juego
+        if (navigationManager)
+            navigationManager.GoTo(1);
     }
     public void SelectLevel(int level) {
         // Llamar a ButtonInteractor StartLevel()
-        // Tener un ButtonInteractor en el mismo gameObject y hacer getComponent
+        interactor.StartLevel(level);
     }
     public void NextDialogue() {
         // Llamar a ConversationManager NextDialogue()
@@ -31,7 +42,7 @@ public class InputCommands : MonoBehaviour
     }
     public void InteractWithCharacter(string character) {
         // Llamar a ConversationManager StartConversation()
-        // Comprobar que no se rompan las posibles interacciones?
+        ConversationManager.Instance.StartConversation(character);
     }
     public void EndLevel() {
         // Llamar a ConversationManager NextDialogue() creo?
