@@ -42,4 +42,8 @@ public class DialogableCharacter : MonoBehaviour
         button.interactable = true;
         speechBubble?.SetActive(true);
     }
+
+    public string GetConversationID() {
+        return conversation;
+    }
 }
