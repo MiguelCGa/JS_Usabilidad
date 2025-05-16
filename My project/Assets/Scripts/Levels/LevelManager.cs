@@ -27,6 +27,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         // EventoBot("Nivel Actual", lastCompeltedLevel) 
+        EventQueue.Instance.AddEvent(new GameEvent(EventType.LevelStart, lastCompeltedLevel));
         levelsCompletion = new TensionCompletion[totalLevels];
         for (int i = 0; i < levelsCompletion.Length; ++i)
             levelsCompletion[i] = TensionCompletion.FAILED;
@@ -34,6 +35,7 @@ public class LevelManager : MonoBehaviour
 
     public int NextLevel() {
         // EventoBot("Nivel Actual", lastCompeltedLevel + 1) 
+        EventQueue.Instance.AddEvent(new GameEvent(EventType.LevelStart, lastCompeltedLevel + 1));
         return lastCompeltedLevel + 1;
     }
 

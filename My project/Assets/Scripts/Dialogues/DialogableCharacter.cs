@@ -30,6 +30,7 @@ public class DialogableCharacter : MonoBehaviour
     public void StartConversation() {
         ConversationManager.Instance.StartConversation(conversation);
         // EventoBot("Conversación iniciada", conversation) 
+        EventQueue.Instance.AddEvent(new GameEvent(EventType.ConversationStarted, conversation));
         DeactivateInteraction();
     }
 

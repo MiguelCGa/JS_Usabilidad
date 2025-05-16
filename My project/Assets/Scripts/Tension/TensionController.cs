@@ -16,12 +16,14 @@ public class TensionController : MonoBehaviour {
     public void SetInitialTension(float tension) {
         currentTension = tension;
         // EventoBot("Tension inicial", currentTension) 
+        EventQueue.Instance.AddEvent(new GameEvent(EventType.StartingTension, currentTension));
     }
 
     public void AddTension(float tension) {
         currentTension = Mathf.Clamp(currentTension + tension, minTension, maxTension);
         tensionDisplay?.SetTension(GetNormalizedTension());
         // EventoBot("Tension modificada", currentTension) 
+        EventQueue.Instance.AddEvent(new GameEvent(EventType.ModifiedTension, currentTension));
     }
 
     public float GetNormalizedTension() {
