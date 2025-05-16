@@ -1,6 +1,6 @@
 {
   "Agresion": {
-    "MariayLucas": [
+    "InicialMaría": [
       {
         "character": "Yo",
         "Text": "¿Sabéis que ha pasado?",
@@ -62,7 +62,7 @@
         "Responses": "None"
       }
     ],
-    "InicialMiguelYCelia":[
+    "InicialMiguel":[
       {
         "character": "Yo",
         "Text": "Parece que están muy unidos. Se deben de sentir igual...",

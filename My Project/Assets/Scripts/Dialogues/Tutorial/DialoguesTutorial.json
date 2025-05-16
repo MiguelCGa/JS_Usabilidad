@@ -1,6 +1,6 @@
 {
   "Tutorial": {
-    "InicalSofía": [
+    "InicialSofía": [
       {
         "character": "Sofía",
         "Text": "¡Hola!",
@@ -35,10 +35,10 @@
         "character": "Sofía",
         "Text": "Prueba a hablar con él.",
         "Responses": "None",
-        "unlock" : "Javier"
+        "unlock" : "InicialJavier"
       }
     ],
-    "Javier": [
+    "InicialJavier": [
       {
         "character": "Yo",
         "Text": "Hola. ¿Sabes qué es lo que ocurre?",

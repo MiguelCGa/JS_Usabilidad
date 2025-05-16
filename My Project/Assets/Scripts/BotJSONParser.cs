@@ -31,6 +31,14 @@ public class BotJSONParser : MonoBehaviour
         }
     }
 
+    /*
+     * Tipos de errores:
+     * No existe dialogo Inicial
+     * El orden de los dialogos es incorrecto
+     * Hay mas personajes que 
+     * 
+     */
+
     public Dictionary<string, List<Tuple<string, int>>> responseDictionary { get; private set; }
     public Dictionary<string, DialogueInfo> dialogueDictionary { get; private set; }
 
@@ -42,8 +50,8 @@ public class BotJSONParser : MonoBehaviour
     {
         Routes = new List<RouteInfo>();
         characters = new List<string>();
-        LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/Exclusion/DialoguesExclusion.json");
-        LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/Exclusion/ResponsesExclusion.json");
+        LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/Tutorial/DialoguesTutorial.json");
+        LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/Tutorial/ResponsesTutorial.json");
 
         Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), 0, 0);
 
@@ -65,17 +73,22 @@ public class BotJSONParser : MonoBehaviour
             for (int i = 0; i < dialogueJsonObject.list.Count; ++i)
             {
                 JSONObject dialogues = dialogueJsonObject.list[i];
+
+                foreach(var dialogue in dialogues)
+                {
+                    string auxCharacter = dialogue.GetField("character").stringValue;
+                    if (!characters.Contains(auxCharacter) && auxCharacter != "Yo")
+                    {
+                        characters.Add(auxCharacter);
+                    }
+                }
                 character = dialogues.list[dialogues.list.Count - 1].GetField("character").stringValue;
                 lastResponse = dialogues.list[dialogues.list.Count - 1].GetField("Responses").stringValue;
 
                 JSONObject unlockJSONObject = dialogues.list[dialogues.list.Count - 1].GetField("unlock");
 
                 dialogueDictionary.Add(dialogueJsonObject.keys[i], new DialogueInfo(character, lastResponse, unlockJSONObject?.stringValue));
-                
-                if(!characters.Contains(character) && character != "Yo")
-                {
-                    characters.Add(character);
-                }
+               
             }
 
             int patata = 14;
@@ -134,6 +147,9 @@ public class BotJSONParser : MonoBehaviour
         {
             // Terminada ruta de personaje actual
             currCharacter++;
+            while(!dialogueDictionary.ContainsKey("Inicial" + characters[currCharacter]) && currCharacter < characters.Count)
+                currCharacter++;
+
             Pathfinder("Inicial" + characters[currCharacter], dialogueList, processedResponses, accumulativeTension, currCharacter);
         }
         else
