@@ -36,13 +36,16 @@ public class BotJSONParser : MonoBehaviour
 
     public List<RouteInfo> Routes;
 
+    private List<string> characters;
+
     private void Start()
     {
+        Routes = new List<RouteInfo>();
+        characters = new List<string>();
         LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/Exclusion/DialoguesExclusion.json");
         LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/Exclusion/ResponsesExclusion.json");
-        Routes = new List<RouteInfo>();
 
-        Pathfinder("InicialRaul", new List<int>(), new HashSet<string>(), 0);
+        Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), 0, 0);
 
         int patata = 14;
     }
@@ -68,6 +71,11 @@ public class BotJSONParser : MonoBehaviour
                 JSONObject unlockJSONObject = dialogues.list[dialogues.list.Count - 1].GetField("unlock");
 
                 dialogueDictionary.Add(dialogueJsonObject.keys[i], new DialogueInfo(character, lastResponse, unlockJSONObject?.stringValue));
+                
+                if(!characters.Contains(character) && character != "Yo")
+                {
+                    characters.Add(character);
+                }
             }
 
             int patata = 14;
@@ -101,7 +109,8 @@ public class BotJSONParser : MonoBehaviour
         int patata = 14;
     }
 
-    public void Pathfinder(string firstDialogueName, List<int> dialogueList, HashSet<string> processedResponses, int accumulativeTension)
+    public void Pathfinder(string firstDialogueName, List<int> dialogueList, HashSet<string> processedResponses, 
+        int accumulativeTension, int currCharacter)
     {
         DialogueInfo currDialogue = dialogueDictionary[firstDialogueName];
 
@@ -119,11 +128,13 @@ public class BotJSONParser : MonoBehaviour
 
         if(currDialogue.unlock != null)
         {
-            Pathfinder(currDialogue.unlock, dialogueList, processedResponses, accumulativeTension);
+            Pathfinder(currDialogue.unlock, dialogueList, processedResponses, accumulativeTension, currCharacter);
         }
         else if (currDialogue.response == "None")
         {
-            return;
+            // Terminada ruta de personaje actual
+            currCharacter++;
+            Pathfinder("Inicial" + characters[currCharacter], dialogueList, processedResponses, accumulativeTension, currCharacter);
         }
         else
         {
@@ -144,7 +155,7 @@ public class BotJSONParser : MonoBehaviour
                         i
                     };
 
-                    Pathfinder(responses.Item1, tempDialogues, tempResponses, accumulativeTension + responses.Item2);
+                    Pathfinder(responses.Item1, tempDialogues, tempResponses, accumulativeTension + responses.Item2, currCharacter);
                 }
             }
         }

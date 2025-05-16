@@ -1,14 +1,14 @@
 {
   "Exclusion": {
-    "InicialRaul": [
+    "InicialRaúl": [
       {
         "character": "Yo",
         "Text": "(Pensando) Tengo que observar cómo se sienten, no vaya a meter la pata.",
-        "Responses": "EmocionRaul",
+        "Responses": "EmocionRaúl",
         "emotions": true
       }
     ],
-    "RaulTriste": [
+    "RaúlTriste": [
       {
         "character": "Yo",
         "Text": "Vaya... ¿Qué es lo que os pone tristes?",
@@ -27,12 +27,12 @@
       {
         "character": "Yo",
         "Text": "Lo siento, creo que no he conseguido entender cómo os sentís.",
-        "Responses": "EmocionRaul",
+        "Responses": "EmocionRaúl",
         "emotions": true
 
       }
     ],
-    "RaulFeliz": [
+    "RaúlFeliz": [
       {
         "character": "Yo",
         "Text": "Hola, ¿Sabéis qué ocurre? Se os ve bastante relajados y contentos.",
@@ -46,10 +46,10 @@
       {
         "character": "Raúl",
         "Text": "Parece que Laura está triste pero Sara no nos deja que le preguntemos, dice que la agobiamos.",
-        "Responses": "PropuestaRaul"
+        "Responses": "PropuestaRaúl"
       }
     ],
-    "RaulAsustado": [
+    "RaúlAsustado": [
       {
         "character": "Yo",
         "Text": "¿Estáis asustados?",
@@ -68,12 +68,12 @@
       {
         "character": "Yo",
         "Text": "Lo siento, creo que no he conseguido entender cómo os sentís.",
-        "Responses": "EmocionRaul",
+        "Responses": "EmocionRaúl",
         "emotions": true
 
       }
     ],
-    "RaulEnfadado": [
+    "RaúlEnfadado": [
       {
         "character": "Yo",
         "Text": "¿Qué es lo que os enfada?",
@@ -92,25 +92,25 @@
       {
         "character": "Yo",
         "Text": "Lo siento, creo que no he conseguido entender cómo os sentís.",
-        "Responses": "EmocionRaul",
+        "Responses": "EmocionRaúl",
         "emotions": true
       }
     ],
-    "RaulSolucionBien": [
+    "RaúlSolucionBien": [
       {
         "character": "Raúl",
         "Text": "Igual tienes razón, ya le preguntaremos más tarde.",
         "Responses": "None"
       }
     ],
-    "RaulSolucionRegular": [
+    "RaúlSolucionRegular": [
       {
         "character": "Raúl",
         "Text": "Bueno, haremos lo que queramos.",
         "Responses": "None"
       }
     ],
-    "RaulSolucionMal": [
+    "RaúlSolucionMal": [
       {
         "character": "Raúl",
         "Text": "Eso, mira a ver qué le pasa con nosotros.",

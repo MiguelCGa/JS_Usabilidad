@@ -1,41 +1,41 @@
 {
   "Exclusion": {
-    "EmocionRaul": [
+    "EmocionRaúl": [
       {
         "text": "Triste",
-        "nextDialogueGroup": "RaulTriste",
+        "nextDialogueGroup": "RaúlTriste",
         "tension": 1 
       },
       {
         "text": "Feliz",
-        "nextDialogueGroup": "RaulFeliz",
+        "nextDialogueGroup": "RaúlFeliz",
         "tension": -1
       },
       {
         "text": "Enfado",
-        "nextDialogueGroup": "RaulEnfadado",
+        "nextDialogueGroup": "RaúlEnfadado",
         "tension": 1
       },
       {
         "text": "Miedo",
-        "nextDialogueGroup": "RaulAsustado",
+        "nextDialogueGroup": "RaúlAsustado",
         "tension": 1
       }
     ],
-    "PropuestaRaul": [
+    "PropuestaRaúl": [
       {
         "text": "Sois muchos, de momento lo mejor es no agobiarla.",
-        "nextDialogueGroup": "RaulSolucionBien",
+        "nextDialogueGroup": "RaúlSolucionBien",
         "tension": -1
       },
       {
         "text": "Laura tiene razón, marchaos de una vez.",
-        "nextDialogueGroup": "RaulSolucionRegular",
+        "nextDialogueGroup": "RaúlSolucionRegular",
         "tension": 1
       },
       {
         "text": "Ahora hablo con Laura, a ver cuál es su problema.",
-        "nextDialogueGroup": "RaulSolucionMal",
+        "nextDialogueGroup": "RaúlSolucionMal",
         "tension": 2
       }
     ],
