@@ -233,6 +233,7 @@ public class ConversationManager : MonoBehaviour {
     private void DoUnlock(Dialogue dialogue) {
         if (dialogue.unlock == null)
             return;
+        //EventoBot("Desbloquear personaje", )
         unlockableConversations[dialogue.unlock].Unlock();
     }
 }
