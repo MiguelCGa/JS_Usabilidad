@@ -9,6 +9,7 @@ public struct GameEvent
 {
     EventType type;
     object parameter;
+
     public GameEvent(EventType t, string s)
     {
         type = t;
@@ -29,7 +30,15 @@ public struct GameEvent
         type = t;
         parameter = null;
     }
+
+    public EventType GetEventType() { return type; }
+    public T GetParameter<T>()
+    {
+        if (parameter is T value) { return (T)parameter; }
+        throw new System.InvalidCastException();
+    }
 }
+
 public enum EventType { GameStart, LevelStart, StartingTension, ModifiedTension, FinalTension, SelectedResponse, 
     ConversationStarted, ConversationEnded, ResponseStarted,  CharacterUnlocked}
 
