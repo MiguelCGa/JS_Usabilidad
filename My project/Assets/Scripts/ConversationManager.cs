@@ -62,7 +62,7 @@ public class ConversationManager : MonoBehaviour {
         }
         currentResponses = data.GetResponseGroupByID(currentLevel, responses);
         // EventoBot("Respuesta/Emoción inciada", responses) 
-        EventQueue.Instance.AddEvent(new GameEvent(EventType.ResponseStarted, responses));
+        EventQueue.Instance().AddEvent(new GameEvent(EventType.ResponseStarted, responses));
         responseManager.SetResponses(currentResponses, GetCurrentDialogue().emotions);
         return true;
     }
@@ -196,7 +196,7 @@ public class ConversationManager : MonoBehaviour {
 
     public void StopDialogue() {
         //EventoBot("Dialogo Terminado");
-        EventQueue.Instance.AddEvent(new GameEvent(EventType.ConversationEnded));
+        EventQueue.Instance().AddEvent(new GameEvent(EventType.ConversationEnded));
         if (inContext) {
             inContext = false;
             contextController.DeactivateContext();
@@ -210,7 +210,7 @@ public class ConversationManager : MonoBehaviour {
             finalTensionMeter.gameObject.SetActive(true);
             finalTensionMeter.SetTension(tensionController.GetNormalizedTension());
             // EventoBot("Tension final", tensionController.GetTension()) 
-            EventQueue.Instance.AddEvent(new GameEvent(EventType.FinalTension, tensionController.GetTension()));
+            EventQueue.Instance().AddEvent(new GameEvent(EventType.FinalTension, tensionController.GetTension()));
             dialoging = true;
             dialogueBox.gameObject.SetActive(true);
             currentConversation = GetLevelConclusionDialogue();
@@ -238,7 +238,7 @@ public class ConversationManager : MonoBehaviour {
         if (dialogue.unlock == null)
             return;
         //EventoBot("Desbloquear personaje", dialogue.unlock);
-        EventQueue.Instance.AddEvent(new GameEvent(EventType.CharacterUnlocked, dialogue.unlock));
+        EventQueue.Instance().AddEvent(new GameEvent(EventType.CharacterUnlocked, dialogue.unlock));
         unlockableConversations[dialogue.unlock].Unlock();
     }
 }

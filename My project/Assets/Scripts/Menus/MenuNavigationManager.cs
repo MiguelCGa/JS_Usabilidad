@@ -26,7 +26,7 @@ public class MenuNavigationManager : MonoBehaviour
             }
         }
         //EventoBot("Inicio de Juego")
-        EventQueue.Instance.AddEvent(new GameEvent(EventType.GameStart));
+        EventQueue.Instance().AddEvent(new GameEvent(EventType.GameStart));
     }
 
     public void GoTo(MenuController menu) {

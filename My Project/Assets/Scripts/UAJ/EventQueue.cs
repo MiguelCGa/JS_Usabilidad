@@ -39,19 +39,29 @@ public struct GameEvent
     }
 }
 
-public enum EventType { GameStart, LevelStart, StartingTension, ModifiedTension, FinalTension, SelectedResponse, 
-    ConversationStarted, ConversationEnded, ResponseStarted,  CharacterUnlocked}
-
-public class EventQueue 
+public enum EventType
 {
-   public static EventQueue Instance { get; private set; }
-   private Queue<GameEvent> queue;
-   public static void Init() {
-        if (Instance == null)
+    GameStart, LevelStart, StartingTension, ModifiedTension, FinalTension, SelectedResponse,
+    ConversationStarted, ConversationEnded, ResponseStarted, CharacterUnlocked
+}
+
+public class EventQueue
+{
+    private static EventQueue instance;
+    private Queue<GameEvent> queue;
+    public static EventQueue Instance()
+    {
+        if (instance == null)
         {
-            Instance = new EventQueue();
-        } 
-   }
+            instance = new EventQueue();
+        }
+
+        return instance;
+    }
+    private EventQueue()
+    {
+        queue = new Queue<GameEvent>();
+    }
 
     public void AddEvent(GameEvent gEvent)
     {
