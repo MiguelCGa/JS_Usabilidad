@@ -74,7 +74,7 @@ public class BotJSONParser : MonoBehaviour
             {
                 JSONObject dialogues = dialogueJsonObject.list[i];
 
-                foreach(var dialogue in dialogues)
+                foreach (var dialogue in dialogues)
                 {
                     string auxCharacter = dialogue.GetField("character").stringValue;
                     if (!characters.Contains(auxCharacter) && auxCharacter != "Yo")
@@ -88,7 +88,6 @@ public class BotJSONParser : MonoBehaviour
                 JSONObject unlockJSONObject = dialogues.list[dialogues.list.Count - 1].GetField("unlock");
 
                 dialogueDictionary.Add(dialogueJsonObject.keys[i], new DialogueInfo(character, lastResponse, unlockJSONObject?.stringValue));
-               
             }
 
             int patata = 14;
@@ -122,7 +121,7 @@ public class BotJSONParser : MonoBehaviour
         int patata = 14;
     }
 
-    public void Pathfinder(string firstDialogueName, List<int> dialogueList, HashSet<string> processedResponses, 
+    public void Pathfinder(string firstDialogueName, List<int> dialogueList, HashSet<string> processedResponses,
         int accumulativeTension, int currCharacter)
     {
         DialogueInfo currDialogue = dialogueDictionary[firstDialogueName];
@@ -135,11 +134,11 @@ public class BotJSONParser : MonoBehaviour
         if (currDialogue.response == "EndLevel")
         {
             Routes.Add(new RouteInfo(dialogueList, accumulativeTension));
-            
+
             return;
         }
 
-        if(currDialogue.unlock != null)
+        if (currDialogue.unlock != null)
         {
             Pathfinder(currDialogue.unlock, dialogueList, processedResponses, accumulativeTension, currCharacter);
         }
@@ -147,7 +146,7 @@ public class BotJSONParser : MonoBehaviour
         {
             // Terminada ruta de personaje actual
             currCharacter++;
-            while(!dialogueDictionary.ContainsKey("Inicial" + characters[currCharacter]) && currCharacter < characters.Count)
+            while (!dialogueDictionary.ContainsKey("Inicial" + characters[currCharacter]) && currCharacter < characters.Count)
                 currCharacter++;
 
             Pathfinder("Inicial" + characters[currCharacter], dialogueList, processedResponses, accumulativeTension, currCharacter);

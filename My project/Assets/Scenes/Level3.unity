@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: Raquel
+  conversation: InicialRaquel
   locked: 0
   speechBubble: {fileID: 528735551}
 --- !u!114 &1329376628

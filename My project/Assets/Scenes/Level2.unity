@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: InicialMiguelYCelia
+  conversation: InicialMiguel
   locked: 0
   speechBubble: {fileID: 1867650197}
 --- !u!1 &887839788 stripped
@@ -1450,7 +1450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: MariayLucas
+  conversation: "InicialMar\xEDa"
   locked: 0
   speechBubble: {fileID: 597189083}
 --- !u!1 &2070171155

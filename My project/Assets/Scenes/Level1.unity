@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: Javier
+  conversation: InicialJavier
   locked: 1
   speechBubble: {fileID: 1173446570}
 --- !u!114 &374056609
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197aea99cbf866140806042af13b2a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: "Sof\xEDa"
+  conversation: "InicialSof\xEDa"
   locked: 0
   speechBubble: {fileID: 655763383}
 --- !u!114 &1885944186
