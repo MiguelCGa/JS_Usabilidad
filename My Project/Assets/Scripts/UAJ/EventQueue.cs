@@ -50,7 +50,7 @@ public struct GameEvent
 
 public enum EventType
 {
-    GameStart, LevelStart, LevelEnd, LevelsMenu, StartingTension, ModifiedTension, FinalTension, SelectedResponse,
+    GameStart, LevelStart, LevelEnd, LevelsMenu, LevelBlackscreenEnded, StartingTension, ModifiedTension, FinalTension, SelectedResponse,
     ConversationStarted, ConversationEnded, ResponseStarted, CharacterUnlocked
 }
 
