@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private enum LevelName
+    {
+        None,
+        Tutorial,
+        Agresion,
+        Football,
+        Exclusion
+    }
     public static GameManager Instance { get; private set; }
 
     [SerializeField]
@@ -69,5 +77,10 @@ public class GameManager : MonoBehaviour
         // EventoBot("Fin de Nivel", currentLevel) 
         EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelEnd, currentLevel));
         ChangeScene(mainMenuScene);
+    }
+
+    public string GetNameOnIndex(int index)
+    {
+        return ((LevelName) index).ToString();
     }
 }
