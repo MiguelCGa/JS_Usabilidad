@@ -24,8 +24,6 @@ public class MenuNavigationManager : MonoBehaviour
                 if (initialMenuIndex < initialMenus.Length) 
                     GoTo(initialMenus[i]);
             }
-            //EventoBot("Inicio de Juego")
-            EventQueue.Instance().AddEvent(new GameEvent(EventType.GameStart));
         }
     }
 

@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //EventoBot("Inicio de Juego")
+        EventQueue.Instance().AddEvent(new GameEvent(EventType.GameStart));
     }
 
     // Update is called once per frame
