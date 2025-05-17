@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
         if (id > LevelManager.Instance.NextLevel())
             return;
         currentLevel = id;
+        // EventoBot("Nivel Actual", id + 1) 
+        EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelStart, id));
         MenuNavigationManager.SetIntialMenuIndex(1);
         ChangeScene(string.Concat(levelScenePrefix, id));
     }

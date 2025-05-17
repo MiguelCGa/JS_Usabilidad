@@ -32,8 +32,6 @@ public class LevelManager : MonoBehaviour
     }
 
     public int NextLevel() {
-        // EventoBot("Nivel Actual", lastCompeltedLevel + 1) 
-        EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelStart, lastCompeltedLevel + 1));
         return lastCompeltedLevel + 1;
     }
 
