@@ -4,7 +4,16 @@ using System.Xml.Schema;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public   class GameListener :MonoBehaviour
+{
 
+    public virtual void RecieveEvent(GameEvent evt)
+    { 
+
+    }
+      
+
+}
 public struct GameEvent
 {
     EventType type;
@@ -49,6 +58,7 @@ public class EventQueue
 {
     private static EventQueue instance;
     private Queue<GameEvent> queue;
+    private HashSet<GameListener> listeners;
     public static EventQueue Instance()
     {
         if (instance == null)
@@ -61,15 +71,26 @@ public class EventQueue
     private EventQueue()
     {
         queue = new Queue<GameEvent>();
+        listeners = new HashSet<GameListener>();
     }
 
     public void AddEvent(GameEvent gEvent)
     {
         queue.Enqueue(gEvent);
+        foreach (GameListener lt in listeners)
+        {
+
+            lt.RecieveEvent(gEvent);
+        }
     }
 
     public GameEvent HandleEvent()
     {
         return queue.Dequeue();
+    }
+
+    public void AddListener(GameListener listener)
+    {
+        listeners.Add(listener);
     }
 }
