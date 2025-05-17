@@ -5,7 +5,7 @@ using System.Linq;
 using Defective.JSON;
 using UnityEngine;
 
-public class BotJSONParser 
+public class BotJSONParser
 {
     public struct DialogueInfo
     {
@@ -22,12 +22,28 @@ public class BotJSONParser
     public struct RouteInfo
     {
         public List<int> Responses;
+        public List<string> Characters;
         public int TotalTension;
 
-        public RouteInfo(List<int> r, int t)
+        public RouteInfo(List<int> r, List<string> c, int t)
         {
             Responses = r;
+            Characters = c;
             TotalTension = t;
+        }
+    }
+
+    public struct ResponseInfo
+    {
+        public string NextDialogueGroup;
+        public int Tension;
+        public int ResponseID;
+
+        public ResponseInfo(string d, int t, int r)
+        {
+            NextDialogueGroup = d;
+            Tension = t;
+            ResponseID = r;
         }
     }
 
@@ -40,7 +56,7 @@ public class BotJSONParser
      * 
      */
 
-    private Dictionary<string, List<Tuple<string, int>>> responseDictionary;
+    private Dictionary<string, List<ResponseInfo>> responseDictionary;
     private Dictionary<string, DialogueInfo> dialogueDictionary;
 
     private List<RouteInfo> Routes;
@@ -48,8 +64,8 @@ public class BotJSONParser
     private List<string> characters;
 
     private static BotJSONParser instance;
-    
-   static  public BotJSONParser Instance()
+
+    static public BotJSONParser Instance()
     {
 
         if (instance == null)
@@ -64,35 +80,22 @@ public class BotJSONParser
 
             return instance;
 
-           }
+        }
     }
 
     public List<RouteInfo> ParseLevel(string level)
     {
         Routes = new List<RouteInfo>();
         characters = new List<string>();
-        LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/"+level+"/Dialogues"+level +".json");
-        LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/"+level+"/Responses"+level+".json");
-        Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), 0, 0);
+        LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Dialogues" + level + ".json");
+        LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Responses" + level + ".json");
+        List<string> auxCharacters = new List<string>() { "Inicial" + characters[0] };
+        Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), auxCharacters, 0, 0);
         return Routes;
-
-
     }
-   /* private void Start()
-    {
-        Routes = new List<RouteInfo>();
-        characters = new List<string>();
-        LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/Tutorial/DialoguesTutorial.json");
-        LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/Tutorial/ResponsesTutorial.json");
 
-        Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), 0, 0);
 
-        int patata = 14;
-    }*/
-
-    
-
-   private void LoadDialogueJson(string level)
+    private void LoadDialogueJson(string level)
     {
         dialogueDictionary = new Dictionary<string, DialogueInfo>(); ;
 
@@ -128,9 +131,9 @@ public class BotJSONParser
         }
     }
 
-   private void LoadResponsesJson(string level)
+    private void LoadResponsesJson(string level)
     {
-        responseDictionary = new Dictionary<string, List<Tuple<string, int>>>();
+        responseDictionary = new Dictionary<string, List<ResponseInfo>>();
 
         using (StreamReader r = new StreamReader(level))
         {
@@ -141,13 +144,16 @@ public class BotJSONParser
 
             for (int i = 0; i < responseJsonObject.list.Count; ++i)
             {
-                responseDictionary.Add(responseJsonObject.keys[i], new List<Tuple<string, int>>());
+                responseDictionary.Add(responseJsonObject.keys[i], new List<ResponseInfo>());
                 for (int j = 0; j < responseJsonObject.list[i].count; ++j)
                 {
                     JSONObject dialogues = responseJsonObject.list[i];
+                    JSONObject interactable = dialogues.list[j].GetField("interactable");
+                    if (interactable != null && !interactable.boolValue) continue;
+
                     string nextDialogueGroup = dialogues.list[j].GetField("nextDialogueGroup").stringValue;
                     int tension = dialogues.list[j].GetField("tension").intValue;
-                    responseDictionary[responseJsonObject.keys[i]].Add(new Tuple<string, int>(nextDialogueGroup, tension));
+                    responseDictionary[responseJsonObject.keys[i]].Add(new ResponseInfo(nextDialogueGroup, tension, j));
                 }
             }
         }
@@ -156,7 +162,7 @@ public class BotJSONParser
     }
 
     private void Pathfinder(string firstDialogueName, List<int> dialogueList, HashSet<string> processedResponses,
-        int accumulativeTension, int currCharacter)
+        List<string> characterOrder, int accumulativeTension, int currCharacter)
     {
         DialogueInfo currDialogue = dialogueDictionary[firstDialogueName];
 
@@ -167,24 +173,26 @@ public class BotJSONParser
 
         if (currDialogue.response == "EndLevel")
         {
-            Routes.Add(new RouteInfo(dialogueList, accumulativeTension));
-
+            Routes.Add(new RouteInfo(dialogueList, characterOrder, accumulativeTension));
             return;
         }
 
         if (currDialogue.unlock != null)
         {
-            Pathfinder(currDialogue.unlock, dialogueList, processedResponses, accumulativeTension, currCharacter);
+            if (!characterOrder.Contains(currDialogue.unlock))
+                characterOrder.Add(currDialogue.unlock);
+            Pathfinder(currDialogue.unlock, dialogueList, processedResponses, characterOrder, accumulativeTension, currCharacter);
         }
         else if (currDialogue.response == "None")
         {
             // Terminada ruta de personaje actual
-            dialogueList.Add(-1);
             currCharacter++;
             while (!dialogueDictionary.ContainsKey("Inicial" + characters[currCharacter]) && currCharacter < characters.Count)
                 currCharacter++;
 
-            Pathfinder("Inicial" + characters[currCharacter], dialogueList, processedResponses, accumulativeTension, currCharacter);
+            if (!characterOrder.Contains("Inicial" + characters[currCharacter]))
+                characterOrder.Add("Inicial" + characters[currCharacter]);
+            Pathfinder("Inicial" + characters[currCharacter], dialogueList, processedResponses, characterOrder, accumulativeTension, currCharacter);
         }
         else
         {
@@ -202,10 +210,10 @@ public class BotJSONParser
                     };
                     List<int> tempDialogues = new List<int>(dialogueList)
                     {
-                        i
+                        responses.ResponseID
                     };
 
-                    Pathfinder(responses.Item1, tempDialogues, tempResponses, accumulativeTension + responses.Item2, currCharacter);
+                    Pathfinder(responses.NextDialogueGroup, tempDialogues, tempResponses, characterOrder, accumulativeTension + responses.Tension, currCharacter);
                 }
             }
         }

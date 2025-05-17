@@ -51,7 +51,8 @@ public class DialogueBox : MonoBehaviour
     private string preparedText = null;
     private string preparedName = null;
 
-    public void prepareDialogue(string text, string name) {
+    public void prepareDialogue(string text, string name)
+    {
         preparedText = text;
         preparedName = name;
     }
@@ -79,7 +80,7 @@ public class DialogueBox : MonoBehaviour
         ChangeImage(name);
 
         // por si ya había alguna activa se para
-        if (typingCoroutine != null) StopCoroutine(typingCoroutine); 
+        if (typingCoroutine != null) StopCoroutine(typingCoroutine);
 
         typingCoroutine = StartCoroutine(TypeText(textToShow, name));
 
@@ -116,7 +117,8 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    private void Awake() {
+    private void Awake()
+    {
         ConversationManager.Instance.SetDialogBox(this);
     }
 
@@ -142,7 +144,8 @@ public class DialogueBox : MonoBehaviour
         dialogueText.fontSizeMin = 10;
         dialogueText.fontSizeMax = 36;
 
-        if (preparedText != null) {
+        if (preparedText != null)
+        {
             dialogue(preparedText, preparedName);
         }
     }
@@ -158,10 +161,12 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    public bool Next() {
+    public bool Next()
+    {
         if (textComplete)
             return false;
-        if (typingCoroutine != null) {
+        if (typingCoroutine != null)
+        {
             StopCoroutine(typingCoroutine);
             typingCoroutine = null;
             dialogueText.text = textToShow; // texto completo

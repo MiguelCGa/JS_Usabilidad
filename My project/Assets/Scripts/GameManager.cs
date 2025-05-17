@@ -37,6 +37,18 @@ public class GameManager : MonoBehaviour
     {
         //EventoBot("Inicio de Juego")
         EventQueue.Instance().AddEvent(new GameEvent(EventType.GameStart));
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        if (arg0.name != "MainMenu")
+            EventQueue.Instance().AddEvent(new GameEvent(EventType.OnLevelLoaded));
     }
 
     // Update is called once per frame
@@ -50,8 +62,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartLevel(int id) {
-        if (id > LevelManager.Instance.NextLevel())
-            return;
+        //if (id > LevelManager.Instance.NextLevel())
+        //    return;
         currentLevel = id;
         // EventoBot("Nivel Actual", id + 1) 
         EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelStart, id));
@@ -63,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     }
     public void Resume() {
-
+        
     }
 
     public void BackToMainMenu() {

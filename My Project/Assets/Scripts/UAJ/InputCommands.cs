@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputCommands : MonoBehaviour {
+public class InputCommands : MonoBehaviour
+{
 
     [SerializeField] private bool showDebugButtons = false;
     [SerializeField] private GameObject debugButtons = null;
@@ -10,56 +11,65 @@ public class InputCommands : MonoBehaviour {
     private ButtonInteractor interactor;
     public static InputCommands Instance { get; private set; }
 
-    private void Awake() {
-        if (Instance == null) {
+    private void Awake()
+    {
+        if (Instance == null)
+        {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else {
+        else
+        {
             Destroy(gameObject);
         }
     }
 
-    private void Start() {
+    private void Start()
+    {
         interactor = GetComponent<ButtonInteractor>();
         if (showDebugButtons)
             debugButtons.SetActive(true);
         else
             debugButtons.SetActive(false);
     }
-    public void StartGame() {
+    public void StartGame()
+    {
         MenuNavigationManager navigationManager = FindObjectOfType<MenuNavigationManager>();
         if (navigationManager)
         {
-            // EventoBot("Menu de Niveles") 
-            EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelsMenu));
             navigationManager.GoTo(1);
         }
     }
-    public void SelectLevel(int level) {
+    public void SelectLevel(int level)
+    {
         interactor.StartLevel(level);
     }
-    public void NextDialogue() {
+    public void NextDialogue()
+    {
         ConversationManager.Instance.NextDialogue();
     }
-    public void SelectOption(int option) {
+    public void SelectOption(int option)
+    {
         ConversationManager.Instance.SelectResponse(option);
     }
-
     public void SkipIntro()
     {
         ConversationManager.Instance.EndContext();
     }
-    public void InteractWithCharacter(string character) {
+    public void InteractWithCharacter(string character)
+    {
         DialogableCharacter[] characters = FindObjectsByType<DialogableCharacter>(FindObjectsSortMode.None);
-        foreach (var chara in characters) {
-            if (chara.GetConversationID() == character) {
+        foreach (var chara in characters)
+        {
+            if (chara.GetConversationID() == character)
+            {
                 chara.StartConversation();
                 break;
             }
         }
     }
-    public void EndLevel() {
+    public void EndLevel()
+    {
         ConversationManager.Instance.NextDialogue();
     }
 }

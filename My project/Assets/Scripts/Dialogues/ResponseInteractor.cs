@@ -22,7 +22,6 @@ public class ResponseInteractor : MonoBehaviour
     public void SelectResponse() {
         ConversationManager.Instance.SelectResponse(id);
         // EventoBot("Id Respuesta", id) 
-        EventQueue.Instance().AddEvent(new GameEvent(EventType.SelectedResponse, id));
         button.interactable = false;
     }
 

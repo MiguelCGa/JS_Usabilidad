@@ -1,26 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.TextCore.Text;
 
-public class FullPathTester : GameListener
+public class FullPathTester : MonoBehaviour
 {
     [SerializeField]
     float checkRouteProportion; //100% == all paths checked  
     public static FullPathTester Instance { get; private set; }
 
-    private  List<BotJSONParser.RouteInfo> currentLevelRoutes;
+    private List<BotJSONParser.RouteInfo> currentLevelRoutes;
     private HashSet<int> unlockedLevels;
-    int currentLevel = 0;
+    private bool inConversation = false;
+    private int currentLevel = 1;
+    private int currentRoute = 0;
+    private int currentCharacter = 0;
+    private int currentResponse = 0;
 
     private void Init()
     {
-
         if (Instance == null)
         {
             Instance = this;
-            EventQueue.Instance().AddListener(Instance);
             unlockedLevels = new HashSet<int>();
-           DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -31,71 +35,98 @@ public class FullPathTester : GameListener
     void Awake()
     {
         Init();
-    
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (EventQueue.Instance().HasEvents())
+        {
+            HandleEvent(EventQueue.Instance().HandleEvent());
+        }
+        if (inConversation)
+        {
+            InputCommands.Instance.NextDialogue();
+        }
     }
 
     private void StartPlaying()
     {
-        
         unlockedLevels.Add(1);
-        currentLevel = 1;
         InputCommands.Instance.StartGame();
     }
 
     private void SelectLevel(int l)
     {
-
         InputCommands.Instance.SelectLevel(l);
-    
     }
-    private void StartLevel(int l )
+    private void StartLevel(int l)
     {
-
         currentLevelRoutes = BotJSONParser.Instance().ParseLevel(GameManager.Instance.GetNameOnIndex(l));
-        InputCommands.Instance.NextDialogue();
-
-    
     }
-    public override void RecieveEvent(GameEvent evt)  
+    private void StartConversation(string character)
     {
+        InputCommands.Instance.InteractWithCharacter(character);
+    }
 
-        switch (evt.GetEventType()) {
+    private void HandleEvent(GameEvent evt)
+    {
+        switch (evt.GetEventType())
+        {
             case EventType.GameStart:
                 Debug.Log("GameStart");
-
                 StartPlaying();
-                EventQueue.Instance().HandleEvent();
                 break;
             case EventType.LevelsMenu:
                 Debug.Log("LevelsMenu");
-                SelectLevel(currentLevel);
-                EventQueue.Instance().HandleEvent();
+                if (currentLevel < SceneManager.sceneCountInBuildSettings)
+                    SelectLevel(currentLevel);
                 break;
             case EventType.LevelStart:
                 Debug.Log("LevelStart" + evt.GetParameter<int>().ToString());
-                StartLevel(1);
+                StartLevel(currentLevel);
                 break;
             case EventType.ConversationStarted:
-                Debug.Log("ConversationStarted" + evt.GetParameter<string>().ToString());
-                InputCommands.Instance.NextDialogue();
+                Debug.Log("ConversationStarted" + evt.GetParameter<string>());
+                inConversation = true;
+                break;
+            case EventType.OnLevelLoaded:
+                Debug.Log("OnLevelLoaded");
+                currentCharacter = 0;
+                currentResponse = 0;
+                inConversation = true;
+                break;
+            case EventType.ResponseStarted:
+                Debug.Log("ResponseStarted" + evt.GetParameter<string>());
+                inConversation = false;
+                if(currentResponse < currentLevelRoutes[currentRoute].Responses.Count)
+                    InputCommands.Instance.SelectOption(currentLevelRoutes[currentRoute].Responses[currentResponse++]);
+                break;
+            case EventType.SelectedResponse:
+                Debug.Log("SelectedResponse: " + evt.GetParameter<int>());
+                inConversation = true;
+                break;
+            case EventType.ConversationEnded:   
+                Debug.Log("ConversationEnded");
+                inConversation = false;
+                if (currentCharacter < currentLevelRoutes[currentRoute].Characters.Count)
+                    StartConversation(currentLevelRoutes[currentRoute].Characters[currentCharacter++]);
                 break;
             case EventType.FinalTension: //chequear si se corresponde con la tension calculada por la ruta
+                Debug.Log("FinalTension: " + currentLevelRoutes[currentRoute].TotalTension);
+                inConversation = true;
+                break;
+            case EventType.LevelEnd:
+                Debug.Log("LevelEnd");
+                if (currentRoute >= currentLevelRoutes.Count - 1)
+                {
+                    currentLevel++;
+                    currentRoute = 0;
+                }
+                else
+                {
+                    currentRoute++;
+                }
                 break;
         }
-
-            
-        
     }
-
 }

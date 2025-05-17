@@ -185,6 +185,8 @@ public class ConversationManager : MonoBehaviour {
     }
 
     public void SelectResponse(int id) {
+        EventQueue.Instance().AddEvent(new GameEvent(EventType.SelectedResponse, id));
+
         responseManager.HideResponses();
         Response resp = currentResponses.responses[id];
         tensionController.AddTension(resp.tension);

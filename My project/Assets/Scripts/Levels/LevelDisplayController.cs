@@ -18,6 +18,8 @@ public class LevelDisplayController : MonoBehaviour {
         ActivateIfCompleted(silverMedals, TensionCompletion.SILVER);
         ActivateIfCompleted(goldMedals, TensionCompletion.GOLD);
         ActivateAbleButtons();
+
+        EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelsMenu));
     }
 
     private void ActivateIfCompleted(Image[] medals, TensionCompletion completion) {
@@ -32,9 +34,9 @@ public class LevelDisplayController : MonoBehaviour {
     private void ActivateAbleButtons() {
         int level = 1;
         foreach (var button in buttons) {
-            if (LevelManager.Instance.NextLevel() < level)
-                button.interactable = false;
-            else
+            //if (LevelManager.Instance.NextLevel() < level)
+            //    button.interactable = false;
+            //else
                 button.interactable = true;
             ++level;
         }
