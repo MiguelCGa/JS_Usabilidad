@@ -45,6 +45,11 @@ public class InputCommands : MonoBehaviour {
     public void SelectOption(int option) {
         ConversationManager.Instance.SelectResponse(option);
     }
+
+    public void SkipIntro()
+    {
+        ConversationManager.Instance.EndContext();
+    }
     public void InteractWithCharacter(string character) {
         DialogableCharacter[] characters = FindObjectsByType<DialogableCharacter>(FindObjectsSortMode.None);
         foreach (var chara in characters) {
