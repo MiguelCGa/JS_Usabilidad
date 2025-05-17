@@ -198,8 +198,7 @@ public class ConversationManager : MonoBehaviour {
         //EventoBot("Dialogo Terminado");
         EventQueue.Instance().AddEvent(new GameEvent(EventType.ConversationEnded));
         if (inContext) {
-            inContext = false;
-            contextController.DeactivateContext();
+            EndContext();
         }
         dialoging = false;
         dialogueBox.gameObject.SetActive(false);
@@ -222,6 +221,12 @@ public class ConversationManager : MonoBehaviour {
             finalTensionMeter.gameObject.SetActive(false);
             finalTensionMeter.ForceTension(1);
         }
+    }
+
+    public void EndContext()
+    {
+        inContext = false;
+        contextController.DeactivateContext();
     }
 
     public void AddUnlockableConversation(string name, DialogableCharacter character) {
