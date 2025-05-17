@@ -66,6 +66,8 @@ public class GameManager : MonoBehaviour
 
     public void CompleteLevel(TensionCompletion tensionCompletion) {
         LevelManager.Instance.CompleteLevel(currentLevel, tensionCompletion);
+        // EventoBot("Fin de Nivel", currentLevel) 
+        EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelEnd, currentLevel));
         ChangeScene(mainMenuScene);
     }
 }

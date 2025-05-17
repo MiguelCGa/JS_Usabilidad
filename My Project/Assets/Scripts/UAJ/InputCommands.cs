@@ -30,7 +30,11 @@ public class InputCommands : MonoBehaviour {
     public void StartGame() {
         MenuNavigationManager navigationManager = FindObjectOfType<MenuNavigationManager>();
         if (navigationManager)
+        {
+            // EventoBot("Menu de Niveles") 
+            EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelsMenu));
             navigationManager.GoTo(1);
+        }
     }
     public void SelectLevel(int level) {
         interactor.StartLevel(level);
