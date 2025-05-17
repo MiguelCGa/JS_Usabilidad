@@ -29,9 +29,6 @@ public class LevelManager : MonoBehaviour
         levelsCompletion = new TensionCompletion[totalLevels];
         for (int i = 0; i < levelsCompletion.Length; ++i)
             levelsCompletion[i] = TensionCompletion.FAILED;
-
-        // EventoBot("Nivel Actual", lastCompeltedLevel) 
-        EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelStart, lastCompeltedLevel));
     }
 
     public int NextLevel() {
