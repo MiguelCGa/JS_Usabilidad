@@ -5,7 +5,7 @@ using System.Linq;
 using Defective.JSON;
 using UnityEngine;
 
-public class BotJSONParser : MonoBehaviour
+public class BotJSONParser 
 {
     public struct DialogueInfo
     {
@@ -35,18 +35,50 @@ public class BotJSONParser : MonoBehaviour
      * Tipos de errores:
      * No existe dialogo Inicial
      * El orden de los dialogos es incorrecto
-     * Hay mas personajes que 
+     * Tensiones de rutas mal implementadas en el juego 
+     * Dialogos sin respuestas correspondientes y vi
      * 
      */
 
-    public Dictionary<string, List<Tuple<string, int>>> responseDictionary { get; private set; }
-    public Dictionary<string, DialogueInfo> dialogueDictionary { get; private set; }
+    private Dictionary<string, List<Tuple<string, int>>> responseDictionary;
+    private Dictionary<string, DialogueInfo> dialogueDictionary;
 
-    public List<RouteInfo> Routes;
+    private List<RouteInfo> Routes;
 
     private List<string> characters;
 
-    private void Start()
+    private static BotJSONParser instance;
+    
+   static  public BotJSONParser Instance()
+    {
+
+        if (instance == null)
+        {
+
+            instance = new BotJSONParser();
+            return instance;
+        }
+
+        else
+        {
+
+            return instance;
+
+           }
+    }
+
+    public List<RouteInfo> ParseLevel(string level)
+    {
+        Routes = new List<RouteInfo>();
+        characters = new List<string>();
+        LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/"+level+"/Dialogues"+level +".json");
+        LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/"+level+"/Responses"+level+".json");
+        Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), 0, 0);
+        return Routes;
+
+
+    }
+   /* private void Start()
     {
         Routes = new List<RouteInfo>();
         characters = new List<string>();
@@ -56,9 +88,11 @@ public class BotJSONParser : MonoBehaviour
         Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), 0, 0);
 
         int patata = 14;
-    }
+    }*/
 
-    public void LoadDialogueJson(string level)
+    
+
+   private void LoadDialogueJson(string level)
     {
         dialogueDictionary = new Dictionary<string, DialogueInfo>(); ;
 
@@ -94,7 +128,7 @@ public class BotJSONParser : MonoBehaviour
         }
     }
 
-    public void LoadResponsesJson(string level)
+   private void LoadResponsesJson(string level)
     {
         responseDictionary = new Dictionary<string, List<Tuple<string, int>>>();
 
@@ -121,7 +155,7 @@ public class BotJSONParser : MonoBehaviour
         int patata = 14;
     }
 
-    public void Pathfinder(string firstDialogueName, List<int> dialogueList, HashSet<string> processedResponses,
+    private void Pathfinder(string firstDialogueName, List<int> dialogueList, HashSet<string> processedResponses,
         int accumulativeTension, int currCharacter)
     {
         DialogueInfo currDialogue = dialogueDictionary[firstDialogueName];
@@ -145,6 +179,7 @@ public class BotJSONParser : MonoBehaviour
         else if (currDialogue.response == "None")
         {
             // Terminada ruta de personaje actual
+            dialogueList.Add(-1);
             currCharacter++;
             while (!dialogueDictionary.ContainsKey("Inicial" + characters[currCharacter]) && currCharacter < characters.Count)
                 currCharacter++;
