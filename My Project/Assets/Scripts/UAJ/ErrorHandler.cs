@@ -12,6 +12,8 @@ public class ErrorHandler
         JSONObject globalErrorData = new JSONObject();
 
         globalErrorData.AddField("ErrorData", e.Message);
+        globalErrorData.AddField("Source", e.Source);
+        globalErrorData.AddField("Trace", e.StackTrace);
 
         if (level != null)
             globalErrorData.AddField("Level", level);
