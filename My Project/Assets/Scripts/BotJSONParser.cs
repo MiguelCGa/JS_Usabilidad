@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Defective.JSON;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class BotJSONParser
@@ -75,6 +76,8 @@ public class BotJSONParser
     // instancia de la clase
     private static BotJSONParser instance;
 
+    private ErrorHandler errorHandler;
+
     static public BotJSONParser Instance()
     {
 
@@ -96,10 +99,20 @@ public class BotJSONParser
     {
         Routes = new List<RouteInfo>();
         characters = new List<string>();
-        LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Dialogues" + level + ".json");
-        LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Responses" + level + ".json");
-        List<string> auxCharacters = new List<string>() { "Inicial" + characters[0] };
-        Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), auxCharacters, 0, 0);
+        try
+        {
+            LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Dialogues" + level + ".json");
+            LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Responses" + level + ".json");
+            List<string> auxCharacters = new List<string>() { "Inicial" + characters[0] };
+            Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), auxCharacters, 0, 0);
+        }
+        catch (Exception e)
+        {
+            var error = errorHandler.ProccessError(e);
+            var file = File.CreateText("error.json");
+            file.Write(error.ToString());
+            file.Close();
+        }
         return Routes;
     }
 
@@ -116,8 +129,15 @@ public class BotJSONParser
 
             // Se crea un objeto json a partir del string leido
             JSONObject levelJsonObject = new JSONObject(json);
+
+            if (!levelJsonObject)
+                throw new Exception("Error en la creacion del archivo .json de dialogos " + level);
+
             // Se obtiene el primer objeto json de la lista, que equivale a los dialogos del nivel
             JSONObject dialogueJsonObject = levelJsonObject.list[0];
+            if(!dialogueJsonObject)
+                throw new Exception("Error en la obtencion de los dialogos del nivel del archivo .json de dialogos " + level);
+
             string character;
             string lastResponse;
 
@@ -125,11 +145,16 @@ public class BotJSONParser
             for (int i = 0; i < dialogueJsonObject.list.Count; ++i)
             {
                 JSONObject dialogues = dialogueJsonObject.list[i];
+                if(!dialogues)
+                    throw new Exception("Error en la obtencion del dialogo " + i + " del archivo .json de dialogos " + level);
 
                 // Se obtiene el nombre de los personajes con los que se interactuan
                 foreach (var dialogue in dialogues)
                 {
                     string auxCharacter = dialogue.GetField("character").stringValue;
+                    if (auxCharacter == null)
+                        throw new Exception("Error en la obtencion del nombre del personaje en el dialogo " + i + " del archivo .json de dialogos " + level);
+
                     if (!characters.Contains(auxCharacter) && auxCharacter != "Yo")
                     {
                         // Se guardan los personajes en una lista
@@ -139,10 +164,17 @@ public class BotJSONParser
 
                 // Se obtiene el nombre del ultimo personaje con el que se interactua
                 character = dialogues.list[dialogues.list.Count - 1].GetField("character").stringValue;
+                if (character == null)
+                    throw new Exception("Error en la obtencion del nombre del ultimo personaje en el ultimo dialogo del archivo .json de dialogos " + level);
                 // Se obtiene la respuesta que se le da al personaje
                 lastResponse = dialogues.list[dialogues.list.Count - 1].GetField("Responses").stringValue;
+                if (lastResponse == null)
+                    throw new Exception("Error en la obtencion de la respuesta al ultimo personaje en el ultimo dialogo del archivo .json de dialogos " + level);
                 // Se obtiene el nombre del dialogo que se desbloquea al terminar la conversacion
                 JSONObject unlockJSONObject = dialogues.list[dialogues.list.Count - 1].GetField("unlock");
+                if (unlockJSONObject == null)
+                    throw new Exception("Error en la obtencion del nombre del dialogo desbloqueado en el ultimo dialogo del archivo .json de dialogos " + level);
+
                 // Se guarda la informacion del dialogo en el diccionario
                 dialogueDictionary.Add(dialogueJsonObject.keys[i], new DialogueInfo(character, lastResponse, unlockJSONObject?.stringValue));
             }

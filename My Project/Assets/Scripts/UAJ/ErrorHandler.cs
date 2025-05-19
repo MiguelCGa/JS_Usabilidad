@@ -6,18 +6,22 @@ using UnityEngine;
 
 public class ErrorHandler 
 {
-    public JSONObject ProccessError(Exception e, BotJSONParser.RouteInfo routeInfo) {
+    public JSONObject ProccessError(Exception e, BotJSONParser.RouteInfo? routeInfo = null) {
         JSONObject globalErrorData = new JSONObject();
 
         globalErrorData.AddField("ErrorData", e.Message);
-        
-        JSONObject routeData = new JSONObject();
 
-        routeData.AddField("CharacterHistory", listToJSON(routeInfo.Characters));
-        routeData.AddField("ResponseHistory", listToJSON(routeInfo.Responses));
-        routeData.AddField("Tension", routeInfo.TotalTension);
+        if (routeInfo != null)
+        {
+            var data = routeInfo.Value;
+            JSONObject routeData = new JSONObject();
 
-        globalErrorData.AddField("RouteInfo", routeData);
+            routeData.AddField("CharacterHistory", listToJSON(data.Characters));
+            routeData.AddField("ResponseHistory", listToJSON(data.Responses));
+            routeData.AddField("Tension", data.TotalTension);
+
+            globalErrorData.AddField("RouteInfo", routeData);
+        }
 
         return globalErrorData;
     }

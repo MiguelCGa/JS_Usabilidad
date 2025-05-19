@@ -9,10 +9,7 @@ using UnityEngine.TextCore.Text;
 
 public class FullPathTester : MonoBehaviour
 {
-    [SerializeField]
-    string errorFileName = "error.json";
-
-    [SerializeField]
+    s[SerializeField]
     float checkRouteProportion; //100% == all paths checked  
     public static FullPathTester Instance { get; private set; }
 
@@ -64,7 +61,7 @@ public class FullPathTester : MonoBehaviour
         catch(Exception e)
         {
             JSONObject error = errorHandler.ProccessError(e, currentLevelRoutes[currentLevel]);
-            var file = File.CreateText(errorFileName);
+            var file = File.CreateText("error.json");
             file.Write(error.ToString());
             file.Close();
         }
