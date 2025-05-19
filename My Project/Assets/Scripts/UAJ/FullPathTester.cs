@@ -117,7 +117,8 @@ public class FullPathTester : MonoBehaviour
                 break;
             case EventType.LevelEnd:
                 Debug.Log("LevelEnd");
-                if (currentRoute >= currentLevelRoutes.Count - 1)
+                if ((currentRoute >= currentLevelRoutes.Count - 1) || 
+                    (currentRoute >= (currentLevelRoutes.Count-1)*checkRouteProportion/100))
                 {
                     currentLevel++;
                     currentRoute = 0;
