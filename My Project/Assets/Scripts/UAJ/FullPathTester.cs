@@ -145,10 +145,6 @@ public class FullPathTester : MonoBehaviour
                 if (currentCharacter < currentLevelRoutes[currentRoute].Characters.Count)
                     StartConversation(currentLevelRoutes[currentRoute].Characters[currentCharacter++]);
                 break;
-            case EventType.FinalTension: //chequear si se corresponde con la tension calculada por la ruta
-                Debug.Log("FinalTension: " + currentLevelRoutes[currentRoute].TotalTension);
-                inConversation = true;
-                break;
             case EventType.LevelEnd:
                 Debug.Log("LevelEnd");
                 if ((currentRoute >= currentLevelRoutes.Count - 1) ||

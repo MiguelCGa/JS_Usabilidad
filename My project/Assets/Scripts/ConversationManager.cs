@@ -210,8 +210,6 @@ public class ConversationManager : MonoBehaviour {
             tensionMeter.SetActive(false);
             finalTensionMeter.gameObject.SetActive(true);
             finalTensionMeter.SetTension(tensionController.GetNormalizedTension());
-            // EventoBot("Tension final", tensionController.GetTension()) 
-            EventQueue.Instance().AddEvent(new GameEvent(EventType.FinalTension, tensionController.GetTension()));
             dialoging = true;
             dialogueBox.gameObject.SetActive(true);
             currentConversation = GetLevelConclusionDialogue();
