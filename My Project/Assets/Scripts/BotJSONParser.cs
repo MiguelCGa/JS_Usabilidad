@@ -126,8 +126,6 @@ public class BotJSONParser
 
                 dialogueDictionary.Add(dialogueJsonObject.keys[i], new DialogueInfo(character, lastResponse, unlockJSONObject?.stringValue));
             }
-
-            int patata = 14;
         }
     }
 
@@ -157,8 +155,6 @@ public class BotJSONParser
                 }
             }
         }
-
-        int patata = 14;
     }
 
     private void Pathfinder(string firstDialogueName, List<int> dialogueList, HashSet<string> processedResponses,

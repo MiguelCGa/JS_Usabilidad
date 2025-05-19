@@ -52,10 +52,6 @@ public class InputCommands : MonoBehaviour
     {
         ConversationManager.Instance.SelectResponse(option);
     }
-    public void SkipIntro()
-    {
-        ConversationManager.Instance.EndContext();
-    }
     public void InteractWithCharacter(string character)
     {
         DialogableCharacter[] characters = FindObjectsByType<DialogableCharacter>(FindObjectsSortMode.None);
@@ -67,9 +63,5 @@ public class InputCommands : MonoBehaviour
                 break;
             }
         }
-    }
-    public void EndLevel()
-    {
-        ConversationManager.Instance.NextDialogue();
     }
 }
