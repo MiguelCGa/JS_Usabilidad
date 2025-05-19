@@ -6,52 +6,18 @@ using UnityEngine;
 
 public class ErrorHandler 
 {
-    public JSONObject ProccessError(Exception e, BotJSONParser.DialogueInfo? dialogueInfo, BotJSONParser.ResponseInfo? responseInfo, BotJSONParser.RouteInfo? routeInfo) {
+    public JSONObject ProccessError(Exception e, BotJSONParser.RouteInfo routeInfo) {
         JSONObject globalErrorData = new JSONObject();
 
         globalErrorData.AddField("ErrorData", e.Message);
+        
+        JSONObject routeData = new JSONObject();
 
+        routeData.AddField("CharacterHistory", listToJSON(routeInfo.Characters));
+        routeData.AddField("ResponseHistory", listToJSON(routeInfo.Responses));
+        routeData.AddField("Tension", routeInfo.TotalTension);
 
-        if (dialogueInfo != null)
-        {
-            var currentDialogue = dialogueInfo.Value;
-
-            JSONObject dialogueData = new JSONObject();
-
-            dialogueData.AddField("CharacterInteracting", currentDialogue.character);
-            dialogueData.AddField("Response", currentDialogue.response);
-            dialogueData.AddField("Unlock", currentDialogue.unlock);
-
-            globalErrorData.AddField("DialogueInfo", dialogueData);
-        }
-
-        if (responseInfo != null)
-        {
-            var currentResponse = responseInfo.Value;
-
-            JSONObject responseData = new JSONObject();
-
-            responseData.AddField("NextDialogueGroup", currentResponse.NextDialogueGroup);
-            responseData.AddField("Tension", currentResponse.Tension);
-            responseData.AddField("ResponseID", currentResponse.ResponseID);
-
-            globalErrorData.AddField("ResponseInfo", responseData);
-
-        }
-
-        if (routeInfo != null)
-        {
-            var currentRoute = routeInfo.Value;
-
-            JSONObject routeData = new JSONObject();
-
-            routeData.AddField("CharacterHistory", listToJSON(currentRoute.Characters));
-            routeData.AddField("ResponseHistory", listToJSON(currentRoute.Responses));
-            routeData.AddField("Tension", currentRoute.TotalTension);
-
-            globalErrorData.AddField("RouteInfo", routeData);
-
-        }
+        globalErrorData.AddField("RouteInfo", routeData);
 
         return globalErrorData;
     }

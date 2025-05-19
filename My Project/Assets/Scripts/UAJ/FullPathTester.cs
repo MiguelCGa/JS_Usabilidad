@@ -1,5 +1,8 @@
+using Defective.JSON;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
@@ -7,8 +10,13 @@ using UnityEngine.TextCore.Text;
 public class FullPathTester : MonoBehaviour
 {
     [SerializeField]
+    string errorFileName = "error.json";
+
+    [SerializeField]
     float checkRouteProportion; //100% == all paths checked  
     public static FullPathTester Instance { get; private set; }
+
+    private ErrorHandler errorHandler = new ErrorHandler();
 
     private List<BotJSONParser.RouteInfo> currentLevelRoutes;
     private HashSet<int> unlockedLevels;
@@ -18,6 +26,8 @@ public class FullPathTester : MonoBehaviour
     private int currentRoute = 0;
     private int currentCharacter = 0;
     private int currentResponse = 0;
+
+    private float time = 0;
 
     private void Init()
     {
@@ -40,14 +50,25 @@ public class FullPathTester : MonoBehaviour
 
     void Update()
     {
-        if (EventQueue.Instance().HasEvents())
+        try
         {
-            HandleEvent(EventQueue.Instance().HandleEvent());
+            if (EventQueue.Instance().HasEvents())
+            {
+                HandleEvent(EventQueue.Instance().HandleEvent());
+            }
+            if (inConversation)
+            {
+                InputCommands.Instance.NextDialogue();
+            }
         }
-        if (inConversation)
+        catch(Exception e)
         {
-            InputCommands.Instance.NextDialogue();
+            JSONObject error = errorHandler.ProccessError(e, currentLevelRoutes[currentLevel]);
+            var file = File.CreateText(errorFileName);
+            file.Write(error.ToString());
+            file.Close();
         }
+        time += Time.deltaTime;
     }
 
     private void StartPlaying()
@@ -125,9 +146,11 @@ public class FullPathTester : MonoBehaviour
                 if ((currentRoute >= currentLevelRoutes.Count - 1) ||
                     (currentRoute >= (currentLevelRoutes.Count - 1) * checkRouteProportion / 100))
                 {
+                    Debug.Log("Tiempo de rutas de nivel " + currentLevel + ": " + time);
                     levelLoaded = false;
                     currentLevel++;
                     currentRoute = 0;
+                    time = 0;
                 }
                 else
                 {
