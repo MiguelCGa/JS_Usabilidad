@@ -205,6 +205,8 @@ public class ConversationManager : MonoBehaviour {
         dialoging = false;
         dialogueBox.gameObject.SetActive(false);
         if (finishingLevel) {
+            //EventoBot("Nivel Concluido");
+            EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelConclusion));
             finishingLevel = false;
             concludingLevel = true;
             tensionMeter.SetActive(false);

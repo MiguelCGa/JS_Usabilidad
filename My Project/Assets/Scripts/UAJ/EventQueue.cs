@@ -40,7 +40,7 @@ public struct GameEvent
 
 public enum EventType
 {
-    GameStart, LevelStart, LevelEnd, LevelsMenu, OnLevelLoaded, SelectedResponse,
+    GameStart, LevelStart, LevelEnd, LevelConclusion, LevelsMenu, OnLevelLoaded, SelectedResponse,
     ConversationStarted, ConversationEnded, ResponseStarted
 }
 

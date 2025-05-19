@@ -145,8 +145,13 @@ public class FullPathTester : MonoBehaviour
                 if (currentCharacter < currentLevelRoutes[currentRoute].Characters.Count)
                     StartConversation(currentLevelRoutes[currentRoute].Characters[currentCharacter++]);
                 break;
+            case EventType.LevelConclusion:
+                Debug.Log("LevelConclusion");
+                inConversation = true;
+                break;
             case EventType.LevelEnd:
                 Debug.Log("LevelEnd");
+                inConversation = true;
                 if ((currentRoute >= currentLevelRoutes.Count - 1) ||
                     (currentRoute >= (currentLevelRoutes.Count - 1) * checkRouteProportion / 100))
                 {
