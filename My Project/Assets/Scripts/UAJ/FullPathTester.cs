@@ -12,6 +12,10 @@ public class FullPathTester : MonoBehaviour
     private GameObject input;
     [SerializeField]
     float checkRouteProportion; //100% == all paths checked  
+
+    [SerializeField]
+    [Range(0.0f, 10.0f)]
+    float maxTension = 10.0f;
     public static FullPathTester Instance { get; private set; }
 
     private ErrorHandler errorHandler = new ErrorHandler();
@@ -53,7 +57,6 @@ public class FullPathTester : MonoBehaviour
 
     void Update()
     {
-
         try
         {
             if (EventQueue.Instance().HasEvents())
@@ -92,7 +95,7 @@ public class FullPathTester : MonoBehaviour
         {
             input = GameObject.FindGameObjectWithTag("Input");
             input.SetActive(false);
-            currentLevelRoutes = BotJSONParser.Instance().ParseLevel(GameManager.Instance.GetNameOnIndex(currentLevel));
+            currentLevelRoutes = BotJSONParser.Instance().ParseLevel(GameManager.Instance.GetNameOnIndex(currentLevel), maxTension);
 
             levelLoaded = true;
         }

@@ -27,9 +27,9 @@ public class BotJSONParser
     {
         public List<int> Responses;     // respuestas que se escogen en la ruta
         public List<string> Characters; // personajes que con los que se interactuan en la ruta
-        public int TotalTension;        // tension total de la ruta
+        public float TotalTension;        // tension total de la ruta
 
-        public RouteInfo(List<int> r, List<string> c, int t)
+        public RouteInfo(List<int> r, List<string> c, float t)
         {
             Responses = r;
             Characters = c;
@@ -40,10 +40,10 @@ public class BotJSONParser
     public struct ResponseInfo
     {
         public string NextDialogueGroup; // siguiente grupo de dialogo a mostrar
-        public int Tension;              // tension que se modifica al escoger la respuesta
+        public float Tension;              // tension que se modifica al escoger la respuesta
         public int ResponseID;           // ID de la respuesta escogida
 
-        public ResponseInfo(string d, int t, int r)
+        public ResponseInfo(string d, float t, int r)
         {
             NextDialogueGroup = d;
             Tension = t;
@@ -77,6 +77,9 @@ public class BotJSONParser
     // instancia de la clase
     private static BotJSONParser instance;
 
+    // parámetro de tensión máxima
+    private float maxTension;
+
     private ErrorHandler errorHandler;
 
     static public BotJSONParser Instance()
@@ -96,16 +99,17 @@ public class BotJSONParser
     // Metodo para leer un nivel
     // @param level: nombre del nivel a leer
     // @return: lista de las rutas posibles
-    public List<RouteInfo> ParseLevel(string level)
+    public List<RouteInfo> ParseLevel(string level, float tension)
     {
+        maxTension = tension;
         Routes = new List<RouteInfo>();
         characters = new List<string>();
         try
         {
-            LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Dialogues" + level + ".json");
+            LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Dialogues" + level + ".json", out float initialTension);
             LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Responses" + level + ".json");
             List<string> auxCharacters = new List<string>() { "Inicial" + characters[0] };
-            Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), auxCharacters, 0, 0);
+            Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), auxCharacters, initialTension, 0);
         }
         catch (Exception e)
         {
@@ -116,7 +120,7 @@ public class BotJSONParser
 
     // Metodo para leer un json de dialogos
     // @param level: nombre del nivel a leer
-    private void LoadDialogueJson(string level)
+    private void LoadDialogueJson(string level, out float initialTension)
     {
         dialogueDictionary = new Dictionary<string, DialogueInfo>(); ;
 
@@ -135,6 +139,13 @@ public class BotJSONParser
             JSONObject dialogueJsonObject = levelJsonObject.list[0];
             if(!dialogueJsonObject)
                 throw new Exception("Error en la obtencion de los dialogos del nivel del archivo .json de dialogos " + level);
+
+            // Se obtiene la tensión inicial del nivle
+            JSONObject initialTens = levelJsonObject.GetField("InitialTension");
+            if(!initialTens)
+                throw new Exception("No hay tensión definida en el nivel del archivo .json de dialogos " + level);
+            initialTension = initialTens.floatValue;
+
 
             string character;
             string lastResponse;
@@ -241,7 +252,7 @@ public class BotJSONParser
     // @param accumulativeTension: tension acumulada hasta el momento
     // @param currCharacter: personaje con el que se interactua en ese momento
     private void Pathfinder(string firstDialogueName, List<int> responseIDs, HashSet<string> processedResponses,
-        List<string> characterOrder, int accumulativeTension, int currCharacter)
+        List<string> characterOrder, float accumulativeTension, int currCharacter)
     {
         // Se obtiene el dialogo actual
         DialogueInfo currDialogue = dialogueDictionary[firstDialogueName];
@@ -256,7 +267,8 @@ public class BotJSONParser
         if (currDialogue.response == "EndLevel")
         {
             // Se guarda la ruta en la lista 
-            Routes.Add(new RouteInfo(responseIDs, characterOrder, accumulativeTension));
+            if(accumulativeTension <= maxTension)
+                Routes.Add(new RouteInfo(responseIDs, characterOrder, accumulativeTension));
             return;
         }
 

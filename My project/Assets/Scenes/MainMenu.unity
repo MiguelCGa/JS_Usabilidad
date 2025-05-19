@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkRouteProportion: 1
+  maxTension: 10
 --- !u!1 &13440104
 GameObject:
   m_ObjectHideFlags: 0
