@@ -118,6 +118,8 @@ public class FullPathTester : MonoBehaviour
                 Debug.Log("LevelsMenu");
                 if (currentLevel < SceneManager.sceneCountInBuildSettings)
                     SelectLevel();
+                else 
+                    Application.Quit();
                 break;
             case EventType.LevelStart:
                 Debug.Log("LevelStart" + evt.GetParameter<int>().ToString());
