@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class FullPathTester : MonoBehaviour
     private int currentRoute = 0;
     private int currentCharacter = 0;
     private int currentResponse = 0;
+
+    private float time;
 
     private void Init()
     {
@@ -47,6 +50,7 @@ public class FullPathTester : MonoBehaviour
         {
             InputCommands.Instance.NextDialogue();
         }
+        time += Time.deltaTime;
     }
 
     private void StartPlaying()
@@ -73,54 +77,56 @@ public class FullPathTester : MonoBehaviour
         switch (evt.GetEventType())
         {
             case EventType.GameStart:
-                Debug.Log("GameStart");
+                //Debug.Log("GameStart");
                 StartPlaying();
                 break;
             case EventType.LevelsMenu:
-                Debug.Log("LevelsMenu");
+                //Debug.Log("LevelsMenu");
                 if (currentLevel < SceneManager.sceneCountInBuildSettings)
                     SelectLevel(currentLevel);
                 break;
             case EventType.LevelStart:
-                Debug.Log("LevelStart" + evt.GetParameter<int>().ToString());
+                //Debug.Log("LevelStart" + evt.GetParameter<int>().ToString());
                 StartLevel(currentLevel);
                 break;
             case EventType.ConversationStarted:
-                Debug.Log("ConversationStarted" + evt.GetParameter<string>());
+                //Debug.Log("ConversationStarted" + evt.GetParameter<string>());
                 inConversation = true;
                 break;
             case EventType.OnLevelLoaded:
-                Debug.Log("OnLevelLoaded");
+                //Debug.Log("OnLevelLoaded");
                 currentCharacter = 0;
                 currentResponse = 0;
                 inConversation = true;
                 break;
             case EventType.ResponseStarted:
-                Debug.Log("ResponseStarted" + evt.GetParameter<string>());
+                //Debug.Log("ResponseStarted" + evt.GetParameter<string>());
                 inConversation = false;
                 if(currentResponse < currentLevelRoutes[currentRoute].Responses.Count)
                     InputCommands.Instance.SelectOption(currentLevelRoutes[currentRoute].Responses[currentResponse++]);
                 break;
             case EventType.SelectedResponse:
-                Debug.Log("SelectedResponse: " + evt.GetParameter<int>());
+                //Debug.Log("SelectedResponse: " + evt.GetParameter<int>());
                 inConversation = true;
                 break;
             case EventType.ConversationEnded:   
-                Debug.Log("ConversationEnded");
+                //Debug.Log("ConversationEnded");
                 inConversation = false;
                 if (currentCharacter < currentLevelRoutes[currentRoute].Characters.Count)
                     StartConversation(currentLevelRoutes[currentRoute].Characters[currentCharacter++]);
                 break;
             case EventType.FinalTension: //chequear si se corresponde con la tension calculada por la ruta
-                Debug.Log("FinalTension: " + currentLevelRoutes[currentRoute].TotalTension);
+                //Debug.Log("FinalTension: " + currentLevelRoutes[currentRoute].TotalTension);
                 inConversation = true;
                 break;
             case EventType.LevelEnd:
-                Debug.Log("LevelEnd");
+                //Debug.Log("LevelEnd");
                 if (currentRoute >= currentLevelRoutes.Count - 1)
                 {
+                    Debug.Log("Tiempo Nivel " + currentLevel + " :" +time);
                     currentLevel++;
                     currentRoute = 0;
+                    time = 0;
                 }
                 else
                 {
