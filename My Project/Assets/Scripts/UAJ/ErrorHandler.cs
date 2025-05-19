@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class ErrorHandler 
 {
+    //Creamos y escribimos un archivo JSON con los datos enviados
     public void ProccessError(Exception e, string level = null, BotJSONParser.RouteInfo? routeInfo = null) {
         JSONObject globalErrorData = new JSONObject();
 
@@ -35,6 +36,7 @@ public class ErrorHandler
         Application.Quit();
     }
 
+    //Parseo de lista a un objeto de tipo JSON
     private JSONObject listToJSON<T>(List<T> list)
     {
         JSONObject jsonObject = new JSONObject();
