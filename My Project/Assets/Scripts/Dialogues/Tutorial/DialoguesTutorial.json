@@ -72,8 +72,12 @@
       {
         "character": "Javier",
         "Text": "De nada, a ver si podéis ayudar de alguna forma…",
-        "Responses": "None"
-      },
+        "Responses": "None",
+        "unlock": "ContinuacionSofia"
+      }
+    ],
+
+    "ContinuacionSofia": [
       {
         "character": "Sofía",
         "Text": "Con la información que tenemos vamos a hablar con uno de los que forman parte del conflicto.",
@@ -333,25 +337,19 @@
       {
         "character": "Héctor",
         "Text": "¡Guay! ¡Vamos!",
-        "Responses": "None"
-      },
-      {
-        "character": "Sofía",
-        "Text": "Parece que ya has hablado con todos, no estaré para ayudarte en los siguientes conflictos",
-        "Responses": "None"
-      },
-      {
-        "character": "Héctor",
-        "Text": "¡Mucha suerte! Ahora veamos cómo se resuelve este..",
-        "Responses": "EndLevel"
+        "Responses": "None",
+        "unlock": "SofiaFinal"
       }
     ],
     "AyudaHectorMal": [
       {
         "character": "Héctor",
         "Text": "No nos vamos a poner de acuerdo, mejor hablarlo con un profesor.",
-        "Responses": "None"
-      },
+        "Responses": "None",
+        "unlock": "SofiaFinal"
+      }
+    ],
+    "SofiaFinal": [
       {
         "character": "Sofía",
         "Text": "Parece que ya has hablado con todos, no estaré para ayudarte en los siguientes conflictos",
