@@ -7,7 +7,7 @@ public class LevelInitializer : MonoBehaviour
     [SerializeField]
     string levelID;
     // Start is called before the first frame update
-    void OnEnable() {
+    void Start() {
         ConversationManager.Instance.SetCurrentLevel(levelID);
         Destroy(gameObject);
     }

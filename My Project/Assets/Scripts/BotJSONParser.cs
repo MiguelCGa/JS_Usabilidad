@@ -105,14 +105,15 @@ public class BotJSONParser
         characters = new List<string>();
         try
         {
-            LoadDialogueJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Dialogues" + level + ".json", out float initialTension);
-            LoadResponsesJson(Application.dataPath + "/Scripts/Dialogues/" + level + "/Responses" + level + ".json");
+            LoadDialogueJson(Application.streamingAssetsPath + "/" + level + "/Dialogues" + level + ".json", out float initialTension);
+            LoadResponsesJson(Application.streamingAssetsPath + "/" + level + "/Responses" + level + ".json");
             List<string> auxCharacters = new List<string>() { "Inicial" + characters[0] };
             Pathfinder("Inicial" + characters[0], new List<int>(), new HashSet<string>(), auxCharacters, initialTension, 0);
         }
         catch (Exception e)
         {
             errorHandler.ProccessError(e, level);
+            return null;
         }
         return Routes;
     }

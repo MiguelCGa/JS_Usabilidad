@@ -109,7 +109,7 @@ public class ConversationManager : MonoBehaviour {
         data = GetComponent<DialogueData>();
         responseManager = GetComponent<ResponseDisplayManager>();
         tensionController = GetComponent<TensionController>();
-        stageManager = GetComponent<StageManager>(); 
+        stageManager = GetComponent<StageManager>();
 
         InputReader.Instance.onUse += () => { if (inputActive) NextDialogue(); };
     }

@@ -1,0 +1,365 @@
+{
+  "Football": {
+    "InicialLuis": [
+      {
+        "character": "Yo",
+        "Text": "Antes de mediar, tengo que entender cómo se sienten los involucrados.",
+        "Responses": "EmocionLuis",
+        "emotions": true
+      }
+    ],
+    "InicialJavier": [
+      {
+        "character": "Yo",
+        "Text": "Antes que nada tengo que identificar como se siente",
+        "Responses": "EmocionJavier",
+        "emotions": true
+      }
+    ],
+    "InicialRaquel": [
+      {
+        "character": "Yo",
+        "Text": "¿Qué está pasando?",
+        "Responses": "None"
+      },
+      {
+        "character": "Raquel",
+        "Text": "Lo de siempre, Luis se ha llevado un balonazo y todos están enfadados.",
+        "Responses": "None"
+      },
+      {
+        "character": "Raquel",
+        "Text": "Unos con Luis por parar el partido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Raquel",
+        "Text": "Y otros con Javier, que no quiere pedirle perdón.",
+        "Responses": "None"
+      }
+    ],
+    "LuisTriste": [
+      {
+        "character": "Yo",
+        "Text": "¿Estás triste? ¿Te ha hecho daño?",
+        "Responses": "None"
+      },
+      {
+        "character": "Luis",
+        "Text": " Sí, el balonazo duele un poco… pero eso casi es lo de menos.",
+        "Responses": "None"
+      },
+      {
+        "character": "Luis",
+        "Text": "Siento que los que jugaban me odian, especialmente Javier, que encima me ha dado el balonazo.",
+        "Responses": "PropuestaLuis"
+      }
+    ],
+    "LuisFeliz": [
+      {
+        "character": "Yo",
+        "Text": "¿Pareces feliz?",
+        "Responses": "None"
+      },
+      {
+        "character": "Luis",
+        "Text": "¡No! Me ha hecho daño y encima todos los que jugaban al fútbol están enfadados conmigo por parar el partido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando): La he liado un poco, está claro que está triste.",
+        "Responses": "EmocionLuis",
+        "emotions": true
+      }
+    ],
+    "LuisAsustado": [
+      {
+        "character": "Yo",
+        "Text": "¿Pareces asustado?",
+        "Responses": "None"
+      },
+      {
+        "character": "Luis",
+        "Text": "¡No! Me ha hecho daño y encima todos los que jugaban al fútbol están enfadados conmigo por parar el partido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando): La he liado un poco, está claro que está triste.",
+        "Responses": "EmocionLuis",
+        "emotions": true
+      }
+    ],
+    "LuisEnfadado": [
+      {
+        "character": "Yo",
+        "Text": "¿Pareces enfadado?",
+        "Responses": "None"
+      },
+      {
+        "character": "Luis",
+        "Text": "¡No! Me ha hecho daño y encima todos los que jugaban al fútbol están enfadados conmigo por parar el partido.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando): La he liado un poco, está claro que está triste.",
+        "Responses": "EmocionLuis",
+        "emotions": true
+      }
+    ],
+    "LuisSolucionBien": [
+      {
+        "character": "Luis",
+        "Text": "Es posible… ",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Bueno, voy a hablar con Javier.",
+        "Responses": "None",
+        "unlock": "InicialJavier"
+      }
+    ],
+    "LuisSolucionMal": [
+      {
+        "character": "Luis",
+        "Text": "¡No! Seguro que se enfada incluso más. ",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Bueno, voy a hablar con Javier.",
+        "Responses": "None",
+        "unlock": "InicialJavier"
+      }
+    ],
+    "InicioJavier": [
+      {
+        "character": "Yo",
+        "Text": "¿Qué te ocurre?",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "¡Es Luis! Está en todo el medio y ahora me deja de malo porque se ha llevado un balonazo. ¡Qué se hubiera apartado!",
+        "Responses": "EmocionJavier",
+        "emotions": true
+      }
+    ],
+    "JavierTriste": [
+      {
+        "character": "Yo",
+        "Text": "¡Siento oír eso! Si necesitas estás triste estoy aquí…",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "¿Qué estás diciendo?",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta… Javier está enfadado.",
+        "Responses": "EmocionJavier",
+        "emotions": true
+      }
+    ],
+    "JavierFeliz": [
+      {
+        "character": "Yo",
+        "Text": "Pareces feliz.",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "Pero qué dices. No.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta… Javier está enfadado.",
+        "Responses": "EmocionJavier",
+        "emotions": true
+      }
+    ],
+    "JavierAsustado": [
+      {
+        "character": "Yo",
+        "Text": "¿Te asusta esta situación?",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "¿Yo asustado? Para nada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta… Javier está enfadado.",
+        "Responses": "EmocionJavier",
+        "emotions": true
+      }
+    ],
+    "JavierEnfadado": [
+      {
+        "character": "Yo",
+        "Text": "Entiendo que estés enfadado. Tanto Luis como tú tenéis razón pero, le has hecho daño.",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "Él se metió en el campo, es culpa suya y encima parece que soy el malo.",
+        "Responses": "PropuestaJavier"
+      }
+    ],
+    "JavierDisculpaMal": [
+      {
+        "character": "Yo",
+        "Text": "Le has hecho daño a Luis, te tienes que disculpar.",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "No me da la gana. No quiero.",
+        "Responses": "EndLevel"
+      }
+    ],
+    "JavierDisculpaBien": [
+      {
+        "character": "Yo",
+        "Text": "¿Por qué crees que Luis se ha disgustado tanto?",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "Igual el balonazo le ha hecho daño… Entiendo que esté triste. Debería disculparme.",
+        "Responses": "EndLevel"
+      }
+    ],
+    "JavierDisculpaRegular": [
+      {
+        "character": "Yo",
+        "Text": "¿Si a ti te dieran un balonazo no esperarías que te pidieran perdón?",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "Ya, supongo que si. Me disculparé si es lo que hay que hacer. ",
+        "Responses": "EndLevel"
+      }
+    ],
+    "IntervencionProfesor": [
+      {
+        "character": "Profesor",
+        "Text": "¿Qué pasa aquí? Luis, Javier, venid y decidme qué ha pasado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Javier",
+        "Text": "Luis se ha cruzado mientras jugábamos al fútbol y le he dado un balonazo sin querer…",
+        "Responses": "None"
+      },
+      {
+        "character": "Luis",
+        "Text": "Yo solo quería ver como jugaban…",
+        "Responses": "None"
+      },
+      {
+        "character": "Profesor",
+        "Text": "¿Y que tenéis que deciros?",
+        "Responses": "EndLevel"
+      }
+    ]
+  },
+  "Lost": [
+    {
+      "character": "Javier",
+      "Text": "...",
+      "Responses": "None"
+    },
+    {
+      "character": "Luis",
+      "Text": "...",
+      "Responses": "None"
+    }
+  ],
+  "InitialTension": 4,
+  "Bronze": [
+    {
+      "character": "Javier",
+      "Text": "Siento haberte dado el balonazo...",
+      "Responses": "None"
+    },
+    {
+      "character": "Luis",
+      "Text": "Vale...",
+      "Responses": "None"
+    }
+  ],
+  "Silver": [
+    {
+      "character": "Javier",
+      "Text": "Siento haberte dado el balonazo... ",
+      "Responses": "None"
+    },
+    {
+      "character": "Luis",
+      "Text": "Gracias Javier, yo también tendré más cuidado la próxima vez.",
+      "Responses": "None"
+    }
+  ],
+  "Gold": [
+    {
+      "character": "Javier",
+      "Text": "Siento haberte dado el balonazo, no te vi y no quería hacerte daño.",
+      "Responses": "None"
+    },
+    {
+      "character": "Luis",
+      "Text": "Gracias, Javier, yo también tendré más cuidado la próxima vez.",
+      "Responses": "None"
+    }
+  ],
+  "InitialContext":[
+    {
+      "character": "Javier",
+      "Text": "¡Luis quita!",
+      "Responses": "None"
+    },
+    {
+      "character": "Luis",
+      "Text": "¡Tengo que pasar, esperad un momento!",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionLost":[
+    {
+      "character": "",
+      "Text": "Al ir a disculparse ni Javier ni Luis se dirigen la palabra, el conflicto no se ha resuelto.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionBronze":[
+    {
+      "character": "",
+      "Text": "Javier le pide disculpas a Luis, Luis no las acepta y Javier se ha disculpado solo para salir del paso.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionSilver":[
+    {
+      "character": "",
+      "Text": "Javier le pide disculpas a Luis, Luis las acepta pero Javier se ha disculpado solo para salir del paso.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionGold":[
+    {
+      "character": "",
+      "Text": "Se reconcilian y Javier le pide perdón a Luis, Luis acepta sus disculpas",
+      "Responses": "None"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "Exclusion": {
+    "EmocionRaúl": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "RaúlTriste",
+        "tension": 1 
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "RaúlFeliz",
+        "tension": -1
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "RaúlEnfadado",
+        "tension": 1
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "RaúlAsustado",
+        "tension": 1
+      }
+    ],
+    "PropuestaRaúl": [
+      {
+        "text": "Sois muchos, de momento lo mejor es no agobiarla.",
+        "nextDialogueGroup": "RaúlSolucionBien",
+        "tension": -1
+      },
+      {
+        "text": "Laura tiene razón, marchaos de una vez.",
+        "nextDialogueGroup": "RaúlSolucionRegular",
+        "tension": 1
+      },
+      {
+        "text": "Ahora hablo con Laura, a ver cuál es su problema.",
+        "nextDialogueGroup": "RaúlSolucionMal",
+        "tension": 2
+      }
+    ],
+    "EmocionSara": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "SaraTriste",
+        "tension": 1
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "SaraFeliz",
+        "tension": 1
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "SaraEnfadada",
+        "tension": -1
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "SaraAsustada",
+        "tension": 1
+      }
+    ],
+    "RespuestaSara": [
+      {
+        "text": "No te entiendo, explícalo mejor.",
+        "nextDialogueGroup": "SaraRespuestaMal",
+        "tension": 1
+      },
+      {
+        "text": "¿Y por qué es eso?",
+        "nextDialogueGroup": "SaraRespuestaBien",
+        "tension": -1
+      }
+    ],
+    "SaraPermiso": [
+      {
+        "text": "¿Creés que puedo hablar con ella un momento?",
+        "nextDialogueGroup": "PermisoSaraBien",
+        "tension": -1
+      },
+      {
+        "text": "Deja que hable con ella, a ver si puedo ayudar.",
+        "nextDialogueGroup": "PermisoSaraMal",
+        "tension": 1
+      }
+    ],
+    "EmocionLaura": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "LauraTriste",
+        "tension": -1
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "LauraFeliz",
+        "tension": 1
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "LauraEnfadada",
+        "tension": 1
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "LauraAsustada",
+        "tension": 1
+      }
+    ],
+    "EscuchaLaura": [
+      {
+        "text": "¿Y qué crees que ha pasado?",
+        "nextDialogueGroup": "EscuchaLauraBien",
+        "tension": -1
+      },
+      {
+        "text": "Algo habrás hecho…",
+        "nextDialogueGroup": "EscuchaLauraMal",
+        "tension": 2
+      },
+      {
+        "text": "¿Qué te parece que has hecho mal?",
+        "nextDialogueGroup": "EscuchaLauraRegular",
+        "tension": 1
+      }
+    ],
+    "AyudaLaura" :[
+      {
+        "text": "No lo sé… Parece muy complicado.",
+        "nextDialogueGroup": "AyudaLauraMal",
+        "tension": 2
+      },
+      {
+        "text": "Lo intentaré. Seguro que podemos mejorar la situación.",
+        "nextDialogueGroup": "AyudaLauraBien",
+        "tension": -2
+      }
+    ],
+    "EmocionCarla": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "CarlaTriste",
+        "tension": 1
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "CarlaFeliz",
+        "tension": 1
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "CarlaEnfadada",
+        "tension": -1
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "CarlaAsustada",
+        "tension": 1
+      }
+    ],
+    "ArregloCarla": [
+      {
+        "text": "Pues se lo podrías haber dicho así en vez de ser tan tonta.",
+        "nextDialogueGroup": "ArregloCarlaMal",
+        "tension": 3
+      },
+      {
+        "text": "Explícaselo y quizás estéis las dos mejor.",
+        "nextDialogueGroup": "ArregloCarlaBien",
+        "tension": -1
+      },
+      {
+        "text": "Prueba a contarle cómo te sientes, seguro que si habláis os podéis llevar un poco mejor.",
+        "nextDialogueGroup": "ArregloCarlaGenial",
+        "tension": -3
+      }
+    ]
+  }
+}

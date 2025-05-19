@@ -95,7 +95,7 @@ public class FullPathTester : MonoBehaviour
         if (!levelLoaded)
         {
             input = GameObject.FindGameObjectWithTag("Input");
-            input.SetActive(false);
+            input?.SetActive(false);
             currentLevelRoutes = BotJSONParser.Instance().ParseLevel(GameManager.Instance.GetNameOnIndex(currentLevel), maxTension);
 
             levelLoaded = true;

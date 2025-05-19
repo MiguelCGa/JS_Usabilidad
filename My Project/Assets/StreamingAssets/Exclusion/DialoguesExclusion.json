@@ -1,0 +1,688 @@
+{
+  "Exclusion": {
+    "InicialRaúl": [
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Tengo que observar cómo se sienten, no vaya a meter la pata.",
+        "Responses": "EmocionRaúl",
+        "emotions": true
+      }
+    ],
+    "RaúlTriste": [
+      {
+        "character": "Yo",
+        "Text": "Vaya... ¿Qué es lo que os pone tristes?",
+        "Responses": "None"
+      },
+      {
+        "character": "Raúl",
+        "Text": "¿Tristes? No... Estamos bien.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta... Están tranquilos y felices, sienten alegría.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Lo siento, creo que no he conseguido entender cómo os sentís.",
+        "Responses": "EmocionRaúl",
+        "emotions": true
+
+      }
+    ],
+    "RaúlFeliz": [
+      {
+        "character": "Yo",
+        "Text": "Hola, ¿Sabéis qué ocurre? Se os ve bastante relajados y contentos.",
+        "Responses": "None"
+      },
+      {
+        "character": "Raúl",
+        "Text": "La verdad que no lo sabemos, estábamos por aquí jugando y queremos enterarnos de lo que pasa.",
+        "Responses": "None"
+      },
+      {
+        "character": "Raúl",
+        "Text": "Parece que Laura está triste pero Sara no nos deja que le preguntemos, dice que la agobiamos.",
+        "Responses": "PropuestaRaúl"
+      }
+    ],
+    "RaúlAsustado": [
+      {
+        "character": "Yo",
+        "Text": "¿Estáis asustados?",
+        "Responses": "None"
+      },
+      {
+        "character": "Raúl",
+        "Text": "¿Asustados? ¿De qué?",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta... Están tranquilos y felices, sienten alegría.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Lo siento, creo que no he conseguido entender cómo os sentís.",
+        "Responses": "EmocionRaúl",
+        "emotions": true
+
+      }
+    ],
+    "RaúlEnfadado": [
+      {
+        "character": "Yo",
+        "Text": "¿Qué es lo que os enfada?",
+        "Responses": "None"
+      },
+      {
+        "character": "Raúl",
+        "Text": "No estamos enfadados con nadie...",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta... Están tranquilos y felices, sienten alegría.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Lo siento, creo que no he conseguido entender cómo os sentís.",
+        "Responses": "EmocionRaúl",
+        "emotions": true
+      }
+    ],
+    "RaúlSolucionBien": [
+      {
+        "character": "Raúl",
+        "Text": "Igual tienes razón, ya le preguntaremos más tarde.",
+        "Responses": "None"
+      }
+    ],
+    "RaúlSolucionRegular": [
+      {
+        "character": "Raúl",
+        "Text": "Bueno, haremos lo que queramos.",
+        "Responses": "None"
+      }
+    ],
+    "RaúlSolucionMal": [
+      {
+        "character": "Raúl",
+        "Text": "Eso, mira a ver qué le pasa con nosotros.",
+        "Responses": "None"
+      }
+    ],
+    "InicialSara": [
+      {
+        "character": "Yo",
+        "Text": "¿Cómo se debe de sentir?",
+        "Responses": "None",
+        "emotions": true
+      }
+    ],
+    "SaraTriste": [
+      {
+        "character": "Yo",
+        "Text": "¿Estás triste?",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "¿Triste? ¡No!",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta... Está muy enfadada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Lo siento, creo que no he conseguido entender cómo te sientes.",
+        "Responses": "EmocionSara",
+        "emotions": true
+      }
+    ],
+    "SaraFeliz": [
+      {
+        "character": "Yo",
+        "Text": "Pareces contenta.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "Pues no entiendes nada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta... Está muy enfadada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Lo siento, creo que no he conseguido entender cómo te sientes.",
+        "Responses": "EmocionSara",
+        "emotions": true
+      }
+    ],
+    "SaraAsustada": [
+      {
+        "character": "Yo",
+        "Text": "¿Tienes miedo?",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "¡No! ¡No tengo miedo!",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Parece que no he escogido la emoción correcta... Está muy enfadada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Lo siento, creo que no he conseguido entender cómo te sientes.",
+        "Responses": "EmocionSara",
+        "emotions": true
+      }
+    ],
+    "SaraEnfadada": [
+      {
+        "character": "Yo",
+        "Text": "¿Sabes qué ha ocurrido? Pareces súper enfadada.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "¡Sí! Lo que ocurre es que Carla y su grupo son unas tontas.",
+        "Responses": "RespuestaSara"
+      }
+    ],
+    "SaraRespuestaBien": [
+      {
+        "character": "Sara",
+        "Text": "Te lo explico.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "Laura ha estado yendo con el grupo de Carla este año y estaba contenta.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "Pero últimamente han empezado a dejarla más y más de lado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "Ya sabía yo que eran unas bobas. Siempre se lo he dicho.",
+        "Responses": "SaraPermiso"
+      }
+    ],
+    "SaraRespuestaMal": [
+      {
+        "character": "Sara",
+        "Text": "Vale, que borde...",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "Laura ha estado yendo con el grupo de Carla este año y estaba contenta.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "Pero últimamente han empezado a dejarla más y más de lado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Sara",
+        "Text": "Ya sabía yo que eran unas bobas. Siempre se lo he dicho.",
+        "Responses": "SaraPermiso"
+      }
+    ],
+    "PermisoSaraBien":[
+      {
+        "character": "Sara",
+        "Text": "Supongo que sí... Quizás puedas hacer algo...",
+        "Responses": "None",
+        "unlock": "InicialLaura"
+      }
+    ],
+    "PermisoSaraMal":[
+      {
+        "character": "Laura",
+        "Text": "No sé, ten cuidado, igual empeoras todo...",
+        "Responses": "None",
+        "unlock": "InicialLaura"
+      }
+    ],
+    "InicialLaura":[
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Vaya... Parece que está muy afectada. ¿Qué es lo que siente?",
+        "Responses": "EmocionLaura",
+        "emotions": true
+      }
+    ],
+    "LauraFeliz": [
+      {
+        "character": "Yo",
+        "Text": "¿Estás muy contenta?",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "No... No estoy contenta...",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) No he acertado con la emoción... Está muy triste.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Lo siento, no he entendido cómo te sientes.",
+        "Responses": "EmocionLaura",
+        "emotions": true
+      }
+    ],
+    "LauraEnfadada": [
+      {
+        "character": "Yo",
+        "Text": "¿Te has enfadado mucho?",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "Bueno... No exactamente...",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) No he acertado con la emoción... Está muy triste.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": " Lo siento, no he entendido cómo te sientes.",
+        "Responses": "EmocionLaura",
+        "emotions": true
+      }
+    ],
+    "LauraAsustada": [
+      {
+        "character": "Yo",
+        "Text": "¿Tienes mucho miedo?",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "No...",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) No he acertado con la emoción... Está muy triste.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Lo siento, no he entendido cómo te sientes.",
+        "Responses": "EmocionLaura",
+        "emotions": true
+      }
+    ],
+    "LauraTriste": [
+      {
+        "character": "Yo",
+        "Text": "Pareces muy triste... ¿Qué ha pasado?",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "No sé... No entiendo nada...",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "Hoy me he enterado de que Carla iba a celebrar su cumpleaños y no me ha invitado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "Y al preguntarle por qué, me ha dicho que las deje en paz y hemos discutido...",
+        "Responses": "EscuchaLaura"
+      }
+    ],
+    "EscuchaLauraBien": [
+      {
+        "character": "Laura",
+        "Text": "Últimamente estaban un poco raras...Quizás les pasaba algo conmigo y no me dí cuenta...",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "¿Puedes hablar con ellas? Quizás así se pueda resolver...",
+        "Responses": "AyudaLaura"
+      }
+    ],
+    "EscuchaLauraMal": [
+      {
+        "character": "Laura",
+        "Text": "¡No sé! No me esperaba esto y no sé qué hacer...",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "¿Puedes hablar con ellas? Quizás así se pueda resolver...",
+        "Responses": "AyudaLaura"
+      }
+    ],
+    "EscuchaLauraRegular": [
+      {
+        "character": "Laura",
+        "Text": "No lo sé... No las he querido molestar... No sé qué ha pasado...",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "¿Puedes hablar con ellas? Quizás así se pueda resolver...",
+        "Responses": "AyudaLaura"
+      }
+    ],
+    "AyudaLauraMal": [
+      {
+        "character": "Laura",
+        "Text": "Vaya... No sé qué haré...",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "Bueno... Vamos a intentarlo.",
+        "Responses": "AyudaLaura"
+      }
+    ],
+    "AyudaLauraBien": [
+      {
+        "character": "Laura",
+        "Text": "¡Muchas gracias! Te acompaño, aunque lo mejor será que hables tú.",
+        "Responses": "None"
+      }
+    ],
+    "InicialCarla":[
+      {
+        "character": "Yo",
+        "Text": "(Pensando) Algo le pasa con Laura. ¿Qué es lo que debe de estar sintiendo?",
+        "Responses": "EmocionCarla",
+        "emotions": true
+      }
+    ],
+    "CarlaFeliz": [
+      {
+        "character": "Yo",
+        "Text": "¿Te alegra ver a Laura?",
+        "Responses": "None"
+      },
+      {
+        "character": "Carla",
+        "Text": "¿Que si me alegra ver a esa? No, no me alegra.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) No se siente así, parece que tiene un enfado tremendo.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdón, está claro que te has enfadado.",
+        "Responses": "EmocionCarla",
+        "emotions": true
+      }
+    ],
+    "CarlaEnfadada": [
+      {
+        "character": "Yo",
+        "Text": "¿Estás enfadada con Laura? ¿Qué es lo que pasa?",
+        "Responses": "None"
+      },
+      {
+        "character": "Carla",
+        "Text": "Pues que es una pesada, eso es lo que pasa.",
+        "Responses": "None"
+      },
+      {
+        "character": "Carla",
+        "Text": "Todo el día pegada a nosotras, parece que no entiende que no nos cae bien.",
+        "Responses": "ArregloCarla"
+      }
+    ],
+    "CarlaAsustada": [
+      {
+        "character": "Yo",
+        "Text": "¿Te asusta Laura?",
+        "Responses": "None"
+      },
+      {
+        "character": "Carla",
+        "Text": "¿Asustarme? No, no me asusta.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "(Pensando) No se siente así, parece que tiene un enfado tremendo.",
+        "Responses": "None"
+      },
+      {
+        "character": "Yo",
+        "Text": "Perdón, está claro que te has enfadado.",
+        "Responses": "EmocionCarla",
+        "emotions": true
+      }
+    ],
+    "CarlaTriste": [
+      {
+        "character": "Yo",
+        "Text": "¿Estás triste con Laura?",
+        "Responses": "None"
+      },
+      {
+        "character": "Carla",
+        "Text": "No, Laura no me pone nada triste.",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "(Pensando) No se siente así, parece que tiene un enfado tremendo.",
+        "Responses": "None"
+      },
+      {
+        "character": "Laura",
+        "Text": "Perdón, está claro que te has enfadado.",
+        "Responses": "EmocionCarla",
+        "emotions": true
+      }
+    ],
+    "ArregloCarlaMal": [
+      {
+        "character": "Carla",
+        "Text": "Eso tú. Haré lo que me dé la gana.",
+        "Responses": "None"
+      },
+      {
+        "character": "Carla",
+        "Text": "Voy a hablar con ella...",
+        "Responses": "EndLevel"
+      }
+    ],
+    "ArregloCarlaBien": [
+      {
+        "character": "Carla",
+        "Text": "Bueno, quizás no sea mala idea.",
+        "Responses": "None"
+      },
+      {
+        "character": "Carla",
+        "Text": "Voy a hablar con ella...",
+        "Responses": "EndLevel"
+      }
+    ],
+    "ArregloCarlaGenial": [
+      {
+        "character": "Carla",
+        "Text": "Ya... La verdad que no estoy contenta con cómo hemos acabado.",
+        "Responses": "None"
+      },
+      {
+        "character": "Carla",
+        "Text": "Voy a hablar con ella...",
+        "Responses": "EndLevel"
+      }
+    ]
+  },
+  "Lost": [
+    {
+      "character": "Carla",
+      "Text": "¿No te has enterado de lo que he dicho antes? ¡Déjanos en paz estúpida!",
+      "Responses": "None"
+    },
+    {
+      "character": "Laura",
+      "Text": "No sé por qué me tratáis así de mal...",
+      "Responses": "None"
+    }
+  ],
+  "InitialTension": 4,
+  "Bronze": [
+    {
+      "character": "Carla",
+      "Text": "Laura, la verdad que no nos caes bien...",
+      "Responses": "None"
+    },
+    {
+      "character": "Carla",
+      "Text": "Te lo tendríamos que haber dicho antes, lo siento.",
+      "Responses": "None"
+    },
+    {
+      "character": "Laura",
+      "Text": "Jo... Yo pensaba que era vuestra amiga...",
+      "Responses": "None"
+    }
+  ],
+  "Silver": [
+    {
+      "character": "Carla",
+      "Text": "Siento haberte tratado así Laura.",
+      "Responses": "None"
+    },
+    {
+      "character": "Carla",
+      "Text": "Nos estuviste agobiando bastante y no supe como reaccionar.",
+      "Responses": "None"
+    },
+    {
+      "character": "Laura",
+      "Text": "Ya... La verdad que no entiendo por qué no me lo dijiste antes... Pero gracias.",
+      "Responses": "None"
+    }
+  ],
+  "Gold": [
+    {
+      "character": "Carla",
+      "Text": "Laura siento haberte tratado así...",
+      "Responses": "None"
+    },
+    {
+      "character": "Carla",
+      "Text": "Nos pareció que entraste a nuestro grupo muy de golpe y no estábamos cómodas...",
+      "Responses": "None"
+    },
+    {
+      "character": "Carla",
+      "Text": "Te tendría que haber dicho las cosas de otra manera.",
+      "Responses": "None"
+    },
+    {
+      "character": "Laura",
+      "Text": "Bueno... Gracias por contármelo. Yo también lo siento si os agobié mucho...",
+      "Responses": "None"
+    }
+  ],
+  "InitialContext": [
+    {
+      "character": "Carla",
+      "Text": "Pues porque no quiero que vengas con nosotras y ya.",
+      "Responses": "None"
+    },
+    {
+      "character": "Laura",
+      "Text": "¡No es justo!",
+      "Responses": "None"
+    },
+    {
+      "character": "Carla",
+      "Text": "¡Déjame en paz, pesada!",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionLost":[
+    {
+      "character": "",
+      "Text": "Carla y Laura no han entendido las perspectivas de la otra.",
+      "Responses": "None"
+    },
+    {
+      "character": "",
+      "Text": "Continúan llevando muy mal.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionBronze":[
+    {
+      "character": "",
+      "Text": "Laura entiende mejor la perspectiva de Carla.",
+      "Responses": "None"
+    },
+    {
+      "character": "",
+      "Text": "Aun así, Carla no ha sido capaz de expresarse teniendo en cuenta a Laura.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionSilver":[
+    {
+      "character": "",
+      "Text": "Carla empatiza con Laura y le transmite lo que siente de forma empática.",
+      "Responses": "None"
+    },
+    {
+      "character": "",
+      "Text": "Aun así, Laura no entiende la perspectiva de Carla.",
+      "Responses": "None"
+    }
+  ],
+  "ConclusionGold":[
+    {
+      "character": "",
+      "Text": "Carla y Laura entienden mejor la situación y empatizan mutuamente.",
+      "Responses": "None"
+    },
+    {
+      "character": "",
+      "Text": "No van a ser amigas pero se tratarán mejor de aquí en adelante.",
+      "Responses": "None"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "Tutorial": {
+    "EmocionElena": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "ElenaEnfadado",
+        "tension": 1,
+        "interactable": false
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "ElenaEnfadado",
+        "tension": 1,
+        "interactable": false
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "ElenaEnfadado",
+        "tension": -1
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "ElenaEnfadado",
+        "tension": 1,
+        "interactable": false
+      }
+    ],
+    "EleccionElena": [
+      {
+        "text": "¿Y si os vais turnando? Así podréis jugar todos a todo.",
+        "nextDialogueGroup": "ElenaBien",
+        "tension": -2
+      },
+      {
+        "text": "Tienes razón. La mayoría manda.",
+        "nextDialogueGroup": "ElenaBien",
+        "tension": -2,
+        "interactable": false
+      },
+      {
+        "text": "El fútbol es un rollazo. Que Héctor decida.",
+        "nextDialogueGroup": "ElenaBien",
+        "tension": -2,
+        "interactable": false
+      }
+    ],
+    "EmocionHector": [
+      {
+        "text": "Triste",
+        "nextDialogueGroup": "HectorTriste",
+        "tension": 1 
+      },
+      {
+        "text": "Feliz",
+        "nextDialogueGroup": "HectorFeliz",
+        "tension": 1
+      },
+      {
+        "text": "Enfado",
+        "nextDialogueGroup": "HectorEnfadado",
+        "tension": -1
+      },
+      {
+        "text": "Miedo",
+        "nextDialogueGroup": "HectorMiedo",
+        "tension": 1
+      }
+    ],
+    "SolucionHector": [
+      {
+        "text": "Vamos a poner turnos y así no os quejaréis tanto.",
+        "nextDialogueGroup": "SolucionHectorBien",
+        "tension": 1
+      },
+      {
+        "text": "Hemos pensado en que os turnéis, así todos podéis jugar a distintas cosas.",
+        "nextDialogueGroup": "SolucionHectorMal",
+        "tension": -1
+      }
+    ],
+    "AyudaHector": [
+      {
+        "text": "Podríamos hablar con un profesor para que nos ayude",
+        "nextDialogueGroup": "AyudaHectorBien",
+        "tension": -1
+      },
+      {
+        "text": "Seguro que os podéis organizar bien entre vosotros…",
+        "nextDialogueGroup": "AyudaHectorMal",
+        "tension": 1
+      }
+    ]
+  }
+}
