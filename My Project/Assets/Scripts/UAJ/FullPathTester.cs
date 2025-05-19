@@ -97,9 +97,9 @@ public class FullPathTester : MonoBehaviour
             levelLoaded = true;
         }
     }
-    private void StartConversation(string character)
+    private bool StartConversation(string character)
     {
-        InputCommands.Instance.InteractWithCharacter(character);
+        return InputCommands.Instance.InteractWithCharacter(character);
     }
 
     private void HandleEvent(GameEvent evt)
@@ -133,7 +133,8 @@ public class FullPathTester : MonoBehaviour
                 Debug.Log("ResponseStarted" + evt.GetParameter<string>());
                 inConversation = false;
                 if (currentResponse < currentLevelRoutes[currentRoute].Responses.Count)
-                    InputCommands.Instance.SelectOption(currentLevelRoutes[currentRoute].Responses[currentResponse++]);
+                    if (!InputCommands.Instance.SelectOption(currentLevelRoutes[currentRoute].Responses[currentResponse++]))
+                        throw new Exception("Error al seleccionar la respuesta: " + currentLevelRoutes[currentRoute].Responses[currentResponse - 1]);
                 break;
             case EventType.SelectedResponse:
                 Debug.Log("SelectedResponse: " + evt.GetParameter<int>());
@@ -143,7 +144,8 @@ public class FullPathTester : MonoBehaviour
                 Debug.Log("ConversationEnded");
                 inConversation = false;
                 if (currentCharacter < currentLevelRoutes[currentRoute].Characters.Count)
-                    StartConversation(currentLevelRoutes[currentRoute].Characters[currentCharacter++]);
+                    if (!StartConversation(currentLevelRoutes[currentRoute].Characters[currentCharacter++]))
+                        throw new Exception("Error en el personaje: " + currentLevelRoutes[currentRoute].Characters[currentCharacter - 1]);
                 break;
             case EventType.LevelConclusion:
                 Debug.Log("LevelConclusion");
