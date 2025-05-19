@@ -156,21 +156,22 @@ public class ConversationManager : MonoBehaviour {
         InitConversation();
     }
 
-    public void NextDialogue() {
+    public bool NextDialogue() {
         if (!dialoging)
-            return;
+            return false;
         if (dialogueBox.Next())
-            return;
+            return true;
         if (CheckResponses())
-            return;
+            return true;
         if (CheckNextStage())
-            return;
+            return true;
         Dialogue d = GetNextDialogue();
         if (d != null) {
             InitDialogue(d);
-            return;
+            return true;
         }
         StopDialogue();
+        return true;
     }
 
     private bool CheckNextStage() {
@@ -184,16 +185,19 @@ public class ConversationManager : MonoBehaviour {
         return false;
     }
 
-    public void SelectResponse(int id) {
+    public bool SelectResponse(int id) {
+        if (id >= currentResponses.responses.Length)
+            return false;
         EventQueue.Instance().AddEvent(new GameEvent(EventType.SelectedResponse, id));
 
         responseManager.HideResponses();
         Response resp = currentResponses.responses[id];
         tensionController.AddTension(resp.tension);
         if (resp.nextStage != null && stageManager.SetStage(resp.nextStage)) 
-            return;
+            return true;
         currentConversation = data.GetDialogueGroupByID(currentLevel, resp.nextDialogueGroup);
         InitConversation();
+        return true;
     }
 
     public void StopDialogue() {

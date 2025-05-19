@@ -32,36 +32,38 @@ public class InputCommands : MonoBehaviour
         else
             debugButtons.SetActive(false);
     }
-    public void StartGame()
+    public bool StartGame()
     {
         MenuNavigationManager navigationManager = FindObjectOfType<MenuNavigationManager>();
-        if (navigationManager)
-        {
+        if (navigationManager) {
             navigationManager.GoTo(1);
+            return true;
         }
+        return false;
     }
-    public void SelectLevel(int level)
+    public bool SelectLevel(int level)
     {
         interactor.StartLevel(level);
+        return true;
     }
-    public void NextDialogue()
+    public bool NextDialogue()
     {
-        ConversationManager.Instance.NextDialogue();
+        return ConversationManager.Instance.NextDialogue();
     }
-    public void SelectOption(int option)
+    public bool SelectOption(int option)
     {
-        ConversationManager.Instance.SelectResponse(option);
+        return ConversationManager.Instance.SelectResponse(option);
     }
-    public void InteractWithCharacter(string character)
+    public bool InteractWithCharacter(string character)
     {
         DialogableCharacter[] characters = FindObjectsByType<DialogableCharacter>(FindObjectsSortMode.None);
         foreach (var chara in characters)
         {
-            if (chara.GetConversationID() == character)
-            {
+            if (chara.GetConversationID() == character) {
                 chara.StartConversation();
-                break;
+                return true;
             }
         }
+        return false;
     }
 }
