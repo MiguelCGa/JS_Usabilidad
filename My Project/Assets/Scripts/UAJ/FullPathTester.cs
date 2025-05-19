@@ -9,7 +9,8 @@ using UnityEngine.TextCore.Text;
 
 public class FullPathTester : MonoBehaviour
 {
-    s[SerializeField]
+    private GameObject input;
+    [SerializeField]
     float checkRouteProportion; //100% == all paths checked  
     public static FullPathTester Instance { get; private set; }
 
@@ -43,6 +44,11 @@ public class FullPathTester : MonoBehaviour
     void Awake()
     {
         Init();
+    }
+    private void Start()
+    {
+        input = GameObject.FindGameObjectWithTag("Input");
+        input.SetActive(false);
     }
 
     void Update()
@@ -82,6 +88,8 @@ public class FullPathTester : MonoBehaviour
     {
         if (!levelLoaded)
         {
+            input = GameObject.FindGameObjectWithTag("Input");
+            input.SetActive(false);
             currentLevelRoutes = BotJSONParser.Instance().ParseLevel(GameManager.Instance.GetNameOnIndex(currentLevel));
             levelLoaded = true;
         }
