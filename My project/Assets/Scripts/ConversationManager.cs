@@ -33,6 +33,7 @@ public class ConversationManager : MonoBehaviour {
     bool finishingLevel = false;
     bool concludingLevel = false;
     bool inContext = false;
+    bool inputActive = true;
 
     Dictionary<string, DialogableCharacter> unlockableConversations = new Dictionary<string, DialogableCharacter>();
 
@@ -110,7 +111,14 @@ public class ConversationManager : MonoBehaviour {
         tensionController = GetComponent<TensionController>();
         stageManager = GetComponent<StageManager>(); 
 
-        InputReader.Instance.onUse += OnUseNextDialogue;
+        InputReader.Instance.onUse += () => { if (inputActive) NextDialogue(); };
+    }
+
+    public void EnableInput() {
+        inputActive = true;
+    }
+    public void DisableInput() {
+        inputActive = false;
     }
 
     public void SetCurrentLevel(string level) {
@@ -154,10 +162,6 @@ public class ConversationManager : MonoBehaviour {
         dialogueBox.gameObject.SetActive(true);
         currentConversation = data.GetDialogueGroupByID(currentLevel, id);
         InitConversation();
-    }
-
-    private void OnUseNextDialogue() {
-        NextDialogue();
     }
 
     public bool NextDialogue() {

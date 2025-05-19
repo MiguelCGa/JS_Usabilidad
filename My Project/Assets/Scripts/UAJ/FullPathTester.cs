@@ -53,6 +53,7 @@ public class FullPathTester : MonoBehaviour
     {
         input = GameObject.FindGameObjectWithTag("Input");
         input.SetActive(false);
+        ConversationManager.Instance.DisableInput();
     }
 
     void Update()
