@@ -17,8 +17,6 @@ public class ContextController : MonoBehaviour {
         contextBackground.gameObject.SetActive(true);
     }
     public void DeactivateContext() {
-        // EventoBot("Final de Pantalla negra") 
-        EventQueue.Instance().AddEvent(new GameEvent(EventType.LevelBlackscreenEnded));
         contextBackground.gameObject.SetActive(false);
     }
 

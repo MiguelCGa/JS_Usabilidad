@@ -40,8 +40,8 @@ public struct GameEvent
 
 public enum EventType
 {
-    GameStart, LevelStart, LevelEnd, LevelsMenu, OnLevelLoaded, LevelBlackscreenEnded, StartingTension, ModifiedTension, FinalTension, SelectedResponse,
-    ConversationStarted, ConversationEnded, ResponseStarted, CharacterUnlocked
+    GameStart, LevelStart, LevelEnd, LevelsMenu, OnLevelLoaded, FinalTension, SelectedResponse,
+    ConversationStarted, ConversationEnded, ResponseStarted
 }
 
 public class EventQueue

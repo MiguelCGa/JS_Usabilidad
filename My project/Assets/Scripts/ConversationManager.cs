@@ -244,8 +244,6 @@ public class ConversationManager : MonoBehaviour {
     private void DoUnlock(Dialogue dialogue) {
         if (dialogue.unlock == null)
             return;
-        //EventoBot("Desbloquear personaje", dialogue.unlock);
-        EventQueue.Instance().AddEvent(new GameEvent(EventType.CharacterUnlocked, dialogue.unlock));
         unlockableConversations[dialogue.unlock].Unlock();
     }
 }
