@@ -109,11 +109,7 @@ public class BotJSONParser
         }
         catch (Exception e)
         {
-            var error = errorHandler.ProccessError(e);
-            var file = File.CreateText("error.json");
-            file.Write(error.ToString());
-            file.Close();
-            return null;
+            errorHandler.ProccessError(e, level);
         }
         return Routes;
     }
@@ -177,9 +173,7 @@ public class BotJSONParser
                 lastResponse = lastResponseObject.stringValue;
                 // Se obtiene el nombre del dialogo que se desbloquea al terminar la conversacion
                 JSONObject unlockJSONObject = dialogues.list[dialogues.list.Count - 1].GetField("unlock");
-                if (unlockJSONObject == null)
-                    throw new Exception("Error en la obtencion del nombre del dialogo desbloqueado en el ultimo dialogo del archivo .json de dialogos " + level);
-
+                
                 // Se guarda la informacion del dialogo en el diccionario
                 dialogueDictionary.Add(dialogueJsonObject.keys[i], new DialogueInfo(character, lastResponse, unlockJSONObject?.stringValue));
             }

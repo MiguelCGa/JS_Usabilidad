@@ -2,14 +2,19 @@ using Defective.JSON;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class ErrorHandler 
 {
-    public JSONObject ProccessError(Exception e, BotJSONParser.RouteInfo? routeInfo = null) {
+    public void ProccessError(Exception e, string level = null, BotJSONParser.RouteInfo? routeInfo = null) {
         JSONObject globalErrorData = new JSONObject();
 
         globalErrorData.AddField("ErrorData", e.Message);
+
+        if (level != null)
+            globalErrorData.AddField("Level", level);
 
         if (routeInfo != null)
         {
@@ -23,7 +28,11 @@ public class ErrorHandler
             globalErrorData.AddField("RouteInfo", routeData);
         }
 
-        return globalErrorData;
+        var file = File.CreateText(Application.persistentDataPath + "/error.json");
+        file.Write(globalErrorData.ToString());
+        file.Close();
+
+        Application.Quit();
     }
 
     private JSONObject listToJSON<T>(List<T> list)
