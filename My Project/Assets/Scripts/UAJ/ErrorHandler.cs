@@ -29,7 +29,7 @@ public class ErrorHandler
             globalErrorData.AddField("RouteInfo", routeData);
         }
 
-        var file = File.CreateText(Application.persistentDataPath + "/error.json");
+        var file = File.CreateText(Application.persistentDataPath + "/" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + "error.json");
         file.Write(globalErrorData.ToString());
         file.Close();
 
