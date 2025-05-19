@@ -13,6 +13,7 @@ public class FullPathTester : MonoBehaviour
     private List<BotJSONParser.RouteInfo> currentLevelRoutes;
     private HashSet<int> unlockedLevels;
     private bool inConversation = false;
+    private bool levelLoaded = false;
     private int currentLevel = 1;
     private int currentRoute = 0;
     private int currentCharacter = 0;
@@ -55,13 +56,17 @@ public class FullPathTester : MonoBehaviour
         InputCommands.Instance.StartGame();
     }
 
-    private void SelectLevel(int l)
+    private void SelectLevel()
     {
-        InputCommands.Instance.SelectLevel(l);
+        InputCommands.Instance.SelectLevel(currentLevel);
     }
-    private void StartLevel(int l)
+    private void StartLevel()
     {
-        currentLevelRoutes = BotJSONParser.Instance().ParseLevel(GameManager.Instance.GetNameOnIndex(l));
+        if (!levelLoaded)
+        {
+            currentLevelRoutes = BotJSONParser.Instance().ParseLevel(GameManager.Instance.GetNameOnIndex(currentLevel));
+            levelLoaded = true;
+        }
     }
     private void StartConversation(string character)
     {
@@ -79,11 +84,11 @@ public class FullPathTester : MonoBehaviour
             case EventType.LevelsMenu:
                 Debug.Log("LevelsMenu");
                 if (currentLevel < SceneManager.sceneCountInBuildSettings)
-                    SelectLevel(currentLevel);
+                    SelectLevel();
                 break;
             case EventType.LevelStart:
                 Debug.Log("LevelStart" + evt.GetParameter<int>().ToString());
-                StartLevel(currentLevel);
+                StartLevel();
                 break;
             case EventType.ConversationStarted:
                 Debug.Log("ConversationStarted" + evt.GetParameter<string>());
@@ -98,14 +103,14 @@ public class FullPathTester : MonoBehaviour
             case EventType.ResponseStarted:
                 Debug.Log("ResponseStarted" + evt.GetParameter<string>());
                 inConversation = false;
-                if(currentResponse < currentLevelRoutes[currentRoute].Responses.Count)
+                if (currentResponse < currentLevelRoutes[currentRoute].Responses.Count)
                     InputCommands.Instance.SelectOption(currentLevelRoutes[currentRoute].Responses[currentResponse++]);
                 break;
             case EventType.SelectedResponse:
                 Debug.Log("SelectedResponse: " + evt.GetParameter<int>());
                 inConversation = true;
                 break;
-            case EventType.ConversationEnded:   
+            case EventType.ConversationEnded:
                 Debug.Log("ConversationEnded");
                 inConversation = false;
                 if (currentCharacter < currentLevelRoutes[currentRoute].Characters.Count)
@@ -117,9 +122,10 @@ public class FullPathTester : MonoBehaviour
                 break;
             case EventType.LevelEnd:
                 Debug.Log("LevelEnd");
-                if ((currentRoute >= currentLevelRoutes.Count - 1) || 
-                    (currentRoute >= (currentLevelRoutes.Count-1)*checkRouteProportion/100))
+                if ((currentRoute >= currentLevelRoutes.Count - 1) ||
+                    (currentRoute >= (currentLevelRoutes.Count - 1) * checkRouteProportion / 100))
                 {
+                    levelLoaded = false;
                     currentLevel++;
                     currentRoute = 0;
                 }

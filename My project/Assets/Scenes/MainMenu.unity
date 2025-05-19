@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a51b7591d685247a83b3fe15c1492d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkRouteProportion: 0
+  checkRouteProportion: 100
 --- !u!1 &13440104
 GameObject:
   m_ObjectHideFlags: 0
