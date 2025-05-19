@@ -113,6 +113,7 @@ public class BotJSONParser
             var file = File.CreateText("error.json");
             file.Write(error.ToString());
             file.Close();
+            return null;
         }
         return Routes;
     }

@@ -26,6 +26,7 @@ public class FullPathTester : MonoBehaviour
     private int currentResponse = 0;
 
     private float time = 0;
+    private bool execute = true;
 
     private void Init()
     {
@@ -53,6 +54,9 @@ public class FullPathTester : MonoBehaviour
 
     void Update()
     {
+        if (!execute)
+            return;
+
         try
         {
             if (EventQueue.Instance().HasEvents())
@@ -66,7 +70,11 @@ public class FullPathTester : MonoBehaviour
         }
         catch(Exception e)
         {
-            JSONObject error = errorHandler.ProccessError(e, currentLevelRoutes[currentLevel]);
+            JSONObject error = new JSONObject();
+            if (currentLevelRoutes!= null)
+                error = errorHandler.ProccessError(e, currentLevelRoutes[currentLevel]);
+            if (currentLevelRoutes == null)
+                error = errorHandler.ProccessError(e);
             var file = File.CreateText("error.json");
             file.Write(error.ToString());
             file.Close();
@@ -91,6 +99,9 @@ public class FullPathTester : MonoBehaviour
             input = GameObject.FindGameObjectWithTag("Input");
             input.SetActive(false);
             currentLevelRoutes = BotJSONParser.Instance().ParseLevel(GameManager.Instance.GetNameOnIndex(currentLevel));
+            if (currentLevelRoutes == null)
+                execute = false;
+
             levelLoaded = true;
         }
     }
