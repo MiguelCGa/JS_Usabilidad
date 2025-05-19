@@ -110,10 +110,12 @@ public class FullPathTester : MonoBehaviour
     {
         switch (evt.GetEventType())
         {
+            //Comienza el bot, usa el comando de comenzar la partida
             case EventType.GameStart:
                 Debug.Log("GameStart");
                 StartPlaying();
                 break;
+            //Selecciona el nivel correspondiente
             case EventType.LevelsMenu:
                 Debug.Log("LevelsMenu");
                 if (currentLevel < SceneManager.sceneCountInBuildSettings)
@@ -121,20 +123,24 @@ public class FullPathTester : MonoBehaviour
                 else 
                     Application.Quit();
                 break;
+            //Carga todos los paths de ese nivel si no lo había hecho antes y desactiva el input del nivel
             case EventType.LevelStart:
                 Debug.Log("LevelStart" + evt.GetParameter<int>().ToString());
                 StartLevel();
                 break;
+            //Marca el estado a inConversation para que el bot llame al comando NextDialogue()
             case EventType.ConversationStarted:
                 Debug.Log("ConversationStarted" + evt.GetParameter<string>());
                 inConversation = true;
                 break;
+            //Restablece los parámetros de nivel
             case EventType.OnLevelLoaded:
                 Debug.Log("OnLevelLoaded");
                 currentCharacter = 0;
                 currentResponse = 0;
                 inConversation = true;
                 break;
+            //Llama al comando SelectOption() con la siguiente respuesta de la ruta actual como parametro
             case EventType.ResponseStarted:
                 Debug.Log("ResponseStarted" + evt.GetParameter<string>());
                 inConversation = false;
@@ -142,10 +148,12 @@ public class FullPathTester : MonoBehaviour
                     if (!InputCommands.Instance.SelectOption(currentLevelRoutes[currentRoute].Responses[currentResponse++]))
                         throw new Exception("Error al seleccionar la respuesta: " + currentLevelRoutes[currentRoute].Responses[currentResponse - 1]);
                 break;
+            //Vuelve a marcar el estado a inConversation
             case EventType.SelectedResponse:
                 Debug.Log("SelectedResponse: " + evt.GetParameter<int>());
                 inConversation = true;
                 break;
+            //Llama al comando StartConversation() con el siguiente personaje de la ruta actual como parámetro
             case EventType.ConversationEnded:
                 Debug.Log("ConversationEnded");
                 inConversation = false;
@@ -153,10 +161,12 @@ public class FullPathTester : MonoBehaviour
                     if (!StartConversation(currentLevelRoutes[currentRoute].Characters[currentCharacter++]))
                         throw new Exception("Error en el personaje: " + currentLevelRoutes[currentRoute].Characters[currentCharacter - 1]);
                 break;
+            //Marca el estado a inConversation para saltar la pantalla de final de nivel
             case EventType.LevelConclusion:
                 Debug.Log("LevelConclusion");
                 inConversation = true;
                 break;
+            //Comprueba si ya se han probado todas las rutas del nivel y, de ser así, pasa al siguiente nivel. En caso contrario prueba el nivel con la siguiente ruta.
             case EventType.LevelEnd:
                 Debug.Log("LevelEnd");
                 inConversation = true;
